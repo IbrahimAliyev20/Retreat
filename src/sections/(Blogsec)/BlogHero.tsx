@@ -21,7 +21,7 @@ const BlogHero: React.FC = () => {
           Sharing knowledge
         </h1>
         <p
-          className="text-xl md:text-2xl custom-color mb-8 opacity-0"
+          className="text-xl md:text-xl custom-color mb-8 opacity-0"
           ref={textRef}
         >
             Check our recent blog articles about yoga and diet.

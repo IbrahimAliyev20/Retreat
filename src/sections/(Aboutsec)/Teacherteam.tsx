@@ -2,82 +2,52 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import useScrollAnimation from '../../hook/useScrollAnimation';
+import {  team } from '../../constans/team';
 
 const Teacherteam: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
-  const memberRefs = Array(3).fill(null).map(() => useRef<HTMLDivElement>(null));
+  const memberRefs = team.map(() => useRef<HTMLDivElement>(null));
 
-  useScrollAnimation(titleRef, 0);  
-  useScrollAnimation(textRef, 0.2);  
+  useScrollAnimation(titleRef, 0);
+  useScrollAnimation(textRef, 0.2);
   memberRefs.forEach((ref, index) => useScrollAnimation(ref, 0.4 + index * 0.2));
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <h2
-        className="text-4xl font-serif custom-color text-center mb-4 opacity-0"
+        className="text-4xl font-serif custom-color text-center mb-4 opacity-0 transition-opacity duration-1000 ease-in-out"
         ref={titleRef}
       >
         Meet the team
       </h2>
       <p
-        className="text-lg custom-color text-center mb-12 opacity-0"
+        className="text-lg custom-color text-center mb-12 opacity-0 transition-opacity duration-1000 ease-in-out"
         ref={textRef}
       >
         We are dedicated to give you the best experience.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Team Member 1 */}
-        <div
-          className="flex flex-col items-center hover:scale-105 duration-300 opacity-0"
-          ref={memberRefs[0]}
-        >
-          <div className="w-full h-64 relative rounded-xl overflow-hidden">
-            <Image
-              src="/images/teamintro1.jpg"
-              alt="Lisa Mango"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl cursor-pointer"
-            />
+        {team.map((member, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center hover:scale-105 duration-300 opacity-0 transition-all group"
+            ref={memberRefs[index]}
+          >
+            <div className="w-full h-64 relative rounded-xl overflow-hidden">
+              <Image
+                src={member.image}
+                alt={member.name}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl cursor-pointer transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+            <h3 className="text-xl font-medium custom-color mt-4">{member.name}</h3>
+            <p className="custom-color opacity-80 mb-4">{member.role}</p>
+          
           </div>
-          <h3 className="text-xl font-medium custom-color mt-4">Lisa Mango</h3>
-          <p className="custom-color opacity-80">Nutrition Expert</p>
-        </div>
-        {/* Team Member 2 */}
-        <div
-          className="flex flex-col items-center hover:scale-105 duration-300 opacity-0"
-          ref={memberRefs[1]}
-        >
-          <div className="w-full h-64 relative rounded-xl overflow-hidden">
-            <Image
-              src="/images/teamintro2.jpg"
-              alt="Angela Smith"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl cursor-pointer"
-            />
-          </div>
-          <h3 className="text-xl font-medium custom-color mt-4">Angela Smith</h3>
-          <p className="custom-color opacity-80">Yoga Teacher</p>
-        </div>
-        {/* Team Member 3 */}
-        <div
-          className="flex flex-col items-center hover:scale-105 duration-300 opacity-0"
-          ref={memberRefs[2]}
-        >
-          <div className="w-full h-64 relative rounded-xl overflow-hidden">
-            <Image
-              src="/images/teamintro3.jpg"
-              alt="Jess Spark"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl cursor-pointer"
-            />
-          </div>
-          <h3 className="text-xl font-medium custom-color mt-4">Jess Spark</h3>
-          <p className="custom-color opacity-80">Yoga Teacher</p>
-        </div>
+        ))}
       </div>
     </div>
   );
