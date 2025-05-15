@@ -1,33 +1,31 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import useScrollAnimation from "../../hook/useScrollAnimation";
+// import useScrollAnimation from "../../hook/useScrollAnimation";
 import { team } from "../../constans/team";
 
 const Teacherteam: React.FC = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
+  // const titleRef = useRef<HTMLHeadingElement>(null);
+  // const textRef = useRef<HTMLParagraphElement>(null);
 
   const memberRefs = React.useMemo(() => team.map(() => React.createRef<HTMLDivElement>()), []);
 
-  useScrollAnimation(titleRef, 0);
-  useScrollAnimation(textRef, 0.2);
+  // useScrollAnimation(titleRef, 0);
+  // useScrollAnimation(textRef, 0.2);
 
-  useScrollAnimation(memberRefs[0], 0.4);
-  useScrollAnimation(memberRefs[1], 0.6);
-  useScrollAnimation(memberRefs[2], 0.8);
+  // useScrollAnimation(memberRefs[0], 0.4);
+  // useScrollAnimation(memberRefs[1], 0.6);
+  // useScrollAnimation(memberRefs[2], 0.8);
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <h2
-        className="text-4xl font-serif custom-color text-center mb-4 opacity-0 transition-opacity duration-1000 ease-in-out"
-        ref={titleRef}
+        className="text-4xl font-serif custom-color text-center mb-4  transition-opacity duration-1000 ease-in-out"
       >
         Meet the team
       </h2>
       <p
-        className="text-lg custom-color text-center mb-12 opacity-0 transition-opacity duration-1000 ease-in-out"
-        ref={textRef}
+        className="text-lg custom-color text-center mb-12  transition-opacity duration-1000 ease-in-out"
       >
         We are dedicated to give you the best experience.
       </p>
@@ -35,7 +33,7 @@ const Teacherteam: React.FC = () => {
         {team.map((member, index) => (
           <div
             key={index}
-            className="flex flex-col items-center hover:scale-105 duration-300 opacity-0 transition-all group"
+            className="flex flex-col items-center hover:scale-105 duration-300  transition-all group"
             ref={memberRefs[index]}
           >
             <div className="w-full h-64 relative rounded-xl overflow-hidden">

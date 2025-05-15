@@ -1,20 +1,20 @@
 "use client";
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import useScrollAnimation from '../hook/useScrollAnimation';
+// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const Experience: React.FC = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const stat1Ref = useRef<HTMLDivElement>(null);
-  const stat2Ref = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
+  // const titleRef = useRef<HTMLHeadingElement>(null);
+  // const textRef = useRef<HTMLParagraphElement>(null);
+  // const stat1Ref = useRef<HTMLDivElement>(null);
+  // const stat2Ref = useRef<HTMLDivElement>(null);
+  // const imageRef = useRef<HTMLDivElement>(null);
 
-  useScrollAnimation(titleRef, 0); 
-  useScrollAnimation(textRef, 0.2);  
-  useScrollAnimation(stat1Ref, 0.4); 
-  useScrollAnimation(stat2Ref, 0.6); 
-  useScrollAnimation(imageRef, 0.8); 
+  // useScrollAnimation(titleRef, 0); 
+  // useScrollAnimation(textRef, 0.2);  
+  // useScrollAnimation(stat1Ref, 0.4); 
+  // useScrollAnimation(stat2Ref, 0.6); 
+  // useScrollAnimation(imageRef, 0.8); 
 
   return (
     <section>
@@ -22,16 +22,14 @@ const Experience: React.FC = () => {
         {/* Sol tərəf - Mətn və statistika */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2
-            className="text-4xl md:text-5xl font-serif text-brown mb-6 leading-snug opacity-0"
-            ref={titleRef}
+            className="text-4xl md:text-5xl font-serif text-brown mb-6 leading-snug "
           >
             Dedicated to give you
             <br />
             top experience
           </h2>
           <p
-            className="text-brown mb-8 max-w-md opacity-0"
-            ref={textRef}
+            className="text-brown mb-8 max-w-md "
           >
             Suspendisse eu ligula. Nullam tincidunt adipiscing enim. Nunc nonummy metus. Vestibulum ullamcorper mauris at ligula.
           </p>
@@ -39,15 +37,13 @@ const Experience: React.FC = () => {
           {/* Statistika */}
           <div className="flex flex-col sm:flex-row gap-6 text-brown font-semibold text-xl">
             <div
-              className="opacity-0"
-              ref={stat1Ref}
+              className=""
             >
               <p className="text-5xl mb-1">1000+</p>
               <p className="text-base font-normal">people healed</p>
             </div>
             <div
-              className="opacity-0"
-              ref={stat2Ref}
+              className=""
             >
               <p className="text-5xl mb-1">8</p>
               <p className="text-base font-normal">years of experience</p>
@@ -57,8 +53,7 @@ const Experience: React.FC = () => {
 
         {/* Sağ tərəf - Şəkil */}
         <div
-          className="md:w-2/5 opacity-0"
-          ref={imageRef}
+          className="md:w-2/5 "
         >
           <Image
             src="/images/experience-image.webp"

@@ -15,7 +15,7 @@
 }
 
 
-
+/* 
 @keyframes slideUp {
   from {
     transform: translateY(50px);
@@ -29,4 +29,4 @@
 
 .animate-slide-up {
   animation: slideUp 0.5s ease-out forwards;
-}
+} */

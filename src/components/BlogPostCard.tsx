@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import useScrollAnimation from '../hook/useScrollAnimation';
+// import useScrollAnimation from '../hook/useScrollAnimation';
 
 interface BlogCardProps {
   title: string;
@@ -9,14 +9,14 @@ interface BlogCardProps {
   imageSrc: string;
   delay: number;
 }
-
-const BlogPostCard: React.FC<BlogCardProps> = ({ title, description, imageSrc, delay }) => {
+                                                                          // delay
+const BlogPostCard: React.FC<BlogCardProps> = ({ title, description, imageSrc,  }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  useScrollAnimation(cardRef, delay);
+  // useScrollAnimation(cardRef, delay);
 
   return (
     <div
-      className="bg-[#f3e8ce] rounded-lg shadow-md overflow-hidden opacity-0 max-w-sm"
+      className="bg-[#f3e8ce] rounded-lg shadow-md overflow-hidden  max-w-sm"
       ref={cardRef}
     >
       <div className="relative w-full h-78">

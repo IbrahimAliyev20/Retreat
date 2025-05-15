@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import useScrollAnimation from "../../hook/useScrollAnimation";
+// import useScrollAnimation from "../../hook/useScrollAnimation";
 
 const AboutContactScroll: React.FC = () => {
   const retreats = React.useMemo(() => [
@@ -31,36 +31,34 @@ const AboutContactScroll: React.FC = () => {
     },
   ], []);
 
-  const stickyTitleRef = useRef<HTMLHeadingElement>(null);
-  const stickyTextRef = useRef<HTMLParagraphElement>(null);
-  const stickyButtonRef = useRef<HTMLButtonElement>(null);
-  const cardRefs = React.useMemo(() => retreats.map(() => React.createRef<HTMLDivElement>()), [retreats]);
+  // const stickyTitleRef = useRef<HTMLHeadingElement>(null);
+  // const stickyTextRef = useRef<HTMLParagraphElement>(null);
+  // const stickyButtonRef = useRef<HTMLButtonElement>(null);
+  // const cardRefs = React.useMemo(() => retreats.map(() => React.createRef<HTMLDivElement>()), [retreats]);
 
-  useScrollAnimation(stickyTitleRef, 0);
-  useScrollAnimation(stickyTextRef, 0.2);
-  useScrollAnimation(stickyButtonRef, 0.4);
+  // useScrollAnimation(stickyTitleRef, 0);
+  // useScrollAnimation(stickyTextRef, 0.2);
+  // useScrollAnimation(stickyButtonRef, 0.4);
 
-  useScrollAnimation(cardRefs[0], 0.6);
-  useScrollAnimation(cardRefs[1], 0.8);
-  useScrollAnimation(cardRefs[2], 1.0);
-  useScrollAnimation(cardRefs[3], 1.2);
+  // useScrollAnimation(cardRefs[0], 0.6);
+  // useScrollAnimation(cardRefs[1], 0.8);
+  // useScrollAnimation(cardRefs[2], 1.0);
+  // useScrollAnimation(cardRefs[3], 1.2);
 
   return (
     <section>
       <div className="container mx-auto flex flex-col md:flex-row gap-72">
         <div className="md:w-1/3 sticky top-16 self-start">
           <h2
-            className="text-3xl md:text-4xl font-semibold text-brown-800 mb-6 opacity-0"
-            ref={stickyTitleRef}
+            className="text-3xl md:text-4xl font-semibold text-brown-800 mb-6 "
           >
             Values we live by
           </h2>
-          <p className="bg-brown-600 mb-8 opacity-0" ref={stickyTextRef}>
+          <p className="bg-brown-600 mb-8 " >
             Suspendisse eu ligula. Nullam tincidunt adipiscing enim. Nunc nonummy.
           </p>
           <button
-            className="bg-[#493913] text-white px-7 py-2 rounded-full hover:bg-brown-700 transition opacity-0"
-            ref={stickyButtonRef}
+            className="bg-[#493913] text-white px-7 py-2 rounded-full hover:bg-brown-700 transition "
           >
             Contact us
           </button>
@@ -69,8 +67,7 @@ const AboutContactScroll: React.FC = () => {
           {retreats.map((retreat, index) => (
             <div
               key={index}
-              className="bg-[#f3e8ce] hover:bg-beige-200 rounded-3xl p-12 shadow-md text-center opacity-0"
-              ref={cardRefs[index]}
+              className="bg-[#f3e8ce] hover:bg-beige-200 rounded-3xl p-12 shadow-md text-center "
             >
               <div className="relative w-full h-48 mb-4">
                 <Image

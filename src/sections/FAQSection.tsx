@@ -1,20 +1,20 @@
 "use client";
 import { useState, useRef } from 'react';
-import useScrollAnimation from '../hook/useScrollAnimation';
+// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const FAQSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Location');
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const tabsRef = useRef<HTMLDivElement>(null);
-  const faqListRef = useRef<HTMLDivElement>(null);
+  // const titleRef = useRef<HTMLHeadingElement>(null);
+  // const textRef = useRef<HTMLParagraphElement>(null);
+  // const tabsRef = useRef<HTMLDivElement>(null);
+  // const faqListRef = useRef<HTMLDivElement>(null);
 
-  useScrollAnimation(titleRef, 0);    
-  useScrollAnimation(textRef, 0.2);   
-  useScrollAnimation(tabsRef, 0.4);   
-  useScrollAnimation(faqListRef, 0.6); 
+  // useScrollAnimation(titleRef, 0);    
+  // useScrollAnimation(textRef, 0.2);   
+  // useScrollAnimation(tabsRef, 0.4);   
+  // useScrollAnimation(faqListRef, 0.6); 
 
   const faqData = {
     Location: [
@@ -45,20 +45,17 @@ const FAQSection: React.FC = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <h2
-        className="text-4xl font-serif text-[#564418] text-center mb-4 opacity-0"
-        ref={titleRef}
+        className="text-4xl font-serif text-[#564418] text-center mb-4 "
       >
         Frequently asked questions
       </h2>
       <p
-        className="text-lg text-[#564418] text-center mb-8 opacity-0"
-        ref={textRef}
+        className="text-lg text-[#564418] text-center mb-8 "
       >
         Pellentesque habitant morbi tristique senectus.
       </p>
       <div
-        className="flex justify-center space-x-4 mb-8 opacity-0"
-        ref={tabsRef}
+        className="flex justify-center space-x-4 mb-8 "
       >
         {['Location', 'Retreat', 'General'].map((tab) => (
           <button
@@ -75,8 +72,7 @@ const FAQSection: React.FC = () => {
         ))}
       </div>
       <div
-        className="bg-[#f5ecd73a2e1f] rounded-xl p-6 opacity-0"
-        ref={faqListRef}
+        className="bg-[#f5ecd73a2e1f] rounded-xl p-6 "
       >
         {faqData[activeTab as keyof typeof faqData].map((faq, index) => (
           <div key={index} className="border-b border-[#564418] border-opacity-20 py-4">

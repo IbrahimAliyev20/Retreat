@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from 'react';
 import Image from 'next/image';
-import useScrollAnimation from '../hook/useScrollAnimation'; // Doğru yol
+// import useScrollAnimation from '../hook/useScrollAnimation'; // 
 
 const ContactForm: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -9,21 +9,21 @@ const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  useScrollAnimation(titleRef, 0);    
-  useScrollAnimation(textRef, 0.2);  
-  useScrollAnimation(formRef, 0.4);   
-  useScrollAnimation(contactRef, 0.6); 
+  // useScrollAnimation(titleRef, 0);    
+  // useScrollAnimation(textRef, 0.2);  
+  // useScrollAnimation(formRef, 0.4);   
+  // useScrollAnimation(contactRef, 0.6); 
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2
-        className="text-4xl font-serif text-[#3A2E1F] mb-4 opacity-0"
+        className="text-4xl font-serif text-[#3A2E1F] mb-4 "
         ref={titleRef}
       >
         Let&apos;s talk
       </h2>
       <p
-        className="text-lg text-[#3A2E1F] opacity-80 mb-8 opacity-0"
+        className="text-lg text-[#3A2E1F]  mb-8 "
         ref={textRef}
       >
         If you have any questions about retreat just let us know and we will be happy to help you.
@@ -31,7 +31,7 @@ const ContactForm: React.FC = () => {
       <div className="flex flex-col md:flex-row gap-50">
         {/* Form Section */}
         <div
-          className="bg-[#f5ecd7] rounded-xl p-6 md:w-1/2 opacity-0"
+          className="bg-[#f5ecd7] rounded-xl p-6 md:w-1/2 "
           ref={formRef}
         >
           <form className="space-y-4">
@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
 
         {/* Image and Contact Info Section */}
         <div
-          className="md:w-1/2 flex flex-col justify-between opacity-0"
+          className="md:w-1/2 flex flex-col justify-between "
           ref={contactRef}
         >
           <div className="w-120 h-90 relative rounded-xl overflow-hidden">

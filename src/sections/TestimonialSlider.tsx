@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { PrevArrow, NextArrow } from "@/components/SliderArrows";
 import Image from "next/image";
-import useScrollAnimation from "../hook/useScrollAnimation";
+// import useScrollAnimation from "../hook/useScrollAnimation";
 
 const TestimonialSlider: React.FC = () => {
   const settings = {
@@ -32,24 +32,22 @@ const TestimonialSlider: React.FC = () => {
     },
   ];
 
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  // const titleRef = useRef<HTMLHeadingElement>(null);
+  // const sliderRef = useRef<HTMLDivElement>(null);
 
-  useScrollAnimation(titleRef, 0);
-  useScrollAnimation(sliderRef, 0.2);
+  // useScrollAnimation(titleRef, 0);
+  // useScrollAnimation(sliderRef, 0.2);
 
   return (
     <section className="bg-[#fff9e9] px-4 md:px-8 lg:px-16">
       <div className="container mx-auto text-center">
         <h2
-          className="text-3xl md:text-4xl font-medium text-brown-800 mb-12 opacity-0"
-          ref={titleRef}
+          className="text-3xl md:text-4xl font-medium text-brown-800 mb-12 "
         >
           Don’t just take our word for it
         </h2>
         <div
-          className="bg-[#f5ecd7] max-w-2xl mx-auto py-8 rounded-xl opacity-0"
-          ref={sliderRef}
+          className="bg-[#f5ecd7] max-w-2xl mx-auto py-8 rounded-xl "
         >
           <Slider {...settings}>
             {testimonials.map((testimonial, index) => (

@@ -1,18 +1,18 @@
 "use client";
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import useScrollAnimation from '../hook/useScrollAnimation';
+// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const RetreatCard: React.FC = () => {
-  const cardRefs = [
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-  ];
+  // const cardRefs = [
+  //   useRef<HTMLDivElement>(null),
+  //   useRef<HTMLDivElement>(null),
+  //   useRef<HTMLDivElement>(null),
+  // ];
 
-  useScrollAnimation(cardRefs[0], 0);   
-  useScrollAnimation(cardRefs[1], 0.2); 
-  useScrollAnimation(cardRefs[2], 0.4); 
+  // useScrollAnimation(cardRefs[0], 0);   
+  // useScrollAnimation(cardRefs[1], 0.2); 
+  // useScrollAnimation(cardRefs[2], 0.4); 
 
   const cards = [
     {
@@ -61,8 +61,7 @@ const RetreatCard: React.FC = () => {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="min-h-screen flex items-center justify-center opacity-0"
-          ref={cardRefs[index]}
+          className="min-h-screen flex items-center justify-center "
         >
           <div className="container mx-auto flex flex-col md:flex-row  justify-between px-4 sm:px-6 lg:px-8">
             <div className="w-full md:w-1/3 text-left md:pr-8">

@@ -1,7 +1,7 @@
 "use client"
 import React, { useRef, useMemo } from "react"
 import Image from "next/image"
-import useScrollAnimation from "../hook/useScrollAnimation"
+// import useScrollAnimation from "../hook/useScrollAnimation"
 
 const RetreatScheduleSection: React.FC = () => {
   const retreats = useMemo(
@@ -31,41 +31,38 @@ const RetreatScheduleSection: React.FC = () => {
     [],
   ) 
 
-  const stickyTitleRef = useRef<HTMLHeadingElement>(null)
-  const stickyTextRef = useRef<HTMLParagraphElement>(null)
-  const stickyButtonRef = useRef<HTMLButtonElement>(null)
+  // const stickyTitleRef = useRef<HTMLHeadingElement>(null)
+  // const stickyTextRef = useRef<HTMLParagraphElement>(null)
+  // const stickyButtonRef = useRef<HTMLButtonElement>(null)
 
-  const cardRefs = useMemo(() => retreats.map(() => React.createRef<HTMLDivElement>()), [retreats])
+  // const cardRefs = useMemo(() => retreats.map(() => React.createRef<HTMLDivElement>()), [retreats])
 
-  useScrollAnimation(stickyTitleRef, 0)
-  useScrollAnimation(stickyTextRef, 0.2)
-  useScrollAnimation(stickyButtonRef, 0.4)
+  // useScrollAnimation(stickyTitleRef, 0)
+  // useScrollAnimation(stickyTextRef, 0.2)
+  // useScrollAnimation(stickyButtonRef, 0.4)
 
-  useScrollAnimation(cardRefs[0], 0.6)
-  useScrollAnimation(cardRefs[1], 0.8)
-  useScrollAnimation(cardRefs[2], 1.0)
+  // useScrollAnimation(cardRefs[0], 0.6)
+  // useScrollAnimation(cardRefs[1], 0.8)
+  // useScrollAnimation(cardRefs[2], 1.0)
 
   return (
     <section>
       <div className="container mx-auto flex flex-col md:flex-row gap-72">
         <div className="md:w-1/3 sticky top-16 self-start">
           <h2
-            className="text-3xl md:text-4xl font-semibold text-[#493913] mb-6 opacity-0"
-            ref={stickyTitleRef}
+            className="text-3xl md:text-4xl font-semibold text-[#493913] mb-6 "
             style={{ transition: "opacity 0.5s ease, transform 0.5s ease", transform: "translateY(20px)" }}
           >
             Upcoming retreats
           </h2>
           <p
-            className="text-[#493913] mb-8 opacity-0"
-            ref={stickyTextRef}
+            className="text-[#493913] mb-8 "
             style={{ transition: "opacity 0.5s ease, transform 0.5s ease", transform: "translateY(20px)" }}
           >
             Check our schedule and free spots, book the date and lets have fun!
           </p>
           <button
-            className="bg-[#493913] text-white px-7 py-2 rounded-full hover:bg-[#5e4a1a] transition opacity-0"
-            ref={stickyButtonRef}
+            className="bg-[#493913] text-white px-7 py-2 rounded-full hover:bg-[#5e4a1a] transition "
             style={{ transition: "opacity 0.5s ease, transform 0.5s ease", transform: "translateY(20px)" }}
           >
             See all retreats
@@ -75,8 +72,7 @@ const RetreatScheduleSection: React.FC = () => {
           {retreats.map((retreat, index) => (
             <div
               key={index}
-              className="bg-[#f3e8ce] hover:bg-[#efe3c0] rounded-3xl p-12 shadow-md opacity-0"
-              ref={cardRefs[index]}
+              className="bg-[#f3e8ce] hover:bg-[#efe3c0] rounded-3xl p-12 shadow-md "
               style={{ transition: "opacity 0.5s ease, transform 0.5s ease", transform: "translateY(20px)" }}
             >
               <h3 className="text-xl font-semibold text-[#493913] mb-2">{retreat.title}</h3>

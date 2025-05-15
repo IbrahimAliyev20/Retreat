@@ -18,12 +18,12 @@ const Carousel: React.FC = () => {
     {
       loop: true,
       dragFree: true,
-      align: 'start', // Slaydlari sola hizala
+      align: 'start',
     },
     [
       AutoScroll({
         playOnInit: true,
-        speed: 2, // Sürüşmə sürəti (dəyəri layihənizə uyğun tənzimləyin)
+        speed: 2,
         stopOnInteraction: true,
         stopOnMouseEnter: true,
         stopOnFocusIn: true,

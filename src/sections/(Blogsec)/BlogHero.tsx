@@ -1,13 +1,13 @@
 "use client";
 import React, { useRef } from 'react';
-import useScrollAnimation from '../../hook/useScrollAnimation';
+// import useScrollAnimation from '../../hook/useScrollAnimation';
 
 const BlogHero: React.FC = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
+  // const titleRef = useRef<HTMLHeadingElement>(null);
+  // const textRef = useRef<HTMLParagraphElement>(null);
 
-  useScrollAnimation(titleRef, 0);    
-  useScrollAnimation(textRef, 0.2);   
+  // useScrollAnimation(titleRef, 0);    
+  // useScrollAnimation(textRef, 0.2);   
 
   return (
     <div
@@ -15,14 +15,12 @@ const BlogHero: React.FC = () => {
 
       <div className="container mx-auto px-4 text-center z-10">
         <h1
-          className="text-6xl md:text-7xl font-serif custom-color mb-6 opacity-0"
-          ref={titleRef}
+          className="text-6xl md:text-7xl font-serif custom-color mb-6 "
         >
           Sharing knowledge
         </h1>
         <p
-          className="text-xl md:text-xl custom-color mb-8 opacity-0"
-          ref={textRef}
+          className="text-xl md:text-xl custom-color mb-8 "
         >
             Check our recent blog articles about yoga and diet.
         </p>
