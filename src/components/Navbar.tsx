@@ -17,7 +17,7 @@ const Navbar = () => {
             alt="Retreat You Logo"
             width={183}
             height={63}
-            className="object-contain"
+            className="object-contain filter invert"
           />
         </Link>
 

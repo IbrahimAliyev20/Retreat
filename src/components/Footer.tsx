@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
                   alt="logo"
                   width={178}
                   height={35}
+                  className="filter invert"
                 />
           </div>
           <p className="text-md mb-4">
