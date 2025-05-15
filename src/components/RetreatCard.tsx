@@ -1,18 +1,7 @@
 "use client";
-import React, { useRef } from 'react';
 import Image from 'next/image';
-// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const RetreatCard: React.FC = () => {
-  // const cardRefs = [
-  //   useRef<HTMLDivElement>(null),
-  //   useRef<HTMLDivElement>(null),
-  //   useRef<HTMLDivElement>(null),
-  // ];
-
-  // useScrollAnimation(cardRefs[0], 0);   
-  // useScrollAnimation(cardRefs[1], 0.2); 
-  // useScrollAnimation(cardRefs[2], 0.4); 
 
   const cards = [
     {

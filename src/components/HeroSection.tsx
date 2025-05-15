@@ -1,20 +1,7 @@
 "use client"
-import React, { useRef } from 'react';
 import Image from 'next/image';
-// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const HeroSection: React.FC = () => {
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const textRef = useRef<HTMLParagraphElement>(null);
-  // const buttonRef = useRef<HTMLButtonElement>(null);
-  // const mainImageRef = useRef<HTMLDivElement>(null);
-  // const secondaryImageRef = useRef<HTMLDivElement>(null);
-
-  // useScrollAnimation(titleRef);
-  // useScrollAnimation(textRef);
-  // useScrollAnimation(buttonRef);
-  // useScrollAnimation(mainImageRef);
-  // useScrollAnimation(secondaryImageRef);
 
   return (
     <div className="bg-cream min-h-screen flex items-center justify-center">

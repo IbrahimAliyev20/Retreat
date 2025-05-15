@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-// import useScrollAnimation from "../../hook/useScrollAnimation";
 
 const AboutContactScroll: React.FC = () => {
   const retreats = React.useMemo(() => [
@@ -31,19 +30,6 @@ const AboutContactScroll: React.FC = () => {
     },
   ], []);
 
-  // const stickyTitleRef = useRef<HTMLHeadingElement>(null);
-  // const stickyTextRef = useRef<HTMLParagraphElement>(null);
-  // const stickyButtonRef = useRef<HTMLButtonElement>(null);
-  // const cardRefs = React.useMemo(() => retreats.map(() => React.createRef<HTMLDivElement>()), [retreats]);
-
-  // useScrollAnimation(stickyTitleRef, 0);
-  // useScrollAnimation(stickyTextRef, 0.2);
-  // useScrollAnimation(stickyButtonRef, 0.4);
-
-  // useScrollAnimation(cardRefs[0], 0.6);
-  // useScrollAnimation(cardRefs[1], 0.8);
-  // useScrollAnimation(cardRefs[2], 1.0);
-  // useScrollAnimation(cardRefs[3], 1.2);
 
   return (
     <section>

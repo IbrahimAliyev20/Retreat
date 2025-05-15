@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from 'react';
+// import React, { useRef } from 'react';
 import Image from 'next/image';
 // import useScrollAnimation from '../hook/useScrollAnimation';
 

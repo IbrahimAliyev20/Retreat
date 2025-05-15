@@ -1,20 +1,10 @@
 "use client";
 import { useState, useRef } from 'react';
-// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const FAQSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Location');
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const textRef = useRef<HTMLParagraphElement>(null);
-  // const tabsRef = useRef<HTMLDivElement>(null);
-  // const faqListRef = useRef<HTMLDivElement>(null);
-
-  // useScrollAnimation(titleRef, 0);    
-  // useScrollAnimation(textRef, 0.2);   
-  // useScrollAnimation(tabsRef, 0.4);   
-  // useScrollAnimation(faqListRef, 0.6); 
 
   const faqData = {
     Location: [

@@ -1,13 +1,6 @@
 "use client";
-import React, { useRef } from 'react';
-// import useScrollAnimation from '../../hook/useScrollAnimation';
 
 const BlogHero: React.FC = () => {
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const textRef = useRef<HTMLParagraphElement>(null);
-
-  // useScrollAnimation(titleRef, 0);    
-  // useScrollAnimation(textRef, 0.2);   
 
   return (
     <div

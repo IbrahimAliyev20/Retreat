@@ -1,22 +1,8 @@
 "use client";
-import React, { useRef } from 'react';
 import Image from 'next/image';
 import { RiCheckDoubleFill } from "react-icons/ri";
-// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const YogaEscapeSection: React.FC = () => {
-  // const imageRef = useRef<HTMLDivElement>(null);
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const text1Ref = useRef<HTMLParagraphElement>(null);
-  // const text2Ref = useRef<HTMLParagraphElement>(null);
-  // const listRef = useRef<HTMLUListElement>(null);
-
-  // useScrollAnimation(imageRef, 0);  
-  // useScrollAnimation(titleRef, 0.2);  
-  // useScrollAnimation(text1Ref, 0.4);  
-  // useScrollAnimation(text2Ref, 0.6);  
-  // useScrollAnimation(listRef, 0.8);   
-
   return (
     <section>
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">

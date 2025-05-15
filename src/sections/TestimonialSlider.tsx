@@ -1,11 +1,10 @@
 "use client";
-import React, { useRef } from "react";
+// import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { PrevArrow, NextArrow } from "@/components/SliderArrows";
 import Image from "next/image";
-// import useScrollAnimation from "../hook/useScrollAnimation";
 
 const TestimonialSlider: React.FC = () => {
   const settings = {
@@ -32,11 +31,6 @@ const TestimonialSlider: React.FC = () => {
     },
   ];
 
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const sliderRef = useRef<HTMLDivElement>(null);
-
-  // useScrollAnimation(titleRef, 0);
-  // useScrollAnimation(sliderRef, 0.2);
 
   return (
     <section className="bg-[#fff9e9] px-4 md:px-8 lg:px-16">

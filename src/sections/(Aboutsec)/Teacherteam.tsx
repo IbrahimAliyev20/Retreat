@@ -1,21 +1,9 @@
 "use client";
-import React, { useRef } from "react";
 import Image from "next/image";
-// import useScrollAnimation from "../../hook/useScrollAnimation";
 import { team } from "../../constans/team";
 
 const Teacherteam: React.FC = () => {
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const textRef = useRef<HTMLParagraphElement>(null);
 
-  const memberRefs = React.useMemo(() => team.map(() => React.createRef<HTMLDivElement>()), []);
-
-  // useScrollAnimation(titleRef, 0);
-  // useScrollAnimation(textRef, 0.2);
-
-  // useScrollAnimation(memberRefs[0], 0.4);
-  // useScrollAnimation(memberRefs[1], 0.6);
-  // useScrollAnimation(memberRefs[2], 0.8);
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,7 +22,6 @@ const Teacherteam: React.FC = () => {
           <div
             key={index}
             className="flex flex-col items-center hover:scale-105 duration-300  transition-all group"
-            ref={memberRefs[index]}
           >
             <div className="w-full h-64 relative rounded-xl overflow-hidden">
               <Image
