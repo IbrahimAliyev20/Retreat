@@ -9,10 +9,10 @@ const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  useScrollAnimation(titleRef, 0);    // 0 saniye gecikme
-  useScrollAnimation(textRef, 0.2);   // 0.2 saniye gecikme
-  useScrollAnimation(formRef, 0.4);   // 0.4 saniye gecikme
-  useScrollAnimation(contactRef, 0.6); // 0.6 saniye gecikme
+  useScrollAnimation(titleRef, 0);    
+  useScrollAnimation(textRef, 0.2);  
+  useScrollAnimation(formRef, 0.4);   
+  useScrollAnimation(contactRef, 0.6); 
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
         className="text-4xl font-serif text-[#3A2E1F] mb-4 opacity-0"
         ref={titleRef}
       >
-        Let's talk
+        Let&apos;s talk
       </h2>
       <p
         className="text-lg text-[#3A2E1F] opacity-80 mb-8 opacity-0"

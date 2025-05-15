@@ -1,23 +1,24 @@
 "use client";
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import useScrollAnimation from '../hook/useScrollAnimation';
-import {  team } from '../constans/team';
+import React from "react";
+import Image from "next/image";
+import useScrollAnimation from "../hook/useScrollAnimation";
+import { team } from "../constans/team";
 
 const TeamCard: React.FC = () => {
-  const cardRefs = team.map(() => useRef<HTMLDivElement>(null));
+  const cardRefs = React.useMemo(() => team.map(() => React.createRef<HTMLDivElement>()), []);
 
-  cardRefs.forEach((ref, index) => {
-    useScrollAnimation(ref, index * 0.2); 
-  });
+  useScrollAnimation(cardRefs[0], 0 * 0.2);
+  useScrollAnimation(cardRefs[1], 1 * 0.2);
+  useScrollAnimation(cardRefs[2], 2 * 0.2);
+  useScrollAnimation(cardRefs[3], 3 * 0.2);
 
   return (
     <section>
       {team.map((member, index) => (
         <div
           key={index}
-          className="flex items-center justify-center opacity-0 transition-opacity duration-1000 ease-in-out"
           ref={cardRefs[index]}
+          className="flex items-center justify-center opacity-0 transition-opacity duration-1000 ease-in-out"
         >
           <div className="mb-10 bg-[#f5ecd7] md:w-[50%] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-5 rounded-lg shadow-md">
             <div className="w-full md:w-1/3 flex flex-col items-center">
@@ -48,7 +49,6 @@ const TeamCard: React.FC = () => {
                 )}
               </div>
             </div>
-
             <div className="w-full md:w-2/3 p-8 rounded-lg">
               <h3 className="text-4xl font-serif custom-color mb-2 transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
                 {member.name}

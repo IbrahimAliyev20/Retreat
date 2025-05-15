@@ -1,17 +1,21 @@
 "use client";
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import useScrollAnimation from '../../hook/useScrollAnimation';
-import {  team } from '../../constans/team';
+import React, { useRef } from "react";
+import Image from "next/image";
+import useScrollAnimation from "../../hook/useScrollAnimation";
+import { team } from "../../constans/team";
 
 const Teacherteam: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
-  const memberRefs = team.map(() => useRef<HTMLDivElement>(null));
+
+  const memberRefs = React.useMemo(() => team.map(() => React.createRef<HTMLDivElement>()), []);
 
   useScrollAnimation(titleRef, 0);
   useScrollAnimation(textRef, 0.2);
-  memberRefs.forEach((ref, index) => useScrollAnimation(ref, 0.4 + index * 0.2));
+
+  useScrollAnimation(memberRefs[0], 0.4);
+  useScrollAnimation(memberRefs[1], 0.6);
+  useScrollAnimation(memberRefs[2], 0.8);
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +49,6 @@ const Teacherteam: React.FC = () => {
             </div>
             <h3 className="text-xl font-medium custom-color mt-4">{member.name}</h3>
             <p className="custom-color opacity-80 mb-4">{member.role}</p>
-          
           </div>
         ))}
       </div>

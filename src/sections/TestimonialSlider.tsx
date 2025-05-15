@@ -1,11 +1,11 @@
 "use client";
-import React, { useRef } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { PrevArrow, NextArrow } from '@/components/SliderArrows';
-import Image from 'next/image';
-import useScrollAnimation from '../hook/useScrollAnimation';
+import React, { useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { PrevArrow, NextArrow } from "@/components/SliderArrows";
+import Image from "next/image";
+import useScrollAnimation from "../hook/useScrollAnimation";
 
 const TestimonialSlider: React.FC = () => {
   const settings = {
@@ -21,22 +21,22 @@ const TestimonialSlider: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Kelly Kapor',
-      text: 'What an experience! From the moment I entered Retreat You I felt in peace. Daily yoga, exercises and great diet really helped me to disconnect.',
-      image: '/images/TestimonialSlider.webp',
+      name: "Kelly Kapor",
+      text: "What an experience! From the moment I entered Retreat You I felt in peace. Daily yoga, exercises and great diet really helped me to disconnect.",
+      image: "/images/TestimonialSlider.webp",
     },
     {
-      name: 'Sarah Johnson',
-      text: 'The retreat was a game-changer for me. The serene environment and guided sessions allowed me to reconnect with myself and find inner calm.',
-      image: '/images/TestimonialSlider.webp',
+      name: "Sarah Johnson",
+      text: "The retreat was a game-changer for me. The serene environment and guided sessions allowed me to reconnect with myself and find inner calm.",
+      image: "/images/TestimonialSlider.webp",
     },
   ];
 
   const titleRef = useRef<HTMLHeadingElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  useScrollAnimation(titleRef, 0);   
-  useScrollAnimation(sliderRef, 0.2); 
+  useScrollAnimation(titleRef, 0);
+  useScrollAnimation(sliderRef, 0.2);
 
   return (
     <section className="bg-[#fff9e9] px-4 md:px-8 lg:px-16">
@@ -55,11 +55,15 @@ const TestimonialSlider: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="px-4">
                 <div className="bg-beige-200 rounded-3xl p-8 flex items-center gap-6">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-40 h-40 rounded-full object-cover"
-                  />
+                  <div className="relative w-140 h-40">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
+                  </div>
                   <div className="text-left">
                     <div className="flex gap-1 mb-2">
                       <Image

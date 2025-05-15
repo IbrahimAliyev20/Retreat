@@ -30,7 +30,7 @@ const JoinUsSection: React.FC = () => {
             className="text-lg text-[#F5E8C7] opacity-80 mb-6 opacity-0"
             ref={textRef}
           >
-            Let's disconnect and enjoy the power of nature improving your health.
+            Let&apos;s disconnect and enjoy the power of nature improving your health.
           </p>
           <button
             className="bg-[#F5E8C7] text-[#3A2E1F] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6 opacity-0"

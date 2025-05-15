@@ -24,7 +24,7 @@ const RetreatHero: React.FC = () => {
           className="text-xl md:text-2xl text-[#3A2E1F] mb-8 opacity-0"
           ref={textRef}
         >
-          Check our schedule and free spots, book the date and let's have fun!
+          Check our schedule and free spots, book the date and let&apos;s have fun!
         </p>
       </div>
     </div>

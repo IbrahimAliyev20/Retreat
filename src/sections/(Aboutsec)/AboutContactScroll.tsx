@@ -1,49 +1,53 @@
 "use client";
-import React, { useRef } from 'react';
-import useScrollAnimation from '../../hook/useScrollAnimation';
+import React, { useRef } from "react";
+import Image from "next/image";
+import useScrollAnimation from "../../hook/useScrollAnimation";
 
 const AboutContactScroll: React.FC = () => {
-  const retreats = [
+  const retreats = React.useMemo(() => [
     {
-      title: 'Equality and understanding',
-      image: '/images/aboutscroll1.jpg',
+      title: "Equality and understanding",
+      image: "/images/aboutscroll1.jpg",
       description:
-        'Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae tortor. Maecenas ullamcorper, dui et placerat feugiat',
+        "Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae tortor. Maecenas ullamcorper, dui et placerat feugiat",
     },
     {
-      title: 'Dedication and experience',
-      image: '/images/JoinUsSection.jpg',
+      title: "Dedication and experience",
+      image: "/images/JoinUsSection.jpg",
       description:
-        'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis faucibus accumsan odio.',
+        "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis faucibus accumsan odio.",
     },
     {
-      title: 'You are what you eat',
-      image: '/images/aboutscroll2.jpg',
+      title: "You are what you eat",
+      image: "/images/aboutscroll2.jpg",
       description:
-        'Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.',
+        "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
     },
     {
-      title: 'YSustainable living',
-      image: '/images/aboutscroll3.jpg',
+      title: "Sustainable living",
+      image: "/images/aboutscroll3.jpg",
       description:
-        'Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.',
+        "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
     },
-  ];
+  ], []);
 
   const stickyTitleRef = useRef<HTMLHeadingElement>(null);
   const stickyTextRef = useRef<HTMLParagraphElement>(null);
   const stickyButtonRef = useRef<HTMLButtonElement>(null);
-  const cardRefs = retreats.map(() => useRef<HTMLDivElement>(null));
+  const cardRefs = React.useMemo(() => retreats.map(() => React.createRef<HTMLDivElement>()), [retreats]);
 
-  useScrollAnimation(stickyTitleRef, 0);    
-  useScrollAnimation(stickyTextRef, 0.2); 
-  useScrollAnimation(stickyButtonRef, 0.4); 
-  cardRefs.forEach((ref, index) => useScrollAnimation(ref, 0.6 + index * 0.2));
+  useScrollAnimation(stickyTitleRef, 0);
+  useScrollAnimation(stickyTextRef, 0.2);
+  useScrollAnimation(stickyButtonRef, 0.4);
+
+  useScrollAnimation(cardRefs[0], 0.6);
+  useScrollAnimation(cardRefs[1], 0.8);
+  useScrollAnimation(cardRefs[2], 1.0);
+  useScrollAnimation(cardRefs[3], 1.2);
 
   return (
     <section>
       <div className="container mx-auto flex flex-col md:flex-row gap-72">
-        {/* Left Sticky Section */}
         <div className="md:w-1/3 sticky top-16 self-start">
           <h2
             className="text-3xl md:text-4xl font-semibold text-brown-800 mb-6 opacity-0"
@@ -51,10 +55,7 @@ const AboutContactScroll: React.FC = () => {
           >
             Values we live by
           </h2>
-          <p
-            className="bg-brown-600 mb-8 opacity-0"
-            ref={stickyTextRef}
-          >
+          <p className="bg-brown-600 mb-8 opacity-0" ref={stickyTextRef}>
             Suspendisse eu ligula. Nullam tincidunt adipiscing enim. Nunc nonummy.
           </p>
           <button
@@ -64,8 +65,6 @@ const AboutContactScroll: React.FC = () => {
             Contact us
           </button>
         </div>
-
-        {/* Right Scrollable Cards */}
         <div className="md:w-2/5 space-y-12">
           {retreats.map((retreat, index) => (
             <div
@@ -73,14 +72,16 @@ const AboutContactScroll: React.FC = () => {
               className="bg-[#f3e8ce] hover:bg-beige-200 rounded-3xl p-12 shadow-md text-center opacity-0"
               ref={cardRefs[index]}
             >
-              <img
-                src={retreat.image}
-                alt={retreat.title}
-                className="w-full h-48 object-cover rounded-2xl mb-4"
-              />
-              <h3 className="text-3xl font-semibold text-brown-800 mb-2">
-                {retreat.title}
-              </h3>
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src={retreat.image}
+                  alt={retreat.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-2xl"
+                />
+              </div>
+              <h3 className="text-3xl font-semibold text-brown-800 mb-2">{retreat.title}</h3>
               <p className="text-lg bg-brown-600 mb-4">{retreat.description}</p>
             </div>
           ))}

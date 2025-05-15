@@ -1,17 +1,25 @@
 "use client";
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import useScrollAnimation from '../hook/useScrollAnimation';
-import { team, TeamMember } from '../constans/team'; 
+import React, { useRef } from "react";
+import Image from "next/image";
+import useScrollAnimation from "../hook/useScrollAnimation";
+import { team, TeamMember } from "../constans/team";
 
 const TeamIntroSection: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
-  const memberRefs = team.map(() => useRef<HTMLDivElement>(null));
+  const infoCardRef = useRef<HTMLDivElement>(null);
+
+  const memberRefs = React.useMemo(() => team.map(() => React.createRef<HTMLDivElement>()), []);
 
   useScrollAnimation(titleRef, 0);
   useScrollAnimation(textRef, 0.2);
-  memberRefs.forEach((ref, index) => useScrollAnimation(ref, 0.4 + index * 0.2));
+
+  useScrollAnimation(memberRefs[0], 0.4);
+  useScrollAnimation(memberRefs[1], 0.6);
+  useScrollAnimation(memberRefs[2], 0.8);
+  useScrollAnimation(memberRefs[3], 1.0);
+
+  useScrollAnimation(infoCardRef, 1.2);
 
   return (
     <div className="custom-color-bg py-16">
@@ -48,11 +56,7 @@ const TeamIntroSection: React.FC = () => {
               <p className="text-[#F5E8C7] opacity-80">{member.role}</p>
             </div>
           ))}
-          {/* Info Card */}
-          <div
-            className="bg-[#625026] rounded-xl p-6 flex flex-col justify-between"
-            ref={memberRefs[team.length]} 
-          >
+          <div className="bg-[#625026] rounded-xl p-6 flex flex-col justify-between opacity-0" ref={infoCardRef}>
             <p className="text-[#F5E8C7] text-lg">
               Retreat You gathered the best specialist in the industry to offer you the best experience. Our team consists of 10 dedicated members.
             </p>

@@ -1,30 +1,32 @@
 "use client";
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import type React from "react";
 
-const useScrollAnimation = (ref: React.RefObject<HTMLElement | null>, delay: number = 0.1) => {
+const useScrollAnimation = (ref: React.RefObject<HTMLElement | null> | null, delay = 0.1) => {
   useEffect(() => {
+    if (!ref || !ref.current) return;
+
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
-            el.style.animationDelay = `${delay}s`;
-            el.classList.add('animate-slide-up');
-            observer.unobserve(el); 
+            setTimeout(() => {
+              el.style.opacity = "1";
+              el.style.transform = "translateY(0)";
+            }, delay * 1000);
+            observer.unobserve(el);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(currentRef);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.unobserve(currentRef);
     };
   }, [ref, delay]);
 };
