@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from 'react';
+import { useState, } from 'react';
 
 const FAQSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Location');

@@ -1,25 +1,8 @@
 "use client";
-// import React, { useRef } from "react";
 import Image from "next/image";
-// import useScrollAnimation from "../hook/useScrollAnimation";
 import { team, TeamMember } from "../constans/team";
 
 const TeamIntroSection: React.FC = () => {
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const textRef = useRef<HTMLParagraphElement>(null);
-  // const infoCardRef = useRef<HTMLDivElement>(null);
-
-  // const memberRefs = React.useMemo(() => team.map(() => React.createRef<HTMLDivElement>()), []);
-
-  // useScrollAnimation(titleRef, 0);
-  // useScrollAnimation(textRef, 0.2);
-
-  // useScrollAnimation(memberRefs[0], 0.4);
-  // useScrollAnimation(memberRefs[1], 0.6);
-  // useScrollAnimation(memberRefs[2], 0.8);
-  // useScrollAnimation(memberRefs[3], 1.0);
-
-  // useScrollAnimation(infoCardRef, 1.2);
 
   return (
     <div className="custom-color-bg py-16">

@@ -1,50 +1,32 @@
 "use client"
-import React, { useRef, useMemo } from "react"
+import React from "react"
 import Image from "next/image"
-// import useScrollAnimation from "../hook/useScrollAnimation"
+
+const retreats = [
+  {
+    title: "5 day detox programme",
+    date: "May 10, 2023 - July 15, 2023",
+    image: "/images/scrollsec1.jpg",
+    description:
+      "Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae tortor. Maecenas ullamcorper, dui et placerat feugiat",
+  },
+  {
+    title: "7 day yoga retreat",
+    date: "June 1, 2023 - June 8, 2023",
+    image: "/images/scrollsec2.jpg",
+    description:
+      "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis faucibus accumsan odio.",
+  },
+  {
+    title: "10 day wellness escape",
+    date: "August 5, 2023 - August 15, 2023",
+    image: "/images/scrollsec3.jpg",
+    description:
+      "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+  },
+]
 
 const RetreatScheduleSection: React.FC = () => {
-  const retreats = useMemo(
-    () => [
-      {
-        title: "5 day detox programme",
-        date: "May 10, 2023 - July 15, 2023",
-        image: "/images/scrollsec1.jpg",
-        description:
-          "Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae tortor. Maecenas ullamcorper, dui et placerat feugiat",
-      },
-      {
-        title: "7 day yoga retreat",
-        date: "June 1, 2023 - June 8, 2023",
-        image: "/images/scrollsec2.jpg",
-        description:
-          "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis faucibus accumsan odio.",
-      },
-      {
-        title: "10 day wellness escape",
-        date: "August 5, 2023 - August 15, 2023",
-        image: "/images/scrollsec3.jpg",
-        description:
-          "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-      },
-    ],
-    [],
-  ) 
-
-  // const stickyTitleRef = useRef<HTMLHeadingElement>(null)
-  // const stickyTextRef = useRef<HTMLParagraphElement>(null)
-  // const stickyButtonRef = useRef<HTMLButtonElement>(null)
-
-  // const cardRefs = useMemo(() => retreats.map(() => React.createRef<HTMLDivElement>()), [retreats])
-
-  // useScrollAnimation(stickyTitleRef, 0)
-  // useScrollAnimation(stickyTextRef, 0.2)
-  // useScrollAnimation(stickyButtonRef, 0.4)
-
-  // useScrollAnimation(cardRefs[0], 0.6)
-  // useScrollAnimation(cardRefs[1], 0.8)
-  // useScrollAnimation(cardRefs[2], 1.0)
-
   return (
     <section>
       <div className="container mx-auto flex flex-col md:flex-row gap-72">

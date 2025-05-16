@@ -1,22 +1,7 @@
 "use client";
-import React, { useRef } from 'react';
 import Image from 'next/image';
-// import useScrollAnimation from '../hook/useScrollAnimation';
 
 const Aboutsec: React.FC = () => {
-  // const iconRef = useRef<HTMLDivElement>(null);
-  // const titleRef = useRef<HTMLHeadingElement>(null);
-  // const card1Ref = useRef<HTMLDivElement>(null);
-  // const card2Ref = useRef<HTMLDivElement>(null);
-  // const card3Ref = useRef<HTMLDivElement>(null);
-  // const buttonRef = useRef<HTMLButtonElement>(null);
-
-  // useScrollAnimation(iconRef, 0);   
-  // useScrollAnimation(titleRef, 0.2);  
-  // useScrollAnimation(card1Ref, 0.4);  
-  // useScrollAnimation(card2Ref, 0.6);  
-  // useScrollAnimation(card3Ref, 0.8);  
-  // useScrollAnimation(buttonRef, 1.0); 
   
   return (
     <section className="bg-cream py-20">

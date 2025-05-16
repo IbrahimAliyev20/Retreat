@@ -1,36 +1,35 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 
+const retreats = [
+  {
+    title: "Equality and understanding",
+    image: "/images/aboutscroll1.jpg",
+    description:
+      "Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae tortor. Maecenas ullamcorper, dui et placerat feugiat",
+  },
+  {
+    title: "Dedication and experience",
+    image: "/images/JoinUsSection.jpg",
+    description:
+      "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis faucibus accumsan odio.",
+  },
+  {
+    title: "You are what you eat",
+    image: "/images/aboutscroll2.jpg",
+    description:
+      "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+  },
+  {
+    title: "Sustainable living",
+    image: "/images/aboutscroll3.jpg",
+    description:
+      "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+  },
+];
+
 const AboutContactScroll: React.FC = () => {
-  const retreats = React.useMemo(() => [
-    {
-      title: "Equality and understanding",
-      image: "/images/aboutscroll1.jpg",
-      description:
-        "Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae tortor. Maecenas ullamcorper, dui et placerat feugiat",
-    },
-    {
-      title: "Dedication and experience",
-      image: "/images/JoinUsSection.jpg",
-      description:
-        "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis faucibus accumsan odio.",
-    },
-    {
-      title: "You are what you eat",
-      image: "/images/aboutscroll2.jpg",
-      description:
-        "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-    },
-    {
-      title: "Sustainable living",
-      image: "/images/aboutscroll3.jpg",
-      description:
-        "Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-    },
-  ], []);
-
-
   return (
     <section>
       <div className="container mx-auto flex flex-col md:flex-row gap-72">

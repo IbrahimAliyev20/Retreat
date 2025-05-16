@@ -1,23 +1,7 @@
 "use client"
 import type React from "react"
-// import { useRef } from "react"
-// import useScrollAnimation from "../../hook/useScrollAnimation"
 
 const AboutHero: React.FC = () => {
-  // const heroTitleRef = useRef<HTMLHeadingElement>(null)
-  // const heroTextRef = useRef<HTMLParagraphElement>(null)
-  // const statRef1 = useRef<HTMLDivElement>(null)
-  // const statRef2 = useRef<HTMLDivElement>(null)
-  // const statRef3 = useRef<HTMLDivElement>(null)
-  // const statRef4 = useRef<HTMLDivElement>(null)
-
-  // useScrollAnimation(heroTitleRef, 0)
-  // useScrollAnimation(heroTextRef, 0.2)
-  // useScrollAnimation(statRef1, 0.4)
-  // useScrollAnimation(statRef2, 0.6)
-  // useScrollAnimation(statRef3, 0.8)
-  // useScrollAnimation(statRef4, 1.0)
-
   return (
     <div>
       <div
