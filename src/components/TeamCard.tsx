@@ -13,7 +13,7 @@ const TeamCard: React.FC = async () => {
           key={index}
           className="flex items-center justify-center  transition-opacity duration-1000 ease-in-out"
         >
-          <div className="mb-10 bg-color-yellow md:w-[50%] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-5 rounded-lg shadow-md">
+          <div className="mb-10 bg-color-yellow md:w-[60%] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-5 rounded-lg shadow-md">
             <div className="w-full md:w-1/3 flex flex-col items-center">
               <div className="relative w-48 h-48 mb-6">
                 <Image

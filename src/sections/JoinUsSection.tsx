@@ -25,7 +25,7 @@ const JoinUsSection =    () => {
             See schedule
           </Link>
           <div
-            className="flex items-center "
+            className="flex items-center mt-5"
           >
             <div className="flex -space-x-2 mr-3">
               <div className="w-8 h-8 rounded-full">
