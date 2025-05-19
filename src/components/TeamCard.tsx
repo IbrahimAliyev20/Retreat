@@ -1,9 +1,10 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import { team } from "../constans/team";
+import { getTeams } from "@/lib/teams";
 
-const TeamCard: React.FC = () => {
+const TeamCard: React.FC = async () => {
+  const data = await getTeams()
+  const team = data
 
   return (
     <section>
@@ -24,29 +25,28 @@ const TeamCard: React.FC = () => {
                 />
               </div>
               <div className="flex space-x-4">
-                {member.social.instagram && (
-                  <a href={member.social.instagram} target="_blank" rel="noopener noreferrer">
+             
+                  <a href="#" target="_blank" rel="noopener noreferrer">
                     <span className="cursor-pointer text-2xl hover:text-blue-500 transition-colors duration-300">📷</span>
                   </a>
-                )}
-                {member.social.twitter && (
-                  <a href={member.social.twitter} target="_blank" rel="noopener noreferrer">
+               
+                  <a href="#" target="_blank" rel="noopener noreferrer">
                     <span className="cursor-pointer text-2xl hover:text-blue-500 transition-colors duration-300">🐦</span>
                   </a>
-                )}
-                {member.social.youtube && (
-                  <a href={member.social.youtube} target="_blank" rel="noopener noreferrer">
+          
+               
+                  <a href="#" target="_blank" rel="noopener noreferrer">
                     <span className="cursor-pointer text-2xl hover:text-blue-500 transition-colors duration-300">🎥</span>
                   </a>
-                )}
+            
               </div>
             </div>
             <div className="w-full md:w-2/3 p-8 rounded-lg">
               <h3 className="text-4xl font-serif custom-color mb-2 transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
                 {member.name}
               </h3>
-              <p className="text-xl custom-color opacity-80 mb-4">{member.role}</p>
-              <p className="custom-color opacity-80 mb-6">{member.description}</p>
+              <p className="text-xl custom-color opacity-80 mb-4">{member.profession}</p>
+              <p className="custom-color opacity-80 mb-6">ssss</p>
               <button className="custom-color border-1 py-2 px-6 rounded-full hover:bg-opacity-90 transition-transform duration-300 hover:scale-105">
                 Read More
               </button>

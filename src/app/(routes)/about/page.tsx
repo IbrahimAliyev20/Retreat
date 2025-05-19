@@ -1,13 +1,16 @@
 import ContactForm from '@/components/ContactForm'
+import { getFaq } from '@/lib/faq'
 import AboutContactScroll from '@/sections/(Aboutsec)/AboutContactScroll'
 import AboutHero from '@/sections/(Aboutsec)/AboutHero'
 import Teacherteam from '@/sections/(Aboutsec)/Teacherteam'
 import Experience from '@/sections/Experience'
-// import FAQSection from '@/sections/FAQSection'
+import FAQSection from '@/sections/FAQSection'
 import JoinUsSection from '@/sections/JoinUsSection'
 import React from 'react'
 
-const Aboutpage = () => {
+const Aboutpage = async () => {
+    const faqs = await getFaq()
+  
   return (
     <div>
       <div>
@@ -24,7 +27,7 @@ const Aboutpage = () => {
         <Teacherteam />
       </div>
       <div className='py-26'>
-        {/* <FAQSection /> */}
+        <FAQSection faqs ={faqs}/>
       </div>
       <div className='py-26'>
         <ContactForm />

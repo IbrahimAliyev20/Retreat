@@ -4,8 +4,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { PrevArrow, NextArrow } from "@/components/SliderArrows";
 import Image from "next/image";
+import { CommentsType } from "@/types/type";
 
-const TestimonialSlider: React.FC = () => {
+  interface Props {
+  comment: CommentsType[];
+}
+const TestimonialSlider: React.FC<Props> = ({ comment }) => {
+
   const settings = {
     dots: false,
     infinite: true,
@@ -17,18 +22,6 @@ const TestimonialSlider: React.FC = () => {
     nextArrow: <NextArrow />,
   };
 
-  const testimonials = [
-    {
-      name: "Kelly Kapor",
-      text: "What an experience! From the moment I entered Retreat You I felt in peace. Daily yoga, exercises and great diet really helped me to disconnect.",
-      image: "/images/TestimonialSlider.webp",
-    },
-    {
-      name: "Sarah Johnson",
-      text: "The retreat was a game-changer for me. The serene environment and guided sessions allowed me to reconnect with myself and find inner calm.",
-      image: "/images/TestimonialSlider.webp",
-    },
-  ];
 
 
   return (
@@ -43,13 +36,13 @@ const TestimonialSlider: React.FC = () => {
           className="bg-color-yellow max-w-2xl mx-auto py-8 rounded-xl "
         >
           <Slider {...settings}>
-            {testimonials.map((testimonial, index) => (
+            {comment.map((testimonial, index) => (
               <div key={index} className="px-4">
                 <div className="bg-beige-200 rounded-3xl p-8 flex items-center gap-6">
                   <div className="relative w-140 h-40">
                     <Image
                       src={testimonial.image}
-                      alt={testimonial.name}
+                      alt={testimonial.author}
                       layout="fill"
                       objectFit="cover"
                       className="rounded-full"
@@ -65,8 +58,8 @@ const TestimonialSlider: React.FC = () => {
                         className="mb-4"
                       />
                     </div>
-                    <p className="text-brown-600 mb-4 text-xl">“{testimonial.text}”</p>
-                    <p className="text-brown-600 font-medium">{testimonial.name}</p>
+                    <p className="text-brown-600 mb-4 text-xl">“{testimonial.description}”</p>
+                    <p className="text-brown-600 font-medium">{testimonial.author}</p>
                   </div>
                 </div>
               </div>

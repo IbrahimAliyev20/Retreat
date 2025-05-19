@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
+import Link from "next/link"
 
 const Footer: React.FC = () => {
   return (
@@ -30,18 +31,18 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-4">Links</h3>
             <ul className="text- space-y-2">
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">About</a></li>
-              <li><a href="#" className="hover:underline">Contact</a></li>
-              <li><a href="#" className="hover:underline">Blog</a></li>
+              <li><Link href="/" className="hover:underline">Home</Link></li>
+              <li><Link href="/about" className="hover:underline">About</Link></li>
+              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+              <li><Link href="/blog" className="hover:underline">Blog</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-4">&nbsp;</h3>
             <ul className="text-md space-y-2">
-              <li><a href="#" className="hover:underline">Retreats</a></li>
-              <li><a href="#" className="hover:underline">Legal</a></li>
-              <li><a href="#" className="hover:underline">Team</a></li>
+              <li><Link href="/retreats" className="hover:underline">Retreats</Link></li>
+              <li><Link href="/legal" className="hover:underline">Legal</Link></li>
+              <li><Link href="/team" className="hover:underline">Team</Link></li>
             </ul>
           </div>
         </div>
@@ -83,12 +84,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-8 pt-8 border-t border-[#4A3C31]/20 flex flex-col md:flex-row justify-between text-md">
-        <p>
-          Template designed by <a href="#" className="underline">Wavesdesign</a>, powered by no-code <a href="#" className="underline">Webflow</a>
-        </p>
-        <a href="#" className="underline mt-4 md:mt-0">See all templates</a>
-      </div>
+   
     </footer>
   )
 }

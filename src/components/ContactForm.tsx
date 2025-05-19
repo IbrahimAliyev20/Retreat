@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ContactForm: React.FC = async  () => {
     const data = await getContact()
 
-    const contact = data[0]
+    const contact = data
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

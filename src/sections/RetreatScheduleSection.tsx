@@ -1,6 +1,6 @@
-"use client"
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 const retreats = [
   {
@@ -43,12 +43,13 @@ const RetreatScheduleSection: React.FC = () => {
           >
             Check our schedule and free spots, book the date and lets have fun!
           </p>
-          <button
+          <Link 
+            href="/retreats"
             className="bg-[#2e826a] text-white px-7 py-2 rounded-full hover:bg-[#5e4a1a] transition "
             style={{ transition: "opacity 0.5s ease, transform 0.5s ease", transform: "translateY(20px)" }}
           >
             See all retreats
-          </button>
+          </Link>
         </div>
         <div className="md:w-2/5 space-y-12">
           {retreats.map((retreat, index) => (

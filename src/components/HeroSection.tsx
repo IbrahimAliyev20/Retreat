@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HeroSection: React.FC = () => {
 
@@ -12,20 +13,21 @@ const HeroSection: React.FC = () => {
           >
             Yoga and
             <br />
-            detox retreat
+            detox FitVibe
           </h1>
           <p
             className="text-lg text-brown mb-8 "
           >
-            Retreat You offers a holistic retreat in Thailand to
+            FitVibe You offers a holistic retreat in Thailand to
             <br />
             disconnect from the hustle of everyday world.
           </p>
-          <button
+          <Link
             className="bg-[#2e826a] text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition "
-          >
+           href="/retreats"
+           >
             See schedule
-          </button>
+          </Link>
         </div>
 
         <div className="w-full md:w-1/2 relative mt-10 md:mt-0 pl-0 md:pl-34">

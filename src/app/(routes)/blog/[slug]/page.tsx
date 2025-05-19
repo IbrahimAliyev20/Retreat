@@ -1,9 +1,22 @@
-import React from 'react'
+import BlogSingle from '@/sections/(Blogsec)/Blogsinglepage';
+import React from 'react';
 
-const BlogPage = () => {
-  return (
-    <div>BlogPage</div>
-  )
+interface BlogPageProps {
+  params: {
+    slug: string;
+  };
 }
 
-export default BlogPage
+const Blogpage = ({ params }: BlogPageProps) => {
+  return (
+    <div>
+      <BlogSingle params={params} />
+    </div>
+  );
+};
+
+export default Blogpage;
+
+export async function generateStaticParams() {
+  return [{ slug: 'nutrition-tips-for-yogis' }];
+}

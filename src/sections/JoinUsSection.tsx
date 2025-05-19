@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const JoinUsSection =    () => {
 
@@ -18,11 +19,11 @@ const JoinUsSection =    () => {
           >
             Let&apos;s disconnect and enjoy the power of nature improving your health.
           </p>
-          <button
+          <Link href="/retreats"
             className="bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
           >
             See schedule
-          </button>
+          </Link>
           <div
             className="flex items-center "
           >

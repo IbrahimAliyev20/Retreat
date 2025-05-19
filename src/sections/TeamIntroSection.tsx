@@ -1,8 +1,11 @@
-"use client";
 import Image from "next/image";
-import { team, TeamMember } from "../constans/team";
+import { getTeams } from "@/lib/teams";
+import Link from "next/link";
 
-const TeamIntroSection: React.FC = () => {
+const TeamIntroSection: React.FC = async  () => {
+    const data = await getTeams()
+
+    const teachers = data
 
   return (
     <div className="bg-color-yellow  py-16">
@@ -18,7 +21,7 @@ const TeamIntroSection: React.FC = () => {
           We are dedicated to give you the best experience.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {team.map((member: TeamMember, index: number) => (
+          {teachers.map((member, index) => (
             <div
               key={index}
               className="flex flex-col items-center hover:scale-105 duration-300 "
@@ -33,16 +36,16 @@ const TeamIntroSection: React.FC = () => {
                 />
               </div>
               <h3 className="text-xl font-medium custom-color mt-4">{member.name}</h3>
-              <p className="custom-color opacity-80">{member.role}</p>
+              <p className="custom-color opacity-80">{member.profession}</p>
             </div>
           ))}
           <div className="bg-color-yellow rounded-xl p-6 flex flex-col justify-between " >
             <p className="custom-color text-lg">
               Retreat You gathered the best specialist in the industry to offer you the best experience. Our team consists of 10 dedicated members.
             </p>
-            <button className="self-start bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition">
+            <Link href="/team" className="self-start bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition">
               Meet all
-            </button>
+            </Link>
           </div>
         </div>
       </div>

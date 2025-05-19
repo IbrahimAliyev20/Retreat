@@ -1,10 +1,12 @@
 import RetreatCard from '@/components/RetreatCard'
+import { getFaq } from '@/lib/faq'
 import Teacherteam from '@/sections/(Aboutsec)/Teacherteam'
 import RetreatHero from '@/sections/(Retreatsec)/RetreatHero'
-// import FAQSection from '@/sections/FAQSection'
+import FAQSection from '@/sections/FAQSection'
 import React from 'react'
 
-const RetreatsPage = () => {
+const RetreatsPage =async () => {
+    const faqs = await getFaq()
   return (
     <div>
       <div >
@@ -17,7 +19,7 @@ const RetreatsPage = () => {
       <Teacherteam />
       </div>
       <div className='py-16'>
-      {/* <FAQSection /> */}
+        <FAQSection faqs ={faqs}/>
       </div>
     </div>
   )

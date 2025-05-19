@@ -1,16 +1,20 @@
 
 import Carousel from "@/components/Carusel";
 import HeroSection from "@/components/HeroSection";
+import { getComments } from "@/lib/comments";
+import { getFaq } from "@/lib/faq";
 import Aboutsec from "@/sections/Aboutsec";
 import Experience from "@/sections/Experience";
-// import FAQSection from "@/sections/FAQSection";
+import FAQSection from "@/sections/FAQSection";
 import JoinUsSection from "@/sections/JoinUsSection";
 import RetreatScheduleSection from "@/sections/RetreatScheduleSection";
 import TeamIntroSection from "@/sections/TeamIntroSection";
 import TestimonialSlider from "@/sections/TestimonialSlider";
 import YogaEscapeSection from "@/sections/YogaEscapeSection";
 
-export default function Home() {
+export default async  function  Home() {
+  const comment = await getComments();
+  const faqs = await getFaq()
   return (
           <div>
 
@@ -31,7 +35,7 @@ export default function Home() {
               <YogaEscapeSection />
             </div>
             <div className="py-16">
-              <TestimonialSlider />
+              <TestimonialSlider comment ={comment} />
             </div>
             <div className="py-16">
               <RetreatScheduleSection />
@@ -40,7 +44,7 @@ export default function Home() {
               <TeamIntroSection />
             </div>
             <div className="py-16">
-              {/* <FAQSection /> */}
+              <FAQSection faqs ={faqs} />
             </div>
             <div className="py-16">
               <JoinUsSection />

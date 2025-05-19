@@ -37,33 +37,11 @@ const Navbar = () => {
               <Link href="/retreats" className="hover:text-[#8a7229] transition-colors text-lg font-semibold">
                   Retreats
                 </Link>
-
-          <div className="relative">
-            <button
-              className="flex items-center gap-1 hover:text-[#8a7229] transition-colors text-lg font-semibold"
-              onClick={() => setMoreOpen(!moreOpen)}
-            >
-              More Pages
-              <ChevronDown className="h-4 w-4" />
-            </button>
-
-            {moreOpen && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-[#f8f3e3] rounded-md shadow-lg py-2 z-10">
-             
-               
-                 <Link href="/retreat-page" className="font-semibold block px-4 py-2 text-lg hover:bg-[#f0e9d2]">
-                  Retreat page (CMS)
-                </Link>
-                
-                <Link href="/team" className="font-semibold block px-4 py-2 text-lg hover:bg-[#f0e9d2]">
+                  <Link href="/team" className="hover:text-[#8a7229] transition-colors text-lg font-semibold">
                   Team
                 </Link>
-                <Link href="/legal" className="font-semibold block px-4 py-2 text-lg hover:bg-[#f0e9d2]">
-                  Legal
-                </Link>
-              </div>
-            )}
-          </div>
+
+          
         </nav>
 
         

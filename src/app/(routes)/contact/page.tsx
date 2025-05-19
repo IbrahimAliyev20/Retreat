@@ -1,16 +1,18 @@
 import ContactForm from '@/components/ContactForm'
-// import FAQSection from '@/sections/FAQSection'
+import { getFaq } from '@/lib/faq'
+import FAQSection from '@/sections/FAQSection'
 import JoinUsSection from '@/sections/JoinUsSection'
 import React from 'react'
 
-const ContactPage = () => {
+const ContactPage = async () => {
+  const faqs = await getFaq()
   return (
     <div>
       <div className='py-26'>
         <ContactForm />
       </div>
       <div className='py-16'>
-        {/* <FAQSection /> */}
+        <FAQSection faqs ={faqs}/>
       </div>
       <div className='py-16'>
         <JoinUsSection />

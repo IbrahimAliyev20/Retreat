@@ -1,9 +1,17 @@
-// import { BreadCrumbType } from "@/types/type";
+import { BreadCrumbType } from "@/types/type";
+import {cookies} from 'next/headers'
 
-// export async function getFaq(): Promise<BreadCrumbType[]> {
-//   const res = await fetch(`${process.env.BASE_URL}/breadcrumb`, {
-//     cache: "no-store",
-//   });
-//   const json = await res.json();
-//   return json.data;
-// }
+
+export async function getBreadCrumb(): Promise<BreadCrumbType[]> {
+      const cookieStore= await cookies()
+     const localeFromCookie = cookieStore.get('NEXT_LOCALE')?.value || 'az'; 
+
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/breadcrumb`, {
+    headers: {
+       "Accept-Language": localeFromCookie, 
+   },
+    cache: "no-store",
+  });
+  const json = await res.json();
+  return json.data;
+}

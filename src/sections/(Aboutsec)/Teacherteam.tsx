@@ -1,9 +1,9 @@
-"use client";
+import { getTeams } from "@/lib/teams";
 import Image from "next/image";
-import { team } from "../../constans/team";
 
-const Teacherteam: React.FC = () => {
-
+const Teacherteam: React.FC = async () => {
+  const data = await getTeams()
+  const teachers = data
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +18,7 @@ const Teacherteam: React.FC = () => {
         We are dedicated to give you the best experience.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {team.map((member, index) => (
+        {teachers.map((member, index) => (
           <div
             key={index}
             className="flex flex-col items-center hover:scale-105 duration-300  transition-all group"
@@ -33,7 +33,7 @@ const Teacherteam: React.FC = () => {
               />
             </div>
             <h3 className="text-xl font-medium custom-color mt-4">{member.name}</h3>
-            <p className="custom-color opacity-80 mb-4">{member.role}</p>
+            <p className="custom-color opacity-80 mb-4">{member.profession}</p>
           </div>
         ))}
       </div>

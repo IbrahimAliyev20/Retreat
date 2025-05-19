@@ -1,5 +1,6 @@
 import { getJoinUs } from '@/lib/join-us';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Aboutsec: React.FC = async () => {
   const data = await getJoinUs();
@@ -40,9 +41,9 @@ const Aboutsec: React.FC = async () => {
         </div>
 
         {/* Düymə */}
-        <button className="bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition">
+        <Link href="/about" className="bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition">
           About us
-        </button>
+        </Link>
       </div>
     </section>
   );
