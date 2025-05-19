@@ -1,4 +1,4 @@
-import { ContactType } from "@/types/type";
+import { ContactType } from '@/types/type';
 import {cookies} from 'next/headers'
 
 
