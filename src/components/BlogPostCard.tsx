@@ -11,7 +11,7 @@ const BlogPostCard: React.FC<BlogCardProps> = ({ title, description, imageSrc,  
 
   return (
     <div
-      className="bg-[#f3e8ce] rounded-lg shadow-md overflow-hidden  max-w-sm"
+      className="bg-color-yellow rounded-lg shadow-md overflow-hidden  max-w-sm"
     >
       <div className="relative w-full h-78">
         <Image

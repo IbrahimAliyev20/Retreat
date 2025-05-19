@@ -32,7 +32,7 @@ const TestimonialSlider: React.FC = () => {
 
 
   return (
-    <section className="bg-[#fff9e9] px-4 md:px-8 lg:px-16">
+    <section className="px-4 md:px-8 lg:px-16">
       <div className="container mx-auto text-center">
         <h2
           className="text-3xl md:text-4xl font-medium text-brown-800 mb-12 "
@@ -40,7 +40,7 @@ const TestimonialSlider: React.FC = () => {
           Don’t just take our word for it
         </h2>
         <div
-          className="bg-[#f5ecd7] max-w-2xl mx-auto py-8 rounded-xl "
+          className="bg-color-yellow max-w-2xl mx-auto py-8 rounded-xl "
         >
           <Slider {...settings}>
             {testimonials.map((testimonial, index) => (

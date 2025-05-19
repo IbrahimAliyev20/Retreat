@@ -1,24 +1,25 @@
-"use client";
 import Image from 'next/image';
 
-const JoinUsSection: React.FC = () => {
+const JoinUsSection =    () => {
+
+ 
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="p-10 custom-color-bg rounded-2xl flex flex-col md:flex-row items-center overflow-hidden">
+      <div className="p-10 bg-color-yellow  rounded-2xl flex flex-col md:flex-row items-center overflow-hidden">
         <div className="p-8 md:p-15 flex-1">
           <h2
-            className="text-4xl font-serif text-[#F5E8C7] mb-4 "
+            className="text-4xl font-serif custom-color mb-4 "
           >
             Join us today!
           </h2>
           <p
-            className="text-lg text-[#F5E8C7] opacity-80 mb-6 "
+            className="text-lg custom-color opacity-80 mb-6 "
           >
             Let&apos;s disconnect and enjoy the power of nature improving your health.
           </p>
           <button
-            className="bg-[#F5E8C7] text-[#3A2E1F] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6 "
+            className="bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
           >
             See schedule
           </button>
@@ -54,7 +55,7 @@ const JoinUsSection: React.FC = () => {
                 />
               </div>
             </div>
-            <p className="text-[#F5E8C7] text-sm">We healed 1000+ students</p>
+            <p className="custom-color text-sm">We healed 1000+ students</p>
           </div>
         </div>
         <div

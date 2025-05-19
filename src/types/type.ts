@@ -49,7 +49,7 @@ export interface GalleryType {
 
 export interface CommentsType {
   author:string;
-  desciption:string;
+  description:string;
   image: string;
   thumb_image: string;
 }
@@ -155,3 +155,29 @@ export interface FAQItem {
 export type FAQType = FAQCategory[];
 
 ///////////FAQ TYPE ////////////////
+
+
+
+export interface ValuesType {
+  title: string; 
+  description: string;
+  image: string;
+  thumb_image: string;
+}
+
+
+
+
+
+export interface ContactType {
+  email: string;
+  address: string;
+  phone: number;
+  image: string;
+  thumb_image: string;
+}
+
+
+
+
+

@@ -1,7 +1,10 @@
-"use client";
+import { getContact } from '@/lib/contact';
 import Image from 'next/image';
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = async  () => {
+    const data = await getContact()
+
+    const contact = data
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +21,7 @@ const ContactForm: React.FC = () => {
       <div className="flex flex-col md:flex-row gap-50">
         {/* Form Section */}
         <div
-          className="bg-[#f5ecd7] rounded-xl p-6 md:w-1/2 "
+          className="bg-color-yellow rounded-xl p-6 md:w-1/2 "
         >
           <form className="space-y-4">
             <div>
@@ -51,7 +54,7 @@ const ContactForm: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-[#3A2E1F] text-[#F5E8C7] font-medium py-3 rounded-full hover:bg-opacity-90 transition"
+              className="w-full bg-[#3A2E1F] custom-color font-medium py-3 rounded-full hover:bg-opacity-90 transition"
             >
               Submit
             </button>
@@ -64,7 +67,7 @@ const ContactForm: React.FC = () => {
         >
           <div className="w-120 h-90 relative rounded-xl overflow-hidden">
             <Image
-              src="/images/teamintro1.jpg"
+              src={contact.image}
               alt="Person in nature"
               layout="fill"
               objectFit="cover"
@@ -79,7 +82,7 @@ const ContactForm: React.FC = () => {
                 width={40}
                 height={40}
               />
-              <p>templates@wavesdesign.io</p>
+              <p>{contact.email}</p>
             </div>
             <div className="flex text-xl items-center text-[#3A2E1F] gap-3">
               <Image
@@ -88,7 +91,7 @@ const ContactForm: React.FC = () => {
                 width={40}
                 height={40}
               />
-              <p>Bangkok, Thailand</p>
+              <p>{contact.address}</p>
             </div>
             <div className="flex text-xl items-center text-[#3A2E1F] gap-3">
               <Image
@@ -97,7 +100,7 @@ const ContactForm: React.FC = () => {
                 width={40}
                 height={40}
               />
-              <p>@retreat_you</p>
+              <p>{contact.phone}</p>
             </div>
           </div>
         </div>

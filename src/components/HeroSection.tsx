@@ -4,7 +4,7 @@ import Image from 'next/image';
 const HeroSection: React.FC = () => {
 
   return (
-    <div className="bg-cream min-h-screen flex items-center justify-center">
+    <div className=" min-h-screen flex items-center justify-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between ">
         <div className="w-full md:w-1/2 text-center md:text-left pr-4">
           <h1
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
             disconnect from the hustle of everyday world.
           </p>
           <button
-            className="bg-[#493913] text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition "
+            className="bg-[#2e826a] text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition "
           >
             See schedule
           </button>

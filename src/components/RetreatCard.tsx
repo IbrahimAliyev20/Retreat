@@ -63,12 +63,12 @@ const RetreatCard: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <button className="bg-[#493913] text-white py-2 px-7 rounded-full hover:bg-opacity-90 transition">
+              <button className="bg-[#2e826a] text-white py-2 px-7 rounded-full hover:bg-opacity-90 transition">
                 Book now
               </button>
             </div>
 
-            <div className="flex flex-col gap-7 bg-[#f5ecd7] w-full md:w-2/4 mt-8 md:mt-0 p-10">
+            <div className="flex flex-col gap-7 bg-color-yellow w-full md:w-2/4 mt-8 md:mt-0 p-10">
               <div className="flex justify-between  ">
                 <h3 className="text-3xl font-serif custom-color">{card.title}</h3>
                 <p className="text-2xl custom-color opacity-80">{card.price}</p>

@@ -3,7 +3,7 @@ import Carousel from "@/components/Carusel";
 import HeroSection from "@/components/HeroSection";
 import Aboutsec from "@/sections/Aboutsec";
 import Experience from "@/sections/Experience";
-import FAQSection from "@/sections/FAQSection";
+// import FAQSection from "@/sections/FAQSection";
 import JoinUsSection from "@/sections/JoinUsSection";
 import RetreatScheduleSection from "@/sections/RetreatScheduleSection";
 import TeamIntroSection from "@/sections/TeamIntroSection";
@@ -14,7 +14,7 @@ export default function Home() {
   return (
           <div>
 
-            <div className="py-0">
+            <div className="py-0 ">
           <HeroSection />
             </div>
 
@@ -40,7 +40,7 @@ export default function Home() {
               <TeamIntroSection />
             </div>
             <div className="py-16">
-              <FAQSection />
+              {/* <FAQSection /> */}
             </div>
             <div className="py-16">
               <JoinUsSection />

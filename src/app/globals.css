@@ -8,12 +8,14 @@
 /* styles/globals.css */
 
 .custom-color{
-  color: #564418;
+  color: #2e826a;
 }
 .custom-color-bg{
-    background-color: #564418;
+    background-color: #71d48c;
 }
-
+.bg-color-yellow{
+  background-color: #71d48b2b;
+}
 
 /* 
 @keyframes slideUp {

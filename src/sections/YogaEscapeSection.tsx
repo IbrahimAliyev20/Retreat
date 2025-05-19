@@ -1,8 +1,17 @@
-"use client";
+import { getAbout } from '@/lib/about';
 import Image from 'next/image';
 import { RiCheckDoubleFill } from "react-icons/ri";
 
-const YogaEscapeSection: React.FC = () => {
+
+
+
+
+const YogaEscapeSection: React.FC = async () => {
+    const data = await getAbout();
+
+      const about = data[1];
+
+  
   return (
     <section>
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -12,7 +21,7 @@ const YogaEscapeSection: React.FC = () => {
         >
           <div className="overflow-hidden">
             <Image
-              src="/images/YogaEscapeSection.webp"
+              src={about.image}
               alt="Retreat Yoga"
               width={600}
               height={400}
@@ -26,13 +35,12 @@ const YogaEscapeSection: React.FC = () => {
           <h2
             className="text-3xl md:text-4xl font-semibold text-brown-800 mb-6 "
           >
-            This retreat is for you if you want to disconnect
+            {about.title}
           </h2>
           <p
             className="text-gray-600 "
           >
-            Suspendisse eu ligula. Nullam incidunt adipiscing enim. Nunc nonummy
-            metus. Vestibulum ullamcorper, mauris at ligula.
+            {about.description}
           </p>
           <div className="w-full h-[0.5px] bg-black my-10"></div>
           <p

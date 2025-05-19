@@ -1,6 +1,6 @@
 import { SliderType } from "@/types/type";
 
-export async function getFaq(): Promise<SliderType[]> {
+export async function getSlider(): Promise<SliderType[]> {
   const res = await fetch(`${process.env.BASE_URL}/slider`, {
     cache: "no-store",
   });

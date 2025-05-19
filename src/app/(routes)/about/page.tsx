@@ -3,7 +3,7 @@ import AboutContactScroll from '@/sections/(Aboutsec)/AboutContactScroll'
 import AboutHero from '@/sections/(Aboutsec)/AboutHero'
 import Teacherteam from '@/sections/(Aboutsec)/Teacherteam'
 import Experience from '@/sections/Experience'
-import FAQSection from '@/sections/FAQSection'
+// import FAQSection from '@/sections/FAQSection'
 import JoinUsSection from '@/sections/JoinUsSection'
 import React from 'react'
 
@@ -24,7 +24,7 @@ const Aboutpage = () => {
         <Teacherteam />
       </div>
       <div className='py-26'>
-        <FAQSection />
+        {/* <FAQSection /> */}
       </div>
       <div className='py-26'>
         <ContactForm />

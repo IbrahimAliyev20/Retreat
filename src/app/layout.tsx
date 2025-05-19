@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#fff7e3] custom-color">
+      <body className=" bg-color-yellow custom-color">
         <header className="fixed w-full z-50">
           <Navbar/>
         </header>
-          <main className="min-h-screen">
+          <main className="w-full ml-21 md:ml-0 min-h-screen">
         {children}
           </main>
           <Footer />

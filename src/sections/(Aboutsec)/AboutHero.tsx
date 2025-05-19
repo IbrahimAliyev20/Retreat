@@ -5,7 +5,7 @@ const AboutHero: React.FC = () => {
   return (
     <div>
       <div
-        className="relative opacity-90 text-[#F5E8C7] py-16"
+        className="relative opacity-90 custom-color py-16"
         style={{
           height: "100vh",
           backgroundImage: "url(/images/abouthero.webp)",

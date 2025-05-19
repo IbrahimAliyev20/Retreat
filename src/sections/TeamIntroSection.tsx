@@ -5,15 +5,15 @@ import { team, TeamMember } from "../constans/team";
 const TeamIntroSection: React.FC = () => {
 
   return (
-    <div className="custom-color-bg py-16">
+    <div className="bg-color-yellow  py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-4xl font-serif text-[#F5E8C7] text-center mb-4 "
+          className="text-4xl font-serif custom-color text-center mb-4 "
         >
           Meet the team
         </h2>
         <p
-          className="text-lg text-[#F5E8C7] text-center mb-12 "
+          className="text-lg custom-color text-center mb-12 "
         >
           We are dedicated to give you the best experience.
         </p>
@@ -32,15 +32,15 @@ const TeamIntroSection: React.FC = () => {
                   className="rounded-xl"
                 />
               </div>
-              <h3 className="text-xl font-medium text-[#F5E8C7] mt-4">{member.name}</h3>
-              <p className="text-[#F5E8C7] opacity-80">{member.role}</p>
+              <h3 className="text-xl font-medium custom-color mt-4">{member.name}</h3>
+              <p className="custom-color opacity-80">{member.role}</p>
             </div>
           ))}
-          <div className="bg-[#625026] rounded-xl p-6 flex flex-col justify-between " >
-            <p className="text-[#F5E8C7] text-lg">
+          <div className="bg-color-yellow rounded-xl p-6 flex flex-col justify-between " >
+            <p className="custom-color text-lg">
               Retreat You gathered the best specialist in the industry to offer you the best experience. Our team consists of 10 dedicated members.
             </p>
-            <button className="self-start bg-[#fff7e3] text-[#3A2E1F] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition">
+            <button className="self-start bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition">
               Meet all
             </button>
           </div>

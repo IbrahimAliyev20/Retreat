@@ -1,5 +1,5 @@
 import ContactForm from '@/components/ContactForm'
-import FAQSection from '@/sections/FAQSection'
+// import FAQSection from '@/sections/FAQSection'
 import JoinUsSection from '@/sections/JoinUsSection'
 import React from 'react'
 
@@ -10,7 +10,7 @@ const ContactPage = () => {
         <ContactForm />
       </div>
       <div className='py-16'>
-        <FAQSection />
+        {/* <FAQSection /> */}
       </div>
       <div className='py-16'>
         <JoinUsSection />

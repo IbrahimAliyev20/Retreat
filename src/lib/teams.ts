@@ -1,6 +1,6 @@
 import { TeamsType } from "@/types/type";
 
-export async function getFaq(): Promise<TeamsType[]> {
+export async function getTeams(): Promise<TeamsType[]> {
   const res = await fetch(`${process.env.BASE_URL}/teams`, {
     cache: "no-store",
   });

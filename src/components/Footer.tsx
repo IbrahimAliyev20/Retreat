@@ -4,7 +4,7 @@ import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#fff9e9] text-[#4A3C31] py-12 px-6 font-sans">
+    <footer className="bg-color-yellow text-[#4A3C31] py-12 px-6 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-4">
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex-1">
-          <div className="bg-[#f5ecd7] p-8 rounded-lg shadow-sm">
+          <div className="bg-color-yellow p-8 rounded-lg shadow-sm">
             <ul className="text-md space-y-4">
               <li className="flex items-center gap-2">
                 <Image
