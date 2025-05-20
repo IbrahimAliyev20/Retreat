@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-color-yellow p-6 rounded-xl flex-1">
+        <div className="bg-[#2e826a] text-white  p-6 rounded-xl flex-1">
           <div >
             <ul className="text-md space-y-4">
               <li className="flex items-center gap-2">
@@ -55,6 +55,7 @@ const Footer: React.FC = () => {
                   alt="Message Icon"
                   width={26}
                   height={26}
+                  className="filter brightness-[10]"
                 />
                 <a href="mailto:fitvibe@wavesdesign.io" className="hover:underline">
                   Fitvibe@wavesdesign.io
@@ -66,6 +67,7 @@ const Footer: React.FC = () => {
                   alt="Location Icon"
                   width={26}
                   height={26}
+                  className="filter brightness-[10]"
                 />
                 <span>Baku, Azerbaijan</span>
               </li>
@@ -75,6 +77,7 @@ const Footer: React.FC = () => {
                   alt="Post Icon"
                   width={26}
                   height={26}
+                  className="filter brightness-[10]"
                 />
                 <a href="#" className="hover:underline">@FitVibe</a>
               </li>

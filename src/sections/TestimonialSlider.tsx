@@ -65,7 +65,7 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
                         alt="Daily yoga icon"
                         width={70}
                         height={70}
-                        className="mb-4"
+                        className="mb-4 filter hue-rotate-85"
                       />
                     </div>
                     <p className="color-desc mb-4 text-xl">“{testimonial.description}”</p>

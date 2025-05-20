@@ -15,7 +15,7 @@ const Aboutsec: React.FC = async () => {
               alt="Daily yoga icon"
               width={72}
               height={42}
-              className="mb-4"
+              className="mb-4 filter hue-rotate-90"
             />
           </div>
           <h2 className="text-3xl md:text-4xl font-serif text-brown max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ const Aboutsec: React.FC = async () => {
                 alt={`${item.title} icon`}
                 width={32}
                 height={32}
-                className="mb-4 brightness-0"
+                className="mb-4 filter hue-rotate-85"
               />
               <h3 className="text-xl font-semibold text-brown mb-2">{item.title}</h3>
               <p className="color-desc text-sm">{item.description}</p>

@@ -20,7 +20,7 @@ const JoinUsSection =    () => {
             Gəlin gündəlik qayğılardan uzaqlaşaq və təbiətin gücü ilə sağlamlığımızı gücləndirək.
           </p>
           <Link href="/retreats"
-            className="bg-color-yellow text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
+            className="bg-[#ddeee1] text-black font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
           >
             Daha Çox
           </Link>
