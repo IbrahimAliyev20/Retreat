@@ -46,7 +46,7 @@ const YogaEscapeSection: React.FC = async () => {
           <p
             className="font-semibold "
           >
-            FITVIBE QATILIN ƏGƏR':
+            FITVIBE QATILIN ƏGƏR:
           </p>
           <ul
             className="ml-5 md:ml-0 text-brown-600 space-y-2 mt-3   "
