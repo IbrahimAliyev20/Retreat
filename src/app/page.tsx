@@ -21,7 +21,7 @@ export default async function Home() {
   return (
     <div>
       <Reveal>
-      <div className="py-0">
+      <div className="pt-34 md:pt-25">
         <HeroSection />
       </div>
       </Reveal>

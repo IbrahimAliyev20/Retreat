@@ -5,7 +5,7 @@ import Link from 'next/link';
 const HeroSection: React.FC = () => {
 
   return (
-    <div className=" min-h-screen flex items-center justify-center">
+    <div className=" flex items-center justify-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between ">
         <div className="w-full md:w-1/2 text-center md:text-left pr-4">
           <h1

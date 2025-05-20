@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="py-4 px-6 bg-[#fff] ">
+    <header className="py-4 px-6 bg-[#fff]  ">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-[#5c4c1e]">
           <Image
