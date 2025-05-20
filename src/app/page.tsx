@@ -80,11 +80,9 @@ export default async function Home() {
       </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-0  md:pt-16 ">
-        <div className='bg-color-yellow'>
+      <div className='py-6 md:py-16'>
 
         <JoinUsSection />
-        </div>
       </div>
       </Reveal>
     </div>

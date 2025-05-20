@@ -8,7 +8,7 @@ const TeamIntroSection: React.FC = async  () => {
     const teachers = data
 
   return (
-    <div className="bg-color-yellow  py-16">
+    <div className="  py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           className="text-4xl font-serif custom-color text-center mb-4 "
@@ -38,7 +38,7 @@ const TeamIntroSection: React.FC = async  () => {
               <p className="custom-color opacity-80">{member.profession}</p>
             </div>
           ))}
-          <div className="bg-color-yellow rounded-xl p-6 flex flex-col justify-between " >
+          <div className="bg-white rounded-xl p-6 flex flex-col justify-between " >
             <p className="custom-color text-lg">
              FitVibe sahənin ən peşəkar mütəxəssislərini toplayaraq sizə mükəmməl təcrübə yaşatmaq üçün çalışır. 
             </p>

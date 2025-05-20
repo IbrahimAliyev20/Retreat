@@ -7,20 +7,20 @@ const JoinUsSection =    () => {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="p-4   rounded-2xl flex flex-col md:flex-row items-center overflow-hidden">
+      <div className="p-4 bg-[#2e826a]    rounded-2xl flex flex-col md:flex-row items-center overflow-hidden">
         <div className="p-8 md:p-15 flex-1">
           <h2
-            className="text-4xl font-serif custom-color mb-4 "
+            className="text-4xl font-serif text-white mb-4 "
           >
             Bu gün bizə qoşulun!
           </h2>
           <p
-            className="text-lg custom-color opacity-80 mb-6 "
+            className="text-lg text-white opacity-80 mb-6 "
           >
             Gəlin gündəlik qayğılardan uzaqlaşaq və təbiətin gücü ilə sağlamlığımızı gücləndirək.
           </p>
           <Link href="/retreats"
-            className="bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
+            className="bg-color-yellow text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
           >
             Daha Çox
           </Link>
@@ -56,7 +56,7 @@ const JoinUsSection =    () => {
                 />
               </div>
             </div>
-            <p className="custom-color text-sm">1000-dən artıq tələbəmiz sağlamlığına qovuşdu.</p>
+            <p className="text-white text-sm">1000-dən artıq tələbəmiz sağlamlığına qovuşdu.</p>
           </div>
         </div>
         <div
