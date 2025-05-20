@@ -20,8 +20,8 @@ const AboutHero: React.FC = async () => {
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex flex-col items-start justify-center">
-          <h1 className="text-7xl font-serif mb-4">{heroabout.title}</h1>
-          <p className="text-2xl opacity-80 mb-8">{heroabout.desciption}</p>
+          <h1 className="text-white text-7xl font-serif mb-4">{heroabout.title}</h1>
+          <p className="text-white text-2xl opacity-80 mb-8">{heroabout.desciption}</p>
         </div>
       </div>
 

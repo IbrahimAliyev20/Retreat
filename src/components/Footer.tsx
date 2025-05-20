@@ -5,8 +5,8 @@ import Link from "next/link"
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-color-yellow text-[#4A3C31] py-12 px-6 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+    <footer className="bg-white w-full text-[#4A3C31] py-12 px-6 font-sans">
+      <div className="container  mx-auto flex flex-col md:flex-row justify-between gap-8">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-4">
        <Image
@@ -31,18 +31,17 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-4">Links</h3>
             <ul className="text- space-y-2">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
-              <li><Link href="/about" className="hover:underline">About</Link></li>
-              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
-              <li><Link href="/blog" className="hover:underline">Blog</Link></li>
+              <li><Link href="/" className="hover:underline">Ana səhifə</Link></li>
+              <li><Link href="/about" className="hover:underline">Haqqımızda</Link></li>
+              <li><Link href="/contact" className="hover:underline">Əlaqə</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-4">&nbsp;</h3>
             <ul className="text-md space-y-2">
-              <li><Link href="/retreats" className="hover:underline">Retreats</Link></li>
-              <li><Link href="/legal" className="hover:underline">Legal</Link></li>
-              <li><Link href="/team" className="hover:underline">Team</Link></li>
+              <li><Link href="/blog" className="hover:underline">Bloqlar</Link></li>
+              <li><Link href="/retreats" className="hover:underline">Xidmətlər</Link></li>
+              <li><Link href="/team" className="hover:underline">Komanda</Link></li>
             </ul>
           </div>
         </div>
@@ -57,8 +56,8 @@ const Footer: React.FC = () => {
                   width={26}
                   height={26}
                 />
-                <a href="mailto:templates@wavesdesign.io" className="hover:underline">
-                  templates@wavesdesign.io
+                <a href="mailto:fitvibe@wavesdesign.io" className="hover:underline">
+                  Fitvibe@wavesdesign.io
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -68,7 +67,7 @@ const Footer: React.FC = () => {
                   width={26}
                   height={26}
                 />
-                <span>Bangkok, Thailand</span>
+                <span>Baku, Azerbaijan</span>
               </li>
               <li className="flex items-center gap-2">
                 <Image

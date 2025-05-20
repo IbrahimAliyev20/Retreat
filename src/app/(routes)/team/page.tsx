@@ -20,8 +20,11 @@ const TeamPage = () => {
       <div className='py-16'>
       <RetreatScheduleSection />
       </div>
-      <div className='py-16'>
+     <div className="py-6 md:py-0  md:pt-16 ">
+        <div className='bg-color-yellow'>
+
         <JoinUsSection />
+        </div>
       </div>
     </div>
 

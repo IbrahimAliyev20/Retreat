@@ -9,14 +9,14 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between ">
         <div className="w-full md:w-1/2 text-center md:text-left pr-4">
           <h1
-            className="text-5xl md:text-8xl font-serif text-brown leading-tight mb-6 "
+            className="text-5xl md:text-8xl font-serif  leading-tight mb-6 "
           >
             Yoga and
             <br />
             detox FitVibe
           </h1>
           <p
-            className="text-lg text-brown mb-8 "
+            className="text-lg color-desc mb-8 "
           >
             FitVibe You offers a holistic retreat in Thailand to
             <br />
@@ -37,15 +37,15 @@ const HeroSection: React.FC = () => {
               alt="Yoga Retreat 1"
               width={700}
               height={730}
-              className="rounded-2xl w-full h-auto "
+              className="rounded-2xl w-[80%] md:w-full mx-auto h-auto "
             />
-            <div className="absolute -bottom-12 -left-12 w-70 " >
+            <div className="absolute -bottom-12  left-0 md:-left-12 w-70 " >
               <Image
                 src="/images/herosec.png"
                 alt="Yoga Retreat 2"
                 width={320}
                 height={400}
-                className="rounded-2xl w-full h-auto "
+                className="rounded-2xl w-[80%] md:w-full mx-auto  h-auto "
               />
             </div>
           </div>

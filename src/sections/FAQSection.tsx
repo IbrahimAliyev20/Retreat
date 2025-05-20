@@ -19,7 +19,6 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs }) => {
     setOpenQuestion(openQuestion === index ? null : index);
   };
 
-  // Əgər faqs boşdursa, placeholder UI göstər
   if (!faqs || faqs.length === 0) {
     return (
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,10 +34,10 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs }) => {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl font-serif text-[#564418] text-center mb-4">
+      <h2 className="text-4xl font-serif custom-color text-center mb-4">
         Frequently asked questions
       </h2>
-      <p className="text-lg text-[#564418] text-center mb-8">
+      <p className="text-lg color-desc text-center mb-8">
         Pellentesque habitant morbi tristique senectus.
       </p>
       <div className="flex justify-center space-x-4 mb-8">
@@ -48,8 +47,8 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs }) => {
             onClick={() => handleTabChange(category.title)}
             className={`py-2 px-6 rounded-full font-medium transition ${
               activeTab === category.title
-                ? "custom-color-bg text-[#F5E8C7]"
-                : "bg-[#f5ecd7] custom-color hover:bg-opacity-80"
+                ? "custom-color-bg1 text-white"
+                : "bg-color-yellow text-black hover:bg-opacity-80"
             }`}
           >
             {category.title}

@@ -1,9 +1,18 @@
-// import { GalleryType } from "@/types/type";
+import { GalleryType } from "@/types/type";
+import {cookies} from 'next/headers'
 
-// export async function getGallery(): Promise<GalleryType[]> {
-//   const res = await fetch(`${process.env.BASE_URL}/gallery`, {
-//     cache: "no-store",
-//   });
-//   const json = await res.json();
-//   return json.data;
-// }
+
+export async function getGallery(): Promise<GalleryType[]> {
+
+    const cookieStore= await cookies()
+    const localeFromCookie = cookieStore.get('NEXT_LOCALE')?.value || 'az'; 
+
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/gallery`, {
+    headers: {
+            "Accept-Language": localeFromCookie, 
+        },
+    cache: "no-store",
+  });
+  const json = await res.json();
+  return json.data;
+}

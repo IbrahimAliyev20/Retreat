@@ -32,8 +32,11 @@ const Aboutpage = async () => {
       <div className='py-26'>
         <ContactForm />
       </div>
-      <div className='py-26'>
+   <div className="py-6 md:py-0  md:pt-16 ">
+        <div className='bg-color-yellow'>
+
         <JoinUsSection />
+        </div>
       </div>
       
  

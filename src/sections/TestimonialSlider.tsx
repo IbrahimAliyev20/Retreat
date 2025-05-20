@@ -20,7 +20,17 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
     arrows: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1068, 
+        settings: {
+          arrows: false, 
+        },
+      },
+    
+    ],
   };
+  
 
 
 
@@ -38,7 +48,7 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
           <Slider {...settings}>
             {comment.map((testimonial, index) => (
               <div key={index} className="px-4">
-                <div className="bg-beige-200 rounded-3xl p-8 flex items-center gap-6">
+                <div className="bg-beige-200 rounded-3xl p-0 md:p-8 flex items-center gap-6">
                   <div className="relative w-140 h-40">
                     <Image
                       src={testimonial.image}

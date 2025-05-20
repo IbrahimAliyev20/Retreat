@@ -6,7 +6,7 @@ const Aboutsec: React.FC = async () => {
   const data = await getJoinUs();
 
   return (
-    <section className="bg-cream py-20">
+    <section className="bg-cream ">
       <div className="container mx-auto text-center px-4">
         <div className="mb-12">
           <div className="flex justify-center gap-2 mb-4">

@@ -25,7 +25,7 @@ const YogaEscapeSection: React.FC = async () => {
               alt="Retreat Yoga"
               width={600}
               height={400}
-              className="w-[70%] h-auto object-cover"
+              className="mx-auto w-[70%] h-auto object-cover"
             />
           </div>
         </div>
@@ -38,7 +38,7 @@ const YogaEscapeSection: React.FC = async () => {
             {about.title}
           </h2>
           <p
-            className="text-gray-600 "
+            className="color-desc"
           >
             {about.description}
           </p>
@@ -49,7 +49,7 @@ const YogaEscapeSection: React.FC = async () => {
             JOIN THE RETREAT IF:
           </p>
           <ul
-            className="text-brown-600 space-y-2 mt-3 "
+            className="ml-5 md:ml-0 text-brown-600 space-y-2 mt-3   "
           >
             <li className="flex items-center">
               <RiCheckDoubleFill className="mr-1" />

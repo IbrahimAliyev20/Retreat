@@ -1,7 +1,9 @@
 import CustomCarousel from '@/components/caruselembla/CustomCarusel';
 import HeroSection from '@/components/HeroSection';
+import Reveal from '@/components/Reveal';
 import { getComments } from '@/lib/comments';
 import { getFaq } from '@/lib/faq';
+import { getGallery } from '@/lib/gallery';
 import Aboutsec from '@/sections/Aboutsec';
 import Experience from '@/sections/Experience';
 import FAQSection from '@/sections/FAQSection';
@@ -14,53 +16,77 @@ import YogaEscapeSection from '@/sections/YogaEscapeSection';
 export default async function Home() {
   const comment = await getComments();
   const faqs = await getFaq();
+  const images = await getGallery();
 
   return (
     <div>
+      <Reveal>
       <div className="py-0">
         <HeroSection />
       </div>
-
-      <div className="py-16">
+      </Reveal>
+ 
+   <Reveal>
+      <div className="py-6 md:py-16">
         <Aboutsec />
       </div>
+   </Reveal>
 
-      <div className="py-16">
+      <Reveal>
+      <div className="py-6 md:py-16">
         <Experience />
       </div>
+      </Reveal>
 
-      <div className="py-16">
+      <Reveal>
+      <div className="py-6 md:py-16">
         
-              <CustomCarousel direction="left" />
+              <CustomCarousel direction="left" images={images}/>
               <div className="mt-4">
-                <CustomCarousel direction="right" />
+                <CustomCarousel direction="right" images={images} />
               </div>
         
       </div>
+      </Reveal>
 
-      <div className="py-16">
+      <Reveal>
+      <div className="py-6 md:py-16">
         <YogaEscapeSection />
       </div>
+      </Reveal>
 
-      <div className="py-16">
+     <Reveal>
+      <div className="py-6  md:py-16">
         <TestimonialSlider comment={comment} />
       </div>
+     </Reveal>
 
-      <div className="py-16">
+      <Reveal>
+      <div className="py-6 md:py-16">
         <RetreatScheduleSection />
       </div>
+      </Reveal>
 
-      <div className="py-16">
+      <Reveal>
+      <div className="py-6  md:py-16">
         <TeamIntroSection />
       </div>
+      </Reveal>
 
-      <div className="py-16">
+      <Reveal>
+      <div className="py-6  md:py-16">
         <FAQSection faqs={faqs} />
       </div>
+      </Reveal>
 
-      <div className="py-16">
+      <Reveal>
+      <div className="py-6 md:py-0  md:pt-16 ">
+        <div className='bg-color-yellow'>
+
         <JoinUsSection />
+        </div>
       </div>
+      </Reveal>
     </div>
   );
 }

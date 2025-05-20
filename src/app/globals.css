@@ -10,25 +10,17 @@
 .custom-color{
   color: #2e826a;
 }
+.custom-color-bg1{
+  background-color: #2e826a;
+}
+
 .custom-color-bg{
     background-color: #71d48c;
 }
 .bg-color-yellow{
   background-color: #71d48b2b;
 }
-
-/* 
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.color-desc{
+  color: #5B5B5B
 }
 
-.animate-slide-up {
-  animation: slideUp 0.5s ease-out forwards;
-} */

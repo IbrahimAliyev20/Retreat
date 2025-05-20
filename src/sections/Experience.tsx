@@ -15,18 +15,18 @@ const Experience: React.FC = async () => {
           <h2 className="text-4xl md:text-5xl font-serif text-brown mb-6 leading-snug">
             {about.title}
           </h2>
-          <p className="text-brown mb-8 max-w-md">
+          <p className="color-desc mb-8 max-w-md">
             {about.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 text-brown font-semibold text-xl">
             <div>
               <p className="text-5xl mb-1">1000+</p>
-              <p className="text-base font-normal">people healed</p>
+              <p className="color-desc text-base font-normal">people healed</p>
             </div>
             <div>
               <p className="text-5xl mb-1">8</p>
-              <p className="text-base font-normal">years of experience</p>
+              <p className=" color-desc text-base font-normal">years of experience</p>
             </div>
           </div>
         </div>
