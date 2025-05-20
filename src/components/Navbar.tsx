@@ -112,35 +112,35 @@ const Navbar = () => {
               Ana səhifə
             </Link>
             <Link
-              href="/about"
+              href="/#"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Haqqımızda
             </Link>
             <Link
-              href="/team"
+              href="/#"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Komanda
             </Link>
             <Link
-              href="/retreats"
+              href="/#"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Xidmətlər
             </Link>
             <Link
-              href="/blog"
+              href="/#"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Bloqlar
             </Link>
             <Link
-              href="/contact"
+              href="/#"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
