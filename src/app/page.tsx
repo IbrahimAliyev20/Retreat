@@ -21,11 +21,7 @@ export default async function Home() {
   return (
     <div>
       <Reveal>
-<<<<<<< HEAD
-      <div className="pt-34 md:pt-25 pb-10">
-=======
-      <div className="pt-34 md:pt-25" id='home'>
->>>>>>> 1b52a0d (Homepage)
+      <div className="pt-34 md:pt-25 pb-10" id='home'>
         <HeroSection />
       </div>
       </Reveal>
