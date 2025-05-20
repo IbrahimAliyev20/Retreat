@@ -39,7 +39,7 @@ const TeamIntroSection: React.FC = async  () => {
             </div>
           ))}
           <div className="bg-white rounded-xl p-6 flex flex-col justify-between " >
-            <p className="custom-color text-lg">
+            <p className="color-desc text-lg">
              FitVibe sahənin ən peşəkar mütəxəssislərini toplayaraq sizə mükəmməl təcrübə yaşatmaq üçün çalışır. 
             </p>
             <Link href="/team" className="self-start bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition">
