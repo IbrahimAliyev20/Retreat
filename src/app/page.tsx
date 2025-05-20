@@ -21,19 +21,23 @@ export default async function Home() {
   return (
     <div>
       <Reveal>
+<<<<<<< HEAD
       <div className="pt-34 md:pt-25 pb-10">
+=======
+      <div className="pt-34 md:pt-25" id='home'>
+>>>>>>> 1b52a0d (Homepage)
         <HeroSection />
       </div>
       </Reveal>
  
    <Reveal>
-      <div className="py-6 md:py-16">
+      <div className="py-6 md:py-16" id='about'>
         <Aboutsec />
       </div>
    </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-16">
+      <div className="py-6 md:py-16" >
         <Experience />
       </div>
       </Reveal>
@@ -62,13 +66,13 @@ export default async function Home() {
      </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-16">
+      <div className="py-6 md:py-16" id='retreat'>
         <RetreatScheduleSection />
       </div>
       </Reveal>
 
       <Reveal>
-      <div className="py-6  md:py-16">
+      <div className="py-6  md:py-16" id='team'>
         <TeamIntroSection />
       </div>
       </Reveal>

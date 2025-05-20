@@ -40,7 +40,7 @@ const CustomCarousel = ({ direction, images }: CarouselProps) => {
   }, [emblaApi]);
 
   return (
-    <div className="embla" style={{ maxWidth: '1600px', margin: '0 auto' }}>
+    <div className="embla" style={{ maxWidth: '2000px', margin: '0 auto' }}>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {images.map((image, index) => (

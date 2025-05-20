@@ -10,12 +10,11 @@ const Teacherteam: React.FC = async () => {
       <h2
         className="text-4xl font-serif custom-color text-center mb-4  transition-opacity duration-1000 ease-in-out"
       >
-        Meet the team
-      </h2>
+        Komanda ilə tanış olun      </h2>
       <p
         className="text-lg custom-color text-center mb-12  transition-opacity duration-1000 ease-in-out"
       >
-        We are dedicated to give you the best experience.
+        Sizə ən yaxşı təcrübəni yaşatmaq üçün çalışırıq.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {teachers.map((member, index) => (

@@ -16,7 +16,7 @@ const ContactForm: React.FC = async  () => {
       <p
         className="text-lg text-[#3A2E1F]  mb-8 "
       >
-        If you have any questions about retreat just let us know and we will be happy to help you.
+        If you have any questions about FirVibe just let us know and we will be happy to help you.
       </p>
       <div className="flex flex-col md:flex-row gap-50">
         {/* Form Section */}

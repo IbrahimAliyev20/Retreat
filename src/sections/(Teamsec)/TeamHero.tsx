@@ -10,8 +10,7 @@ const TeamHero: React.FC = () => {
         <h1
           className="text-6xl md:text-8xl font-serif custom-color mb-6 "
         >
-         Meet the team
-        </h1>
+         Komanda ilə tanış olun        </h1>
         <p
           className="text-xl md:text-2xl custom-color mb-8 "
         >

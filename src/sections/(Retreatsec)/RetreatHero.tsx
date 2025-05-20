@@ -10,7 +10,7 @@ const RetreatHero: React.FC = () => {
         <h1
           className="text-6xl md:text-8xl font-serif text-[#3A2E1F] mb-6 "
         >
-          Upcoming retreats
+          Upcoming FitVibe
         </h1>
         <p
           className="text-xl md:text-2xl text-[#3A2E1F] mb-8 "

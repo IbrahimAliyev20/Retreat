@@ -22,11 +22,11 @@ const Experience: React.FC = async () => {
           <div className="flex flex-col sm:flex-row gap-6 text-brown font-semibold text-xl">
             <div>
               <p className="text-5xl mb-1">1000+</p>
-              <p className="color-desc text-base font-normal">people healed</p>
+              <p className="color-desc text-base font-normal">Sağalan insanlar</p>
             </div>
             <div>
               <p className="text-5xl mb-1">8</p>
-              <p className=" color-desc text-base font-normal">years of experience</p>
+              <p className=" color-desc text-base font-normal">İllərlə təcrübə</p>
             </div>
           </div>
         </div>

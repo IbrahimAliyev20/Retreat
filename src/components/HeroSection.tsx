@@ -11,22 +11,22 @@ const HeroSection: React.FC = () => {
           <h1
             className="text-5xl md:text-8xl font-serif  leading-tight mb-6 "
           >
-            Yoga and
+            Yoga və
             <br />
-            detox FitVibe
+            detoks FitVibe
           </h1>
           <p
             className="text-lg color-desc mb-8 "
           >
-            FitVibe You offers a holistic retreat in Thailand to
+            FitVibe , gündəlik həyatın qaçaqaçından uzaqlaşmaq üçün 
             <br />
-            disconnect from the hustle of everyday world.
+            Azərbaycanda hərtərəfli bir FitVibe təcrübəsi təklif edir.
           </p>
           <Link
             className="bg-[#2e826a] text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition "
            href="/retreats"
            >
-            See schedule
+            Daha Çox
           </Link>
         </div>
 

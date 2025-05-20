@@ -62,7 +62,7 @@ const RetreatScheduleSection: React.FC = () => {
           <h2
             className="text-3xl md:text-4xl font-semibold text-[#2e826a] mb-6 animate-on-scroll transition-all duration-500 ease-in-out"
           >
-            Upcoming retreats
+            Upcoming FitVibe
           </h2>
           <p
             className="color-desc mb-8 animate-on-scroll transition-all duration-500 ease-in-out"
@@ -70,10 +70,10 @@ const RetreatScheduleSection: React.FC = () => {
             Check our schedule and free spots, book the date and lets have fun!
           </p>
           <Link
-            href="/retreats"
+            href="/#"
             className="bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition"
           >
-            See all retreats
+            See all FitVibe
           </Link>
         </div>
 
@@ -82,10 +82,10 @@ const RetreatScheduleSection: React.FC = () => {
           {retreats.map((retreat, index) => (
             <div
               key={index}
-              className="bg-color-yellow rounded-3xl p-12 shadow-md animate-on-scroll transition-all duration-500 ease-in-out"
+              className="bg-white rounded-3xl p-12 shadow-md animate-on-scroll transition-all duration-500 ease-in-out"
             >
               <h3 className="text-xl font-semibold text-[#2e826a] mb-2">{retreat.title}</h3>
-              <p className="text-xl font-light text-[#2e826a] mb-8">{retreat.date}</p>
+              <p className="text-xl font-light color-desc mb-8">{retreat.date}</p>
               <div className="relative w-full h-48 mb-4">
                 <Image
                   src={retreat.image || '/placeholder.svg'}
@@ -95,7 +95,7 @@ const RetreatScheduleSection: React.FC = () => {
                   className="rounded-2xl"
                 />
               </div>
-              <p className="text-[#2e826a] mb-4">{retreat.description}</p>
+              <p className="color-desc mb-4">{retreat.description}</p>
               <button className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition">
                 Book now
               </button>

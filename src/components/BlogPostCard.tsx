@@ -1,16 +1,14 @@
-"use client";
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface BlogCardProps {
   title: string;
-  description: string;
   imageSrc: string;
-  delay: number;
 }
-const BlogPostCard: React.FC<BlogCardProps> = ({ title, description, imageSrc,  }) => {
+const BlogPostCard: React.FC<BlogCardProps> = ({ title,  imageSrc,  }) => {
 
   return (
-    <div
+    <Link href="#"
       className="bg-color-yellow rounded-lg shadow-md overflow-hidden  max-w-sm"
     >
       <div className="relative w-full h-78">
@@ -24,9 +22,8 @@ const BlogPostCard: React.FC<BlogCardProps> = ({ title, description, imageSrc,  
       </div>
       <div className="p-6 text-center">
         <h3 className="text-3xl font-serif text-[#564418] mb-2">{title}</h3>
-        <p className="text-[#564418] opacity-80">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

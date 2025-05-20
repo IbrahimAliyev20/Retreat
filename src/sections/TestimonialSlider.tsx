@@ -40,22 +40,22 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
         <h2
           className="text-3xl md:text-4xl font-medium text-brown-800 mb-12 "
         >
-          Don’t just take our word for it
+          Bunu sadəcə bizim sözümüz kimi qəbul etməyin.
         </h2>
         <div
-          className="bg-color-yellow max-w-2xl mx-auto py-8 rounded-xl "
+          className=" max-w-2xl mx-auto py-8 rounded-xl "
         >
           <Slider {...settings}>
             {comment.map((testimonial, index) => (
               <div key={index} className="px-4">
-                <div className="bg-beige-200 rounded-3xl p-0 md:p-8 flex items-center gap-6">
+                <div className="bg-white rounded-3xl p-0 md:p-8 flex items-center gap-6">
                   <div className="relative w-140 h-40">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.author}
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-full"
+                      className=" rounded-full"
                     />
                   </div>
                   <div className="text-left">
@@ -68,8 +68,8 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
                         className="mb-4"
                       />
                     </div>
-                    <p className="text-brown-600 mb-4 text-xl">“{testimonial.description}”</p>
-                    <p className="text-brown-600 font-medium">{testimonial.author}</p>
+                    <p className="color-desc mb-4 text-xl">“{testimonial.description}”</p>
+                    <p className="color-desc font-medium">{testimonial.author}</p>
                   </div>
                 </div>
               </div>

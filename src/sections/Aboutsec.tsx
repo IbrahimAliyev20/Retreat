@@ -19,29 +19,28 @@ const Aboutsec: React.FC = async () => {
             />
           </div>
           <h2 className="text-3xl md:text-4xl font-serif text-brown max-w-2xl mx-auto">
-            Join us on 10 day retreat in Thailand mountain-side where we will train yoga, detox and enjoy the nature.
-          </h2>
+          Azərbaycanın dağlarında keçiriləcək 10 günlük FitVibe proqramımıza qoşul – yoqa, detoks və təbiətlə rahatlan!          </h2>
         </div>
 
         {/* Kartlar */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {data.map((item, index) => (
-            <div key={index} className="bg-color-yellow rounded-xl p-6 text-left">
+            <div key={index} className="bg-white rounded-xl p-6 text-left">
               <Image
                 src={item.icon}
                 alt={`${item.title} icon`}
                 width={32}
                 height={32}
-                className="mb-4"
+                className="mb-4 brightness-0"
               />
               <h3 className="text-xl font-semibold text-brown mb-2">{item.title}</h3>
-              <p className="text-brown text-sm">{item.description}</p>
+              <p className="color-desc text-sm">{item.description}</p>
             </div>
           ))}
         </div>
 
         {/* Düymə */}
-        <Link href="/about" className="bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition">
+        <Link href="#" className="bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition">
           About us
         </Link>
       </div>

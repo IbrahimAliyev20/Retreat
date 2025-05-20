@@ -25,7 +25,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-[black]">
+        <nav className="hidden md:flex items-center gap-8 text-[#5b5b5b]">
           <Link
             href="/"
             className=" transition-colors text-lg font-semibold"
@@ -33,31 +33,31 @@ const Navbar = () => {
             Ana səhifə
           </Link>
           <Link
-            href="/about"
+            href="#about"
             className=" transition-colors text-lg font-semibold"
           >
             Haqqımızda
           </Link>
           <Link
-            href="/team"
+            href="#retreat"
             className=" transition-colors text-lg font-semibold"
           >
             Komanda
           </Link>
           <Link
-            href="/retreats"
+            href="#team"
             className=" transition-colors text-lg font-semibold"
           >
             Xidmətlər
           </Link>
           <Link
-            href="/blog"
+            href="/#"
             className="transition-colors text-lg font-semibold"
           >
             Bloqlar
           </Link>
           <Link
-            href="/contact"
+            href="/#"
             className=" transition-colors text-lg font-semibold"
           >
             Əlaqə

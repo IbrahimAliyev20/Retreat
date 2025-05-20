@@ -5,11 +5,11 @@ import Link from "next/link"
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white w-full text-[#4A3C31] py-12 px-6 font-sans">
+    <footer className="bg-white w-full text-[#4A3C31] py-8 px-6 font-sans">
       <div className="container  mx-auto flex flex-col md:flex-row justify-between gap-8">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-4">
-       <Image
+             <Image
                   src="/images/logo.png"
                   alt="logo"
                   width={178}
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                 />
           </div>
           <p className="text-md mb-4">
-            Elit massa non eros, consectetur non ac consequat in nisl mattis adipiscing tellus egestas gravida.
+           Elit proqramla sağlamlığınızı və enerjinizi artırın.
           </p>
           <div className="flex gap-4 mb-4">
             <FaInstagram className="text-xl" />
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex-1">
-          <div className="bg-color-yellow p-8 rounded-lg shadow-sm">
+          <div >
             <ul className="text-md space-y-4">
               <li className="flex items-center gap-2">
                 <Image
@@ -76,14 +76,14 @@ const Footer: React.FC = () => {
                   width={26}
                   height={26}
                 />
-                <a href="#" className="hover:underline">@retreat_you</a>
+                <a href="#" className="hover:underline">@FitVibe</a>
               </li>
             </ul>
           </div>
         </div>
+        
       </div>
-
-   
+      <p className="text-center pt-4 mt-10 border-t-1 border-[#00000038]"> Bütün hüquqlar Fitvibe tərəfindən qorunur. Veb sayt Markup tərəfindən hazırlanıb.</p>
     </footer>
   )
 }

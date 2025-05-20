@@ -7,22 +7,22 @@ const JoinUsSection =    () => {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="p-10   rounded-2xl flex flex-col md:flex-row items-center overflow-hidden">
+      <div className="p-4   rounded-2xl flex flex-col md:flex-row items-center overflow-hidden">
         <div className="p-8 md:p-15 flex-1">
           <h2
             className="text-4xl font-serif custom-color mb-4 "
           >
-            Join us today!
+            Bu gün bizə qoşulun!
           </h2>
           <p
             className="text-lg custom-color opacity-80 mb-6 "
           >
-            Let&apos;s disconnect and enjoy the power of nature improving your health.
+            Gəlin gündəlik qayğılardan uzaqlaşaq və təbiətin gücü ilə sağlamlığımızı gücləndirək.
           </p>
           <Link href="/retreats"
             className="bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
           >
-            See schedule
+            Daha Çox
           </Link>
           <div
             className="flex items-center mt-5"
@@ -56,7 +56,7 @@ const JoinUsSection =    () => {
                 />
               </div>
             </div>
-            <p className="custom-color text-sm">We healed 1000+ students</p>
+            <p className="custom-color text-sm">1000-dən artıq tələbəmiz sağlamlığına qovuşdu.</p>
           </div>
         </div>
         <div

@@ -46,22 +46,22 @@ const YogaEscapeSection: React.FC = async () => {
           <p
             className="font-semibold "
           >
-            JOIN THE RETREAT IF:
+            FITVIBE QATILIN ƏGƏR':
           </p>
           <ul
             className="ml-5 md:ml-0 text-brown-600 space-y-2 mt-3   "
           >
             <li className="flex items-center">
               <RiCheckDoubleFill className="mr-1" />
-              you need to disconnect
+                əlaqəni kəsmək lazımdır 
             </li>
             <li className="flex items-center">
               <RiCheckDoubleFill className="mr-1" />
-              you want to focus on your body
+              bədəninizə diqqət yetirmək istəyirsiniz
             </li>
             <li className="flex items-center">
               <RiCheckDoubleFill className="mr-1" />
-              improve your yoga
+              yoganızı təkmilləşdirin
             </li>
           </ul>
         </div>
