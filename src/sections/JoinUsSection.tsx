@@ -6,7 +6,7 @@ const JoinUsSection =    () => {
  
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-0">
       <div className="p-4 bg-[#2e826a]    rounded-2xl flex flex-col md:flex-row items-center overflow-hidden">
         <div className="p-8 md:p-15 flex-1">
           <h2
