@@ -15,12 +15,12 @@ const RetreatScheduleSection: React.FC = async () => {
           <h2
             className="text-3xl md:text-4xl font-semibold text-[#2e826a] mb-6 animate-on-scroll transition-all duration-500 ease-in-out"
           >
-            Upcoming FitVibe
+            FitVibe – Tezliklə
           </h2>
           <p
             className="color-desc mb-8 animate-on-scroll transition-all duration-500 ease-in-out"
           >
-            Check our schedule and free spots, book the date and lets have fun!
+            Cədvəlimizə və boş yerlərə bax, tarix seç və əylənməyə başlayaq!
           </p>
           <Link
             href="/service"

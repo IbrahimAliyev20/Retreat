@@ -18,10 +18,10 @@ const AboutContactScroll: React.FC = async  () => {
           <h2
             className="text-3xl md:text-4xl font-semibold text-brown-800 mb-6 "
           >
-            Values we live by
+            Bizim üçün önəmli olan dəyərlər
           </h2>
           <p className="bg-brown-600 mb-8 " >
-            Suspendisse eu ligula. Nullam tincidunt adipiscing enim. Nunc nonummy.
+            Peşəkarlıqla yanaşmaq bizim əsas prinsipimizdir.
           </p>
           <Link href="/contact"
             className="bg-[#2e826a] text-white px-7 py-2 rounded-full hover:bg-brown-700 transition "
