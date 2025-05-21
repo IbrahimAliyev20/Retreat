@@ -12,5 +12,5 @@ export async function getBlogBySlug(slug: string): Promise<BlogsType> {
     cache: "no-store",
   });
   const json = await res.json();
-  return json.data; // JSON strukturunda "data" içində gəlir
+  return json.data; 
 }

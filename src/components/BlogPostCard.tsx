@@ -12,7 +12,7 @@ const BlogPostCard: React.FC<BlogCardProps> = ({ title, imageSrc, slug }) => {
   return (
     <Link
       href={`/blog/${slug}`}
-      className="bg-color-yellow rounded-lg shadow-md overflow-hidden max-w-sm"
+      className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm"
     >
       <div className="relative w-full h-78">
         <Image
@@ -24,7 +24,7 @@ const BlogPostCard: React.FC<BlogCardProps> = ({ title, imageSrc, slug }) => {
         />
       </div>
       <div className="p-6 text-center">
-        <h3 className="text-3xl font-serif text-[#564418] mb-2">{title}</h3>
+        <h3 className="text-3xl font-serif custom-color mb-2">{title}</h3>
       </div>
     </Link>
   );

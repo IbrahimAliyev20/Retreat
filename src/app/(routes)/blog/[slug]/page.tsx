@@ -1,3 +1,4 @@
+import Reveal from '@/components/Reveal';
 import BlogCardSec from '@/sections/(Blogsec)/BlogCardSec';
 import BlogSingle from '@/sections/(Blogsec)/Blogsinglepage';
 
@@ -6,15 +7,25 @@ interface BlogPageProps {
 }
 
 export default async function Blogpage({ params }: BlogPageProps) {
-  const { slug } = await params; // params'ı çöz
+  const { slug } = await params; 
 
   return (
+     
+
     <div className="container mx-auto">
-      <BlogSingle params={{ slug }} /> {/* params={{ slug }} olarak geçir */}
+     <Reveal>
+      <BlogSingle params={{ slug }} />
+      </Reveal>
+      <Reveal>
+
       <div className="py-8">
         <p className="text-6xl font-semibold">Other blog posts</p>
       </div>
+      </Reveal>
+      <Reveal>
+
       <BlogCardSec />
+      </Reveal>
     </div>
   );
 }

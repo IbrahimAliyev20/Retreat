@@ -1,9 +1,22 @@
-import React from 'react'
+import { getServiceDetail } from "@/lib/servicedetail";
+import ServicePageSingle from "@/sections/(Service)/ServicePageSingle";
+import { notFound } from "next/navigation";
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
+export default async function ServiceSlugPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params; 
+  try {
+    const service = await getServiceDetail(slug);
+    return (
+      <div>
+        <ServicePageSingle service={service} />
+      </div>
+    );
+  } catch (error) {
+    console.error("Error fetching service:", error);
+    notFound(); 
+  }
 }
-
-export default page

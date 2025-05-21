@@ -12,9 +12,9 @@ const TeamHero: React.FC = () => {
         >
          Komanda ilə tanış olun        </h1>
         <p
-          className="text-xl md:text-2xl custom-color mb-8 "
+          className="text-xl md:text-2xl color-desc mb-8 "
         >
-         Dedicated to give you top experience
+        Sizə yüksək səviyyəli təcrübə yaşatmaq üçün buradayıq
         </p>
       </div>
     </div>

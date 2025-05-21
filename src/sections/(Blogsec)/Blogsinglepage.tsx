@@ -14,7 +14,7 @@ export default async function BlogSingle({ params }: BlogSingleProps) {
         <div className="text-center mb-8">
           <p className="text-2xl uppercase text-accent mb-10">July 8, 2023</p>
           <h1 className="text-6xl font-bold text-accent">{blog.title}</h1>
-          <p className="text-2xl text-textColor mt-10">
+          <p className="text-2xl color-desc mt-10">
             Dive into expert advice from our dietitian on how to nourish your body...
           </p>
         </div>

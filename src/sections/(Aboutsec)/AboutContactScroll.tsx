@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { getValues } from "@/lib/values";
+import Link from "next/link";
 
 
 
@@ -22,17 +23,17 @@ const AboutContactScroll: React.FC = async  () => {
           <p className="bg-brown-600 mb-8 " >
             Suspendisse eu ligula. Nullam tincidunt adipiscing enim. Nunc nonummy.
           </p>
-          <button
+          <Link href="/contact"
             className="bg-[#2e826a] text-white px-7 py-2 rounded-full hover:bg-brown-700 transition "
           >
-            Contact us
-          </button>
+            Bizimlə Əlaqə
+          </Link>
         </div>
         <div className="md:w-2/5 space-y-12">
           {contactscrol.map((retreat, index) => (
             <div
               key={index}
-              className="bg-color-yellow hover:bg-beige-200 rounded-3xl p-12 shadow-md text-center "
+              className="bg-white hover:bg-beige-200 rounded-3xl p-12 shadow-md text-center "
             >
               <div className="relative w-full h-48 mb-4">
                 <Image
@@ -44,7 +45,7 @@ const AboutContactScroll: React.FC = async  () => {
                 />
               </div>
               <h3 className="text-3xl font-semibold text-brown-800 mb-2">{retreat.title}</h3>
-              <p className="text-lg bg-brown-600 mb-4">{retreat.description}</p>
+              <p className="text-lg color-desc mb-4">{retreat.description}</p>
             </div>
           ))}
         </div>

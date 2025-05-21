@@ -27,7 +27,7 @@ export default function TeamCard({ team }: TeamCardProps) {
           key={member.slug}
           className="flex items-center justify-center transition-opacity duration-1000 ease-in-out"
         >
-          <div className="mb-10 bg-color-yellow md:w-[60%] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-5 rounded-lg shadow-md">
+          <div className="mb-10 bg-white md:w-[60%] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-5 rounded-lg shadow-md">
             <div className="w-full md:w-1/3 flex flex-col items-center">
               <div className="relative w-48 h-48 mb-6">
                 <Image
@@ -74,17 +74,17 @@ export default function TeamCard({ team }: TeamCardProps) {
                 {member.name}
               </h3>
               <p className="text-xl custom-color opacity-80 mb-4">{member.profession}</p>
-              <p className="custom-color opacity-80 mb-6">
+              <p className="color-desc opacity-80 mb-6">
                 {member.description
                   ? member.description.replace(/<[^>]+>/g, '').slice(0, 100) + '...'
                   : 'No description available.'}
               </p>
               <Link
                 href={`/team/${member.slug}`}
-                className="custom-color border border-[#2e826a] py-2 px-6 rounded-full hover:bg-[#2e826a] hover:text-white transition-transform duration-300 hover:scale-105"
+                className=" border border-[#2e826a] py-2 px-6 rounded-full hover:bg-[#2e826a] hover:text-white transition-transform duration-300 hover:scale-105"
                 aria-label={`Read more about ${member.name}`}
               >
-                Read More
+                Ətraflı oxu
               </Link>
             </div>
           </div>

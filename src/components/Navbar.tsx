@@ -33,31 +33,31 @@ const Navbar = () => {
             Ana səhifə
           </Link>
           <Link
-            href="#about"
+            href="/about"
             className=" transition-colors text-lg font-semibold"
           >
             Haqqımızda
           </Link>
           <Link
-            href="#retreat"
+            href="/team"
             className=" transition-colors text-lg font-semibold"
           >
             Komanda
           </Link>
           <Link
-            href="#team"
+            href="/service"
             className=" transition-colors text-lg font-semibold"
           >
             Xidmətlər
           </Link>
           <Link
-            href="/#"
+            href="/blog"
             className="transition-colors text-lg font-semibold"
           >
             Bloqlar
           </Link>
           <Link
-            href="/#"
+            href="/contact"
             className=" transition-colors text-lg font-semibold"
           >
             Əlaqə
@@ -112,35 +112,35 @@ const Navbar = () => {
               Ana səhifə
             </Link>
             <Link
-              href="/#"
+              href="/about"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Haqqımızda
             </Link>
             <Link
-              href="/#"
+              href="/team"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Komanda
             </Link>
             <Link
-              href="/#"
+              href="/service"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Xidmətlər
             </Link>
             <Link
-              href="/#"
+              href="/blog"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >
               Bloqlar
             </Link>
             <Link
-              href="/#"
+              href="/contact"
               className="hover:text-[#8a7229] transition-colors text-lg font-semibold"
               onClick={toggleMenu}
             >

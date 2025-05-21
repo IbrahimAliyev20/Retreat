@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
   return (
     <div className=" flex items-center justify-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between ">
-        <div className="w-full md:w-1/2 text-center md:text-left pr-4">
+        <div className="w-full md:w-1/2 text-center md:text-left ">
           <h1
             className="text-5xl md:text-8xl font-serif  leading-tight mb-6 "
           >
@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
           </p>
           <Link
             className="bg-[#2e826a] text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition "
-           href="/retreats"
+           href="/service"
            >
             Daha Çox
           </Link>

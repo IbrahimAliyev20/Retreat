@@ -34,13 +34,13 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl font-serif text-[#3A2E1F] mb-4">Let&apos;s talk</h2>
-      <p className="text-lg text-[#3A2E1F] mb-8">
+      <h2 className="text-4xl font-serif custom-color mb-4">Let&apos;s talk</h2>
+      <p className="text-lg color-desc mb-8">
         If you have any questions about FirVibe just let us know and we will be happy to help you.
       </p>
       <div className="flex flex-col md:flex-row gap-50">
         {/* Form Section */}
-        <div className="bg-color-yellow rounded-xl p-6 md:w-1/2">
+        <div className="bg-white rounded-xl p-6 md:w-1/2">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <input
@@ -48,7 +48,7 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
                 value={formData.name}
                 onChange={handleChange}
                 type="text"
-                placeholder="Full name"
+                placeholder="Ad Soyad"
                 className="w-full border-b border-[#3A2E1F] border-opacity-20 bg-transparent text-[#3A2E1F] placeholder-[#3A2E1F] placeholder-opacity-50 focus:outline-none py-2"
               />
             </div>
@@ -68,7 +68,7 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
                 value={formData.subject}
                 onChange={handleChange}
                 type="text"
-                placeholder="Instagram (optional)"
+                placeholder="Sosyal Medya Linki"
                 className="w-full border-b border-[#3A2E1F] border-opacity-20 bg-transparent text-[#3A2E1F] placeholder-[#3A2E1F] placeholder-opacity-50 focus:outline-none py-2"
               />
             </div>
@@ -77,16 +77,16 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
                 name="note"
                 value={formData.note}
                 onChange={handleChange}
-                placeholder="Example Text"
+                placeholder="Nümunə Mətn"
                 className="w-full border-b border-[#3A2E1F] border-opacity-20 bg-transparent text-[#3A2E1F] placeholder-[#3A2E1F] placeholder-opacity-50 focus:outline-none py-2 resize-none"
                 rows={3}
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-[#3A2E1F] custom-color font-medium py-3 rounded-full hover:bg-opacity-90 transition"
+              className="w-full custom-color-bg1 text-white font-medium py-3 rounded-full hover:bg-opacity-90 transition"
             >
-              Submit
+              Göndər
             </button>
           </form>
         </div>

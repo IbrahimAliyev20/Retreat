@@ -28,7 +28,7 @@ const AboutHero: React.FC = async () => {
     
       <div className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 text-center">
             {counters.map((counter: CountersType, index: number) => (
               <div key={index}>
                 <h3 className="text-7xl font-serif text-[#3A2E1F] mb-2">{counter.number}</h3>

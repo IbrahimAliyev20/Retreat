@@ -8,7 +8,7 @@ import Aboutsec from '@/sections/Aboutsec';
 import Experience from '@/sections/Experience';
 import FAQSection from '@/sections/FAQSection';
 import JoinUsSection from '@/sections/JoinUsSection';
-import RetreatScheduleSection from '@/sections/RetreatScheduleSection';
+import RetreatScheduleSection from '@/sections/ServiceScheduleSection';
 import TeamIntroSection from '@/sections/TeamIntroSection';
 import TestimonialSlider from '@/sections/TestimonialSlider';
 import YogaEscapeSection from '@/sections/YogaEscapeSection';

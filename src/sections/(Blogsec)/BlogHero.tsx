@@ -13,7 +13,7 @@ const BlogHero: React.FC = () => {
           Sharing knowledge
         </h1>
         <p
-          className="text-xl md:text-xl custom-color mb-8 "
+          className="text-xl md:text-xl color-desc mb-8 "
         >
             Check our recent blog articles about yoga and diet.
         </p>

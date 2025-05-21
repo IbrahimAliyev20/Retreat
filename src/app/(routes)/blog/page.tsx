@@ -1,30 +1,30 @@
-import BlogCardSec from '@/sections/(Blogsec)/BlogCardSec'
-import BlogHero from '@/sections/(Blogsec)/BlogHero'
-import JoinUsSection from '@/sections/JoinUsSection'
-import React from 'react'
+import Reveal from "@/components/Reveal";
+import BlogCardSec from "@/sections/(Blogsec)/BlogCardSec";
+import BlogHero from "@/sections/(Blogsec)/BlogHero";
+import JoinUsSection from "@/sections/JoinUsSection";
+import React from "react";
 
 const Blog = () => {
   return (
     <div>
-
-      <div>
-      <BlogHero />
-      </div>
-
-       <div>
-        <BlogCardSec />
-      </div>
-     <div className="py-6 md:py-0  md:pt-16 ">
-        <div className='bg-color-yellow'>
-
-        <JoinUsSection />
+      <Reveal>
+        <div>
+          <BlogHero />
         </div>
-      </div>
-      <div>
+      </Reveal>
 
-      </div>
+      <Reveal>
+        <div>
+          <BlogCardSec />
+        </div>
+      </Reveal>
+      <Reveal>
+        <div className="py-6  md:pt-16 ">
+          <JoinUsSection />
+        </div>
+      </Reveal>
     </div>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

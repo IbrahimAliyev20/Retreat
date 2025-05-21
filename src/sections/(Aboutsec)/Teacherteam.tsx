@@ -10,7 +10,7 @@ export default async function Teacherteam() {
       <h2 className="text-4xl font-serif custom-color text-center mb-4 transition-opacity duration-1000 ease-in-out">
         Komanda ilə tanış olun
       </h2>
-      <p className="text-lg custom-color text-center mb-12 transition-opacity duration-1000 ease-in-out">
+      <p className="text-lg color-desc text-center mb-12 transition-opacity duration-1000 ease-in-out">
         Sizə ən yaxşı təcrübəni yaşatmaq üçün çalışırıq.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -34,7 +34,7 @@ export default async function Teacherteam() {
               />
             </div>
             <h3 className="text-xl font-medium custom-color mt-4">{member.name}</h3>
-            <p className="custom-color opacity-80 mb-4">{member.profession}</p>
+            <p className="color-desc opacity-80 mb-4">{member.profession}</p>
           </Link>
         ))}
       </div>
