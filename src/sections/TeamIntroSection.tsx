@@ -1,5 +1,5 @@
+import { getTeams } from "@/lib/getTeamBySlug";
 import Image from "next/image";
-import { getTeams } from "@/lib/teams";
 import Link from "next/link";
 
 const TeamIntroSection: React.FC = async  () => {

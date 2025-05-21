@@ -1,4 +1,4 @@
-'use client'; // İstemci bileşeni olarak işaretliyoruz, çünkü animasyon için useEffect kullanılabilir
+"use client"
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -31,7 +31,6 @@ const retreats = [
 const RetreatScheduleSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // Animasyon için useEffect (sadece masaüstünde çalışacak)
   useEffect(() => {
     if (window.innerWidth >= 768) { // md: kırılma noktası (768px)
       const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll');

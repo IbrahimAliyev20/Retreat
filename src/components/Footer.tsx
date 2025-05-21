@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold mb-4">&nbsp;</h3>
             <ul className="text-md space-y-2">
               <li><Link href="/blog" className="hover:underline">Bloqlar</Link></li>
-              <li><Link href="/retreats" className="hover:underline">Xidmətlər</Link></li>
+              <li><Link href="/service" className="hover:underline">Xidmətlər</Link></li>
               <li><Link href="/team" className="hover:underline">Komanda</Link></li>
             </ul>
           </div>

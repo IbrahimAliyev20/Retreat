@@ -1,34 +1,33 @@
-import TeamCard from '@/components/TeamCard'
-import TeamHero from '@/sections/(Teamsec)/TeamHero'
-import Experience from '@/sections/Experience'
-import JoinUsSection from '@/sections/JoinUsSection'
-import RetreatScheduleSection from '@/sections/RetreatScheduleSection'
-import React from 'react'
+import TeamCard from '@/components/TeamCard';
+import { getTeams } from '@/lib/getTeamBySlug';
+import TeamHero from '@/sections/(Teamsec)/TeamHero';
+import Experience from '@/sections/Experience';
+import JoinUsSection from '@/sections/JoinUsSection';
+import RetreatScheduleSection from '@/sections/RetreatScheduleSection';
 
-const TeamPage = () => {
+export default async function TeamPage() {
+
+  const team = await getTeams()
+
   return (
     <div>
-      <div >
-      <TeamHero />
+      <div>
+        <TeamHero />
       </div>
-      <div className='py-16'>
-        <TeamCard />
+      <div className="py-16">
+        <TeamCard team={team}/>
       </div>
-      <div className='py-16'>
+      <div className="py-16">
         <Experience />
       </div>
-      <div className='py-16'>
-      <RetreatScheduleSection />
+      <div className="py-16">
+        <RetreatScheduleSection />
       </div>
-     <div className="py-6 md:py-0  md:pt-16 ">
-        <div className='bg-color-yellow'>
-
-        <JoinUsSection />
+      <div className="py-6 md:py-0 md:pt-16">
+        <div className="bg-color-yellow">
+          <JoinUsSection />
         </div>
       </div>
     </div>
-
-  )
+  );
 }
-
-export default TeamPage

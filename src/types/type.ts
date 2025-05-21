@@ -64,10 +64,14 @@ export interface CommentsType {
 ////////// Teams Type ////////////
 
 export interface TeamsType {
-  name:string;
-  profession:string;
+  name: string;
+  slug: string;
+  description: string;
+  profession: string;
   image: string;
   thumb_image: string;
+  instagram?: string; 
+  twitter?: string; 
 }
 ////////// Teams Type ////////////
 
@@ -172,7 +176,7 @@ export interface ValuesType {
 export interface ContactType {
   email: string;
   address: string;
-  phone: number;
+  phone: string;
   image: string;
   thumb_image: string;
 }

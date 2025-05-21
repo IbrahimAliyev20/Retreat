@@ -1,47 +1,42 @@
-import ContactForm from '@/components/ContactForm'
-import { getFaq } from '@/lib/faq'
-import AboutContactScroll from '@/sections/(Aboutsec)/AboutContactScroll'
-import AboutHero from '@/sections/(Aboutsec)/AboutHero'
-import Teacherteam from '@/sections/(Aboutsec)/Teacherteam'
-import Experience from '@/sections/Experience'
-import FAQSection from '@/sections/FAQSection'
-import JoinUsSection from '@/sections/JoinUsSection'
-import React from 'react'
+import ContactForm from '@/components/ContactForm';
+import { getContact } from '@/lib/contact';
+import { getFaq } from '@/lib/faq';
+import AboutContactScroll from '@/sections/(Aboutsec)/AboutContactScroll';
+import AboutHero from '@/sections/(Aboutsec)/AboutHero';
+import Teacherteam from '@/sections/(Aboutsec)/Teacherteam';
+import Experience from '@/sections/Experience';
+import FAQSection from '@/sections/FAQSection';
+import JoinUsSection from '@/sections/JoinUsSection';
 
-const Aboutpage = async () => {
-    const faqs = await getFaq()
-  
+export default async function AboutPage() {
+  const faqs = await getFaq();
+  const data = await getContact(); 
+
   return (
     <div>
       <div>
-
-      <AboutHero />
+        <AboutHero />
       </div>
-      <div className='py-26'>
+      <div className="py-24">
         <AboutContactScroll />
       </div>
-      <div className='py-26'>
+      <div className="py-24">
         <Experience />
       </div>
-      <div className='py-26'>
+      <div className="py-24">
         <Teacherteam />
       </div>
-      <div className='py-26'>
-        <FAQSection faqs ={faqs}/>
+      <div className="py-24">
+        <FAQSection faqs={faqs} />
       </div>
-      <div className='py-26'>
-        <ContactForm />
+      <div className="py-24">
+        <ContactForm contactData={data} />
       </div>
-   <div className="py-6 md:py-0  md:pt-16 ">
-        <div className='bg-color-yellow'>
-
-        <JoinUsSection />
+      <div className="py-6 md:py-0 md:pt-16">
+        <div className="bg-color-yellow">
+          <JoinUsSection />
         </div>
       </div>
-      
- 
     </div>
-  )
+  );
 }
-
-export default Aboutpage

@@ -1,7 +1,6 @@
-"use client";
 import Image from 'next/image';
 
-const RetreatCard: React.FC = () => {
+const ServiceCard: React.FC = () => {
 
   const cards = [
     {
@@ -94,4 +93,4 @@ const RetreatCard: React.FC = () => {
   );
 };
 
-export default RetreatCard;
+export default ServiceCard;

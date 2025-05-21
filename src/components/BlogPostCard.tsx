@@ -1,22 +1,25 @@
+// src/components/BlogPostCard.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface BlogCardProps {
   title: string;
   imageSrc: string;
+  slug: string;
 }
-const BlogPostCard: React.FC<BlogCardProps> = ({ title,  imageSrc,  }) => {
 
+const BlogPostCard: React.FC<BlogCardProps> = ({ title, imageSrc, slug }) => {
   return (
-    <Link href="#"
-      className="bg-color-yellow rounded-lg shadow-md overflow-hidden  max-w-sm"
+    <Link
+      href={`/blog/${slug}`}
+      className="bg-color-yellow rounded-lg shadow-md overflow-hidden max-w-sm"
     >
       <div className="relative w-full h-78">
         <Image
           src={imageSrc}
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           className="rounded-t-lg"
         />
       </div>

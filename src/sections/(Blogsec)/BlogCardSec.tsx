@@ -1,25 +1,25 @@
-import BlogPostCard from '@/components/BlogPostCard';
+// src/sections/(Blogsec)/BlogCardSec.tsx
 import { getBlogs } from '@/lib/blog';
-import React from 'react';
+import BlogPostCard from '@/components/BlogPostCard';
+import { BlogsType } from '@/types/type';
 
-const BlogCardSec: React.FC  = async () => {
-  const blogpost = await getBlogs()
-  
+export default async function BlogCardSec() {
+  const blogposts: BlogsType[] = await getBlogs();
+
   return (
     <section className="py-16">
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <div className="flex flex-col md:flex-row gap-8 justify-center">
-          {blogpost.map((post, index) => (
+          {blogposts.map((post, index) => (
             <BlogPostCard
               key={index}
               title={post.title}
-              imageSrc={post.image}
+              imageSrc={post.thumb_image} 
+              slug={post.slug} 
             />
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default BlogCardSec;
+}

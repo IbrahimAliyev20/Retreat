@@ -1,4 +1,4 @@
-import RetreatCard from '@/components/RetreatCard'
+import ServiceCard from '@/components/ServiceCard'
 import { getFaq } from '@/lib/faq'
 import Teacherteam from '@/sections/(Aboutsec)/Teacherteam'
 import RetreatHero from '@/sections/(Retreatsec)/RetreatHero'
@@ -13,7 +13,7 @@ const RetreatsPage =async () => {
       <RetreatHero />
       </div >
       <div className='py-16 '>
-      <RetreatCard />
+      <ServiceCard />
       </div>
       <div className='py-16'>
       <Teacherteam />
