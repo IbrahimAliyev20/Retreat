@@ -48,9 +48,11 @@ const RetreatScheduleSection: React.FC = async () => {
                 />
               </div>
               <p className="color-desc mb-4">{service.description}</p>
-              <button className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition">
+              <Link 
+              href={`/service/${service.slug}`}
+              className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition">
                 İndi sifariş et
-              </button>
+              </Link>
             </div>
           ))}
         </div>

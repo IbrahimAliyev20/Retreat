@@ -109,6 +109,7 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
                 alt="Post icon"
                 width={40}
                 height={40}
+                className='filter hue-rotate-85'
               />
               <p>{contactData.email}</p>
             </div>
@@ -118,6 +119,7 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
                 alt="Location icon"
                 width={40}
                 height={40}
+                className='filter hue-rotate-85'
               />
               <p>{contactData.address}</p>
             </div>
@@ -127,6 +129,7 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
                 alt="Message icon"
                 width={40}
                 height={40}
+                className='filter hue-rotate-85'
               />
               <p>{contactData.phone}</p>
             </div>

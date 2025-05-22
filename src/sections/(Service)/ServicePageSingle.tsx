@@ -45,7 +45,7 @@ export default function ServicePageSingle({ service }: ServicePageSingleProps) {
 
         <div className="w-[30%] bg-white p-6 rounded-lg shadow-md mt-6 md:mt-0">
           <h4 className="text-xl font-semibold text-[#5a4b3c] mb-4">{service.title}</h4>
-          <div className="border-t border-[#5a4b3c] my-4"></div>
+          <div className="border-t border-[#5a4b3c] my-4 "></div>
 
           {service.attribute_1.map((attr, index) => (
             <div key={index} className="flex justify-between text-[#5a4b3c] mb-2">
@@ -70,8 +70,8 @@ export default function ServicePageSingle({ service }: ServicePageSingleProps) {
             </div>
           ))}
 
-          <button className="w-full bg-[#5a4b3c] text-white py-3 rounded-full hover:bg-[#4a3b2c] transition">
-            Add to Cart
+          <button className="w-full bg-[#2e826a] text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition ">
+            Keçid et
           </button>
         </div>
       </section>

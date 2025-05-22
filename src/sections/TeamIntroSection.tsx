@@ -21,7 +21,8 @@ const TeamIntroSection: React.FC = async  () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {teachers.map((member, index) => (
-            <div
+            <Link
+              href={`/team/${member.slug}`}
               key={index}
               className="flex flex-col items-center hover:scale-105 duration-300 "
             >
@@ -36,7 +37,7 @@ const TeamIntroSection: React.FC = async  () => {
               </div>
               <h3 className="text-xl font-medium custom-color mt-4">{member.name}</h3>
               <p className="custom-color opacity-80">{member.profession}</p>
-            </div>
+            </Link>
           ))}
           <div className="bg-white rounded-xl p-6 flex flex-col justify-between " >
             <p className="color-desc text-lg">
