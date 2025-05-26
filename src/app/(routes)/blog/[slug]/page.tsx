@@ -19,7 +19,7 @@ export default async function Blogpage({ params }: BlogPageProps) {
       <Reveal>
 
       <div className="py-8">
-        <p className="text-6xl font-semibold">Other blog posts</p>
+        <p className="text-5xl font-semibold">Other blog posts</p>
       </div>
       </Reveal>
       <Reveal>

@@ -1,6 +1,6 @@
 "use client";
 
-const RetreatHero: React.FC = () => {
+const ServiceHero: React.FC = () => {
 
   return (
     <div
@@ -22,4 +22,4 @@ const RetreatHero: React.FC = () => {
   );
 };
 
-export default RetreatHero;
+export default ServiceHero;

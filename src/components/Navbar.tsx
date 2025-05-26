@@ -19,7 +19,7 @@ const Navbar = () => {
           <Image
             src="/images/logo.png"
             alt="Retreat You Logo"
-            width={183}
+            width={143}
             height={63}
             className="object-contain filter invert"
           />

@@ -4,7 +4,7 @@ import { getTeams } from "@/lib/getTeamBySlug";
 import TeamHero from "@/sections/(Teamsec)/TeamHero";
 import Experience from "@/sections/Experience";
 import JoinUsSection from "@/sections/JoinUsSection";
-import RetreatScheduleSection from "@/sections/ServiceScheduleSection";
+import ServiceScheduleSection from "@/sections/ServiceScheduleSection";
 
 export default async function TeamPage() {
   const team = await getTeams();
@@ -30,7 +30,7 @@ export default async function TeamPage() {
 
       <Reveal>
         <div className="py-16">
-          <RetreatScheduleSection />
+          <ServiceScheduleSection />
         </div>
       </Reveal>
 

@@ -17,6 +17,7 @@ const AboutHero: React.FC = async () => {
           backgroundImage: `url(${heroabout.image})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          borderRadius: "0 0 150px 0 ",
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex flex-col items-start justify-center">

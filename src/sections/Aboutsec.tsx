@@ -33,16 +33,19 @@ const Aboutsec: React.FC = async () => {
                 height={32}
                 className="mb-4 filter hue-rotate-85"
               />
-              <h3 className="text-xl font-semibold text-brown mb-2">{item.title}</h3>
-              <p className="color-desc text-sm">{item.description}</p>
+              <h3 className="text-[24px] font-semibold text-brown mb-2">{item.title}</h3>
+              <p className="color-desc text-[16px]">{item.description}</p>
             </div>
           ))}
         </div>
 
         {/* Düymə */}
-        <Link href="/about" className="bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition">
+        <div className='w-full justify-center flex'>
+        <Link href="/about" className="flex w-fit bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition">
           About us
         </Link>
+        
+        </div>
       </div>
     </section>
   );

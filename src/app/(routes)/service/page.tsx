@@ -2,7 +2,7 @@ import Reveal from '@/components/Reveal'
 import ServiceCard from '@/components/ServiceCard'
 import { getFaq } from '@/lib/faq'
 import Teacherteam from '@/sections/(Aboutsec)/Teacherteam'
-import RetreatHero from '@/sections/(Service)/RetreatHero'
+import ServiceHero from '@/sections/(Service)/ServiceHero'
 import FAQSection from '@/sections/FAQSection'
 import React from 'react'
 
@@ -12,7 +12,7 @@ const RetreatsPage =async () => {
     <div>
       <Reveal>
             <div >
-            <RetreatHero />
+            <ServiceHero />
             </div >
       </Reveal>
       <Reveal>

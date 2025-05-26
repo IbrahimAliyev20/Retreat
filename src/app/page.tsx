@@ -8,7 +8,7 @@ import Aboutsec from '@/sections/Aboutsec';
 import Experience from '@/sections/Experience';
 import FAQSection from '@/sections/FAQSection';
 import JoinUsSection from '@/sections/JoinUsSection';
-import RetreatScheduleSection from '@/sections/ServiceScheduleSection';
+import ServiceScheduleSection from '@/sections/ServiceScheduleSection';
 import TeamIntroSection from '@/sections/TeamIntroSection';
 import TestimonialSlider from '@/sections/TestimonialSlider';
 import YogaEscapeSection from '@/sections/YogaEscapeSection';
@@ -21,25 +21,29 @@ export default async function Home() {
   return (
     <div>
       <Reveal>
-      <div className="pt-34 md:pt-25 pb-10" id='home'>
+      <div className="pt-34  pb-16" id='home'>
         <HeroSection />
       </div>
       </Reveal>
  
    <Reveal>
-      <div className="py-6 md:py-16" id='about'>
+      <div className="py-6 md:py-20" id='about'>
         <Aboutsec />
       </div>
    </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-16" >
+      <div className="py-6 md:py-20" >
         <Experience />
       </div>
       </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-16">
+      <div className="py-6 md:py-20">
+        <div className='container mx-auto text-center w-full md:w-[40%] flex flex-col'>
+        <h1 className='text-4xl md:text-5xl font-serif text-brown mb-2 leading-snug'>Experience the location</h1>
+        <h3  className='text-lg color-desc mb-8 '>Located in mountain side in Thailand our location offers peace and tranquility.</h3>
+        </div>
         
               <CustomCarousel direction="left" images={images}/>
               <div className="mt-4">
@@ -50,37 +54,37 @@ export default async function Home() {
       </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-16">
+      <div className="py-6 md:py-20">
         <YogaEscapeSection />
       </div>
       </Reveal>
 
      <Reveal>
-      <div className="py-6  md:py-16">
+      <div className="py-6  md:py-20">
         <TestimonialSlider comment={comment} />
       </div>
      </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-16" id='retreat'>
-        <RetreatScheduleSection />
+      <div className="py-6 md:py-20" id='retreat'>
+        <ServiceScheduleSection />
       </div>
       </Reveal>
 
       <Reveal>
-      <div className="py-6  md:py-16" id='team'>
+      <div className="py-6  md:py-20" id='team'>
         <TeamIntroSection />
       </div>
       </Reveal>
 
       <Reveal>
-      <div className="py-6  md:py-16">
+      <div className="py-6  md:py-20">
         <FAQSection faqs={faqs} />
       </div>
       </Reveal>
 
       <Reveal>
-      <div className='py-6 md:py-16'>
+      <div className='py-6 md:py-20'>
 
         <JoinUsSection />
       </div>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-const RetreatScheduleSection: React.FC = async () => {
+const ServiceScheduleSection: React.FC = async () => {
 
   const data = await getServices() 
  
@@ -61,4 +61,4 @@ const RetreatScheduleSection: React.FC = async () => {
   );
 };
 
-export default RetreatScheduleSection;
+export default ServiceScheduleSection;

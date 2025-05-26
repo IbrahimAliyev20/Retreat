@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between ">
         <div className="w-full md:w-1/2 text-center md:text-left ">
           <h1
-            className="text-5xl md:text-8xl font-serif  leading-tight mb-6 "
+            className="text-5xl md:text-8xl font-serif  leading-tight  "
           >
             Yoga və
             <br />
@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
               alt="Yoga Retreat 1"
               width={700}
               height={730}
-              className="rounded-2xl w-[80%] md:w-full mx-auto h-auto "
+              className="rounded-2xl w-[80%] md:w-[90%] mx-auto h-auto "
             />
             <div className="absolute -bottom-12  left-0 md:-left-12 w-70 " >
               <Image
