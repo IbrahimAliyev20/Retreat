@@ -8,7 +8,7 @@ const ServiceCard = async () => {
 
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col gap-54">
+      <div className="flex flex-col gap-16 md:gap-54">
         {cards.map((card, index) => (
           <div
             key={index}
