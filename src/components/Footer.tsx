@@ -86,7 +86,11 @@ const Footer: React.FC = () => {
         </div>
         
       </div>
-      <p className="text-center pt-4 mt-10 border-t-1 border-[#00000038]"> Bütün hüquqlar Fitvibe tərəfindən qorunur. Veb sayt Markup tərəfindən hazırlanıb.</p>
+      <p className="text-center pt-4 mt-10 border-t-1 border-[#00000038]"> Bütün hüquqlar Fitvibe tərəfindən qorunur. Veb sayt 
+        <Link href={"https://markup.az/"} target="_blank" className="mx-1">
+        Markup 
+        </Link> 
+        tərəfindən hazırlanıb.</p>
     </footer>
   )
 }

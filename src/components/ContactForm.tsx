@@ -34,13 +34,13 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl font-serif custom-color mb-4">Let&apos;s talk</h2>
+      <h2 className="text-4xl font-serif custom-color mb-4">Gəlin danışaq!</h2>
       <p className="text-lg color-desc mb-8">
-        If you have any questions about FirVibe just let us know and we will be happy to help you.
+        FirVibe ilə bağlı hər hansı sualınız varsa, bizə bildirin — sizə məmnuniyyətlə kömək edərik.
       </p>
-      <div className="flex flex-col md:flex-row gap-50">
+      <div className="flex flex-col md:flex-row gap-20 md:gap-50">
         {/* Form Section */}
-        <div className="bg-white rounded-xl p-6 md:w-1/2">
+        <div className="bg-white rounded-xl p-6 md:w-1/2 h-fit">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <input
@@ -93,7 +93,7 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
 
         {/* Contact Info Section */}
         <div className="md:w-1/2 flex flex-col justify-between">
-          <div className="w-120 h-90 relative rounded-xl overflow-hidden">
+          <div className=" h-90 relative rounded-xl overflow-hidden">
             <Image
               src={contactData.image}
               alt="Person in nature"

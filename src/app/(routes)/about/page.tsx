@@ -22,35 +22,35 @@ export default async function AboutPage() {
       </Reveal>
 
       <Reveal>
-        <div className="py-24">
+        <div className="py-6 md:py-16">
           <AboutContactScroll />
         </div>
       </Reveal>
       <Reveal>
-        <div className="py-24">
+        <div className="py-6 md:py-16">
           <Experience />
         </div>
       </Reveal>
       <Reveal>
-        <div className="py-24">
+        <div className="py-6 md:py-16">
           <Teacherteam />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="py-24">
+        <div className="py-6 md:py-16">
           <FAQSection faqs={faqs} />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="py-24">
+        <div className="py-6 md:py-16">
           <ContactForm contactData={data} />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="py-6 md:py-16 ">
+        <div className="py-6 md:py-16">
             <JoinUsSection />
         </div>
       </Reveal>

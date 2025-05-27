@@ -9,7 +9,7 @@ export default async function BlogCardSec() {
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row gap-8 justify-center">
+        <div className="items-center flex flex-col md:flex-row gap-8 justify-center">
           {blogposts.map((post, index) => (
             <BlogPostCard
               key={index}

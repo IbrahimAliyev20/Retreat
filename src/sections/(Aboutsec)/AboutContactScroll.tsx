@@ -13,8 +13,8 @@ const AboutContactScroll: React.FC = async  () => {
 
   return (
     <section>
-      <div className="container mx-auto flex flex-col md:flex-row gap-72">
-        <div className="md:w-1/3 sticky top-16 self-start">
+      <div className="container mx-auto flex flex-col md:flex-row gap-16 md:gap-72">
+        <div className="md:w-1/3 inline-block md:sticky top-16 self-start ml-10 md:ml-0">
           <h2
             className="text-3xl md:text-4xl font-semibold text-brown-800 mb-6 "
           >

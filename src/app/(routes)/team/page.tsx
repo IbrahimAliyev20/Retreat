@@ -17,25 +17,25 @@ export default async function TeamPage() {
         </div>
       </Reveal>
       <Reveal>
-        <div className="py-16">
+        <div className="py-6 md:py-16">
           <TeamCard team={team} />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="py-16">
+        <div className="py-6 md:py-16">
           <Experience />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="py-16">
+        <div className="py-6 md:py-16">
           <ServiceScheduleSection />
         </div>
       </Reveal>
 
       <Reveal>
-        <div className="py-6  md:pt-16">
+        <div className="py-6  md:py-16">
           <JoinUsSection />
         </div>
       </Reveal>

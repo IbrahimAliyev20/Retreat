@@ -41,8 +41,8 @@ export default async function Home() {
       <Reveal>
       <div className="py-6 md:py-20">
         <div className='container mx-auto text-center w-full md:w-[40%] flex flex-col'>
-        <h1 className='text-4xl md:text-5xl font-serif text-brown mb-2 leading-snug'>Experience the location</h1>
-        <h3  className='text-lg color-desc mb-8 '>Located in mountain side in Thailand our location offers peace and tranquility.</h3>
+        <h1 className='text-4xl md:text-5xl font-serif text-brown mb-2 leading-snug'>Məkanın ruhunu hiss et</h1>
+        <h3  className='text-lg color-desc mb-8 '>Dağ ətəyində yerləşən məkanımız sizə sakitlik və dinclik təqdim edir</h3>
         </div>
         
               <CustomCarousel direction="left" images={images}/>

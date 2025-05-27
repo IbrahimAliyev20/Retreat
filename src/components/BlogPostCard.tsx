@@ -12,7 +12,7 @@ const BlogPostCard: React.FC<BlogCardProps> = ({ title, imageSrc, slug }) => {
   return (
     <Link
       href={`/blog/${slug}`}
-      className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm"
+      className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm min-h-[470px]"
     >
       <div className="relative w-full h-78">
         <Image

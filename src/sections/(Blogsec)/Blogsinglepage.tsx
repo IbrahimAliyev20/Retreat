@@ -15,7 +15,7 @@ export default async function BlogSingle({ params }: BlogSingleProps) {
           <p className="text-2xl uppercase text-accent mb-10">July 8, 2023</p>
           <h1 className="text-6xl font-bold text-accent">{blog.title}</h1>
           <p className="text-2xl color-desc mt-10">
-            Dive into expert advice from our dietitian on how to nourish your body...
+            Bədənini necə qidalandırmaq barədə dietoloqumuzun peşəkar tövsiyələrinə nəzər sal...
           </p>
         </div>
 
@@ -26,12 +26,12 @@ export default async function BlogSingle({ params }: BlogSingleProps) {
               alt={blog.title}
               fill
               style={{ objectFit: 'cover' }}
-              className="rounded-lg"
+              className="rounded-3xl"
             />
           </div>
         </div>
 
-        <article className="space-y-8 w-[60%] mx-auto">
+        <article className="space-y-8 w-[90%] md:w-[60%] mx-auto">
           <div
             className="prose max-w-none"
             dangerouslySetInnerHTML={{ __html: blog.description }}

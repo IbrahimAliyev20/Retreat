@@ -18,8 +18,8 @@ export default async function Blogpage({ params }: BlogPageProps) {
       </Reveal>
       <Reveal>
 
-      <div className="py-8">
-        <p className="text-5xl font-semibold">Other blog posts</p>
+      <div >
+        <p className="text-5xl font-semibold">Digər bloq yazıları</p>
       </div>
       </Reveal>
       <Reveal>

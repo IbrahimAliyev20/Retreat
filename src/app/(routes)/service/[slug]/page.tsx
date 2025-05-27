@@ -22,15 +22,15 @@ export default async function ServiceSlugPage({ params }: ServicePageProps) {
         <ServicePageSingle service={service} />
       </Reveal>
 
-    <div className="container mx-auto">
+    <div className="container mx-auto py-6 md:py-16">
 
       <Reveal>
         <ServiceSingleTeam  service={service}/>
       </Reveal>
 
       <Reveal>
-        <div className="py-8">
-          <p className="text-6xl font-semibold">Other services</p>
+        <div className="px-2 py-8">
+          <p className="text-5xl md:text-6xl font-semibold mb-2 md:mb-5">Other services</p>
         </div>
       </Reveal>
 

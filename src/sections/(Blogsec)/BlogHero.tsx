@@ -4,7 +4,7 @@ const BlogHero: React.FC = () => {
 
   return (
     <div
-      className="relative pt-40  flex items-center justify-center overflow-hidden">
+      className="relative pt-30  flex items-center justify-center overflow-hidden">
 
       <div className="container mx-auto px-4 text-center z-10">
         <h1

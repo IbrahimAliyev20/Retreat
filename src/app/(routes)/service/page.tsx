@@ -11,24 +11,24 @@ const RetreatsPage =async () => {
   return (
     <div>
       <Reveal>
-            <div >
+            <div className='pb-6 md:pb-16' >
             <ServiceHero />
             </div >
       </Reveal>
       <Reveal>
-      <div className='py-16 '>
+      <div className='py-6 md:py-16'>
       <ServiceCard />
       </div>
 
       </Reveal>
 
       <Reveal>
-   <div className='py-16'>
+   <div className='py-6 md:py-16'>
       <Teacherteam />
       </div>
       </Reveal>
    <Reveal>
-       <div className='py-16'>
+       <div className='py-6 md:py-16'>
         <FAQSection faqs ={faqs}/>
       </div>
    </Reveal>
