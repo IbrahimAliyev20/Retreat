@@ -66,7 +66,7 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
                         </div>
                       </Reveal>
                       <Reveal duration={1.0} yOffset={70}>
-                        <p className="color-desc mb-4 text-xl">“{testimonial.description}”</p>
+                        <p className="color-desc mb-4 text-[16px] md:text-xl">“{testimonial.description}”</p>
                         <p className="color-desc font-medium">{testimonial.author}</p>
                       </Reveal>
                     </div>
