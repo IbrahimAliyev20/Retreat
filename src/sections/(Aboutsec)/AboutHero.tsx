@@ -24,10 +24,10 @@ const AboutHero: React.FC = async () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col items-start justify-center">
           <div className="w-[50%]">
             <Reveal duration={0.5} yOffset={60}>
-              <h1 className="text-white text-7xl font-serif mb-4">{heroabout.title}</h1>
+              <h1 className="text-white text-5xl md:text-7xl font-serif mb-4">{heroabout.title}</h1>
             </Reveal>
             <Reveal duration={0.7} yOffset={50}>
-              <p className="text-white text-2xl opacity-80 mb-8">{heroabout.desciption}</p>
+              <p className="text-white text-xl md:text-2xl opacity-80 mb-8">{heroabout.desciption}</p>
             </Reveal>
           </div>
         </div>
