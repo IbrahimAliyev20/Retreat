@@ -10,7 +10,7 @@ export default async function BlogSingle({ params }: BlogSingleProps) {
 
   return (
     <div className="container mx-auto py-0 md:py-25 space-y-20">
-      <div>
+      <div className='py-26'>
         <div className="text-center mb-8">
           <p className="text-2xl uppercase text-accent mb-10">July 8, 2023</p>
           <h1 className="text-6xl font-bold text-accent">{blog.title}</h1>
@@ -20,13 +20,13 @@ export default async function BlogSingle({ params }: BlogSingleProps) {
         </div>
 
         <div className="mb-8">
-          <div className="relative w-full h-[600px] overflow-hidden rounded-lg">
+          <div className="relative w-full h-[600px] overflow-hidden rounded-0 md:rounded-lg">
             <Image
               src={blog.image}
               alt={blog.title}
               fill
               style={{ objectFit: 'cover' }}
-              className="rounded-3xl"
+              className="rounded-0 md:rounded-3xl"
             />
           </div>
         </div>
