@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-[#2e826a] text-white  p-6 rounded-xl flex-1">
+        <div className="bg-[#2e826a] text-white  p-6 rounded-lg flex-1">
           <div >
             <ul className="text-md space-y-4">
               <li className="flex items-center gap-2">

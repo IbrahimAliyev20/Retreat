@@ -20,7 +20,7 @@ export default async function Teacherteam() {
             href={`/team/${member.slug}`}
             className="flex flex-col items-center hover:scale-105 duration-300 transition-all group"
           >
-            <div className="w-full h-64 relative rounded-xl overflow-hidden">
+            <div className="w-full h-80 relative rounded-xl overflow-hidden">
               <Image
                 src={member.image || '/placeholder.svg'}
                 alt={member.name}

@@ -44,7 +44,7 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
             {comment.map((testimonial, index) => (
               <div key={index} className="px-4">
                 <Reveal duration={0.7} yOffset={50}>
-                  <div className="bg-white rounded-3xl p-0 md:p-8 flex items-center gap-6 h-76">
+                  <div className="bg-white rounded-lg p-0 md:p-8 flex items-center gap-6 h-76">
                     <div className="relative w-40 h-40 flex-shrink-0">
                       <Image
                         src={testimonial.image}

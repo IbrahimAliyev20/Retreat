@@ -19,7 +19,7 @@ const YogaEscapeSection: React.FC = async () => {
                 alt="Retreat Yoga"
                 width={600}
                 height={400}
-                className="mx-auto w-[70%] h-auto object-cover"
+                className="mx-auto w-[85%] h-auto object-cover"
               />
             </div>
           </Reveal>

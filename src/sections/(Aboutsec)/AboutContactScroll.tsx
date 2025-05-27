@@ -34,13 +34,13 @@ const AboutContactScroll: React.FC = async () => {
         <div className="md:w-2/5 space-y-12">
           {contactscrol.map((retreat, index) => (
             <Reveal key={index} duration={0.7 + index * 0.2} yOffset={50 + index * 10}>
-              <div className="bg-white hover:bg-beige-200 rounded-3xl p-12 shadow-md text-center">
-                <div className="relative w-full h-48 mb-4">
+              <div className="bg-white hover:bg-beige-200 rounded-lg p-12 shadow-md text-center">
+                <div className="relative w-full h-58 mb-4">
                   <Image
                     src={retreat.image}
                     alt={retreat.title}
                     fill
-                    className="rounded-2xl object-cover"
+                    className="rounded-lg object-cover"
                   />
                 </div>
                 <h3 className="text-3xl font-semibold text-brown-800 mb-2">{retreat.title}</h3>

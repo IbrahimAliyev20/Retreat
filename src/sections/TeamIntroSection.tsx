@@ -41,7 +41,7 @@ const TeamIntroSection: React.FC = async () => {
             </Reveal>
           ))}
           <Reveal duration={0.9} yOffset={60}>
-            <div className="w-full h-64 bg-white rounded-xl p-6 flex flex-col justify-between">
+            <div className="w-full h-64 bg-white rounded-lg p-6 flex flex-col justify-between">
               <p className="color-desc text-lg">
                 FitVibe sahənin ən peşəkar mütəxəssislərini toplayaraq sizə mükəmməl təcrübə yaşatmaq üçün çalışır.
               </p>

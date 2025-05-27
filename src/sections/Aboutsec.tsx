@@ -30,7 +30,7 @@ const Aboutsec: React.FC = async () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {data.map((item, index) => (
             <Reveal key={index} duration={0.7} yOffset={60}>
-              <div className="bg-white rounded-xl p-6 text-left">
+              <div className="bg-white rounded-lg p-6 text-left">
                 <Image
                   src={item.icon}
                   alt={`${item.title} icon`}

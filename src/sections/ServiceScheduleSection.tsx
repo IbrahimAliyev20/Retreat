@@ -31,21 +31,21 @@ const ServiceScheduleSection: React.FC = async () => {
           </Reveal>
         </div>
 
-        <div className="md:w-2/5 space-y-12 mt-8 md:mt-0">
+        <div className="md:w-3/5 space-y-12 mt-8 md:mt-0">
           {services.map((service, index) => (
             <Reveal key={index} duration={0.7 + index * 0.2} yOffset={50 + index * 10}>
-              <div className="bg-white rounded-3xl p-12 shadow-md">
+              <div className="bg-white rounded-lg p-16 shadow-md">
                 <h3 className="text-xl font-semibold text-[#2e826a] mb-2">{service.title}</h3>
                 <p className="text-xl font-light color-desc mb-8">{service.date_range}</p>
-                <div className="relative w-full h-48 mb-4">
+                <div className="relative w-full h-52 mb-4">
                   <Image
                     src={service.image || '/placeholder.svg'}
                     alt={service.title}
                     fill
-                    className="rounded-2xl object-cover"
+                    className="rounded-lg object-cover"
                   />
                 </div>
-                <p className="color-desc mb-4">{service.description}</p>
+                <p className="color-desc mb-8">{service.description}</p>
                 <Link
                   href={`/service/${service.slug}`}
                   className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"

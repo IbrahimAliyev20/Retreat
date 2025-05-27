@@ -45,7 +45,7 @@ const CustomCarousel = ({ direction, images }: CarouselProps) => {
         <div className="embla__container">
           {images.map((image, index) => (
             <div className="embla__slide" key={index}>
-              <div className="border border-gray-100 shadow-sm w-[200px] h-[150px] md:w-[650px] md:h-[450px] flex items-center justify-center relative">
+              <div className="border border-gray-100 shadow-sm w-[200px] h-[150px] md:w-[500px] md:h-[400px] flex items-center justify-center relative">
                 <Image
                   src={image.image}
                   alt={`${index}`}
