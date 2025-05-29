@@ -6,14 +6,17 @@ import TeamCard from '@/components/TeamCard';
 import Reveal from '@/components/Reveal';
 import JoinUsSection from '@/sections/JoinUsSection';
 
-export default async function TeamPage({ params }: {params:Promise<{slug:string}>}) {
+interface TeamPageProps {
+  params: Promise<{ slug: string }>;
+}
+export default async function TeamPage({ params }: TeamPageProps) {
   const { slug } = await params;
 
   const team = await getTeamBySlug(slug);
   const allTeams = await getTeams();
 
   if (!team) {
-    notFound(); // 404 səhifəsinə yönləndir
+    notFound(); 
   }
 
   return (
@@ -41,10 +44,10 @@ export default async function TeamPage({ params }: {params:Promise<{slug:string}
   );
 }
 
-export async function generateStaticParams() {
-  const teams = await getTeams();
+// export async function generateStaticParams() {
+//   const teams = await getTeams();
 
-  return teams.map((team: TeamsType) => ({
-    slug: team.slug,
-  }));
-}
+//   return teams.map((team: TeamsType) => ({
+//     slug: team.slug,
+//   }));
+// }

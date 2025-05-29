@@ -3,7 +3,7 @@ import Image from "next/image";
 
 interface ServicePageSingleProps {
   service: ServiceType;
-}
+}0
 
 export default function ServicePageSingle({ service }: ServicePageSingleProps) {
   return (
