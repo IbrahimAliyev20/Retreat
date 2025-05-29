@@ -3,25 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { TeamsType } from "@/types/type";
 import Reveal from "@/components/Reveal";
+import { getSocialMedia } from "@/lib/sociallink";
 
 interface TeamCardProps {
   team: TeamsType[];
 }
 
-export default function TeamCard({ team }: TeamCardProps) {
-  const socialLinksMap: Record<string, { instagram: string; twitter: string; tiktok: string }> = {
-    'kelly-kapor': {
-      instagram: 'https://instagram.com/kellykapor',
-      twitter: 'https://twitter.com/kellykapor',
-      tiktok: 'https://tiktok.com/@kellykapor',
-    },
-    'mini-cooper': {
-      instagram: 'https://instagram.com/minicooper',
-      twitter: 'https://twitter.com/minicooper',
-      tiktok: 'https://tiktok.com/@minicooper',
-    },
-  };
 
+export default async function  TeamCard({ team }: TeamCardProps) {
+  const data = await getSocialMedia();
+  const socialLinksMap = data[0]
+      
   return (
     <section>
       {team.map((member, index) => (
@@ -45,30 +37,18 @@ export default function TeamCard({ team }: TeamCardProps) {
                 </Reveal>
                 <Reveal duration={0.8} yOffset={60}>
                   <div className="flex space-x-4">
-                    <a
-                      href={socialLinksMap[member.slug]?.instagram || '#'}
+                    <Link
+                      href={socialLinksMap.link || '#'}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Follow ${member.name} on Instagram`}
                     >
-                      <span className="cursor-pointer text-2xl hover:text-blue-500 transition-colors duration-300">📷</span>
-                    </a>
-                    <a
-                      href={socialLinksMap[member.slug]?.twitter || '#'}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Follow ${member.name} on Twitter`}
-                    >
-                      <span className="cursor-pointer text-2xl hover:text-blue-500 transition-colors duration-300">🐦</span>
-                    </a>
-                    <a
-                      href={socialLinksMap[member.slug]?.tiktok || '#'}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Follow ${member.name} on TikTok`}
-                    >
-                      <span className="cursor-pointer text-2xl hover:text-blue-500 transition-colors duration-300">🎥</span>
-                    </a>
+                    </Link>
+                    <Image
+                    src={socialLinksMap.image}
+                    alt="Instagram" 
+                    fill
+                    />
                   </div>
                 </Reveal>
               </div>

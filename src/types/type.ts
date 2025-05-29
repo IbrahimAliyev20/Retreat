@@ -173,6 +173,20 @@ export interface ValuesType {
 ///////////////////////////
 
 
+
+///////////Social link TYPE ////////////////
+
+
+
+export interface SocialMediaType {
+  link: string; 
+  image: string;
+}
+
+
+///////////////////////////
+
+
 export interface ContactType {
   email: string;
   address: string;
