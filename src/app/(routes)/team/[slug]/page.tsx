@@ -6,7 +6,7 @@ import { TeamsType } from '@/types/type';
 import Reveal from '@/components/Reveal';
 import JoinUsSection from '@/sections/JoinUsSection';
 
-export default async function TeamPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function TeamPage({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const team = await getTeamBySlug(slug);
   const allTeams = await getTeams();
