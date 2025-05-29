@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import { getTeamBySlug, getTeams } from '@/lib/getTeamBySlug';
-import { TeamsType } from '@/types/type';
 import TeamSinglePage from '@/sections/(Teamsec)/TeamSinglePage';
 import TeamCard from '@/components/TeamCard';
 import Reveal from '@/components/Reveal';
