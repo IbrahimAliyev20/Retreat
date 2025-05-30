@@ -21,7 +21,8 @@ const JoinUsSection = () => {
             <Link
               href="/team"
               className="bg-[#ddeee1] text-black font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition mb-6"
-            >
+              >
+            
               Daha Çox
             </Link>
           </Reveal>

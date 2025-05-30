@@ -10,7 +10,7 @@ export async function getFaq(): Promise<FAQType> {
       headers: {
         "Accept-Language": localeFromCookie,
       },
-      cache: "no-store",
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
@@ -19,7 +19,6 @@ export async function getFaq(): Promise<FAQType> {
     }
 
     const json = await res.json();
-    console.log(json); 
     return json.data;
   } catch (error) {
     console.error('Error fetching FAQs:', error);

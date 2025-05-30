@@ -11,7 +11,7 @@ export async function getGallery(): Promise<GalleryType[]> {
     headers: {
             "Accept-Language": localeFromCookie, 
         },
-    cache: "no-store",
+    next: { revalidate: 3600 },
   });
   const json = await res.json();
   return json.data;

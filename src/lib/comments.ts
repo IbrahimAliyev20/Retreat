@@ -11,7 +11,7 @@ export async function getComments(): Promise<CommentsType[]> {
     headers: {
        "Accept-Language": localeFromCookie, 
    },
-    cache: "no-store",
+    next: { revalidate: 3600 },
   });
   const json = await res.json();
   return json.data;

@@ -10,7 +10,7 @@ export async function getTeamBySlug(slug: string): Promise<TeamsType | null> {
       headers: {
         "Accept-Language": localeFromCookie,
       },
-      cache: "no-store",
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
@@ -35,7 +35,7 @@ export async function getTeams(): Promise<TeamsType[]> {
       headers: {
         "Accept-Language": localeFromCookie,
       },
-      cache: "no-store",
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
