@@ -10,7 +10,9 @@ const ServiceCard = async () => {
     <section className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-16 md:gap-40">
         {cards.map((card, index) => (
-          <div className="flex flex-col">
+          <div
+            key={index}
+           className="flex flex-col">
             <div className="border-b-[0.5px] bg-gray-700 opacity-55 shadow-md mb-40"></div>
 
             <div 

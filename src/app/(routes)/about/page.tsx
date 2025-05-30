@@ -4,7 +4,6 @@ import { getContact } from "@/lib/contact";
 import { getFaq } from "@/lib/faq";
 import AboutContactScroll from "@/sections/(Aboutsec)/AboutContactScroll";
 import AboutHero from "@/sections/(Aboutsec)/AboutHero";
-import Teacherteam from "@/sections/(Aboutsec)/Teacherteam";
 import Aboutsec from "@/sections/Aboutsec";
 import Experience from "@/sections/Experience";
 import FAQSection from "@/sections/FAQSection";
