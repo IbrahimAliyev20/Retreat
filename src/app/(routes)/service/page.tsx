@@ -11,7 +11,7 @@ const RetreatsPage =async () => {
   return (
     <div>
       <Reveal>
-            <div className='pb-6 md:pb-16' >
+            <div >
             <ServiceHero />
             </div >
       </Reveal>

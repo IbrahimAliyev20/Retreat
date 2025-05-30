@@ -8,14 +8,15 @@ export default async function BlogCardSec() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto">
-        <div className="items-center flex flex-col md:flex-row gap-8 justify-center">
+      <div className="container mx-auto px-0 sm:px-6 ">
+        <div className="md:w-[100%] w-[80%]  mx-auto md:mx-0 grid grid-cols-1 md:grid-cols-3 gap-8 ">
           {blogposts.map((post, index) => (
             <BlogPostCard
               key={index}
               title={post.title}
-              imageSrc={post.thumb_image} 
-              slug={post.slug} 
+              imageSrc={post.image} 
+              slug={post.slug}
+              description={post.description} 
             />
           ))}
         </div>

@@ -47,7 +47,7 @@ const TeamIntroSection: React.FC = async () => {
               </p>
               <Link
                 href="/team"
-                className="self-start bg-[#2e826a] text-[white] font-medium py-2 px-6 rounded-full hover:bg-opacity-90 transition"
+                className="w-fit border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
               >
                 Daha çox bax
               </Link>

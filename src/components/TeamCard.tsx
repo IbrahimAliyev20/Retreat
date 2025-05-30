@@ -47,7 +47,8 @@ export default async function  TeamCard({ team }: TeamCardProps) {
                     <Image
                     src={socialLinksMap.image}
                     alt="Instagram" 
-                    fill
+                    width={30} 
+                    height={30} 
                     />
                   </div>
                 </Reveal>
@@ -71,7 +72,7 @@ export default async function  TeamCard({ team }: TeamCardProps) {
                 <Reveal duration={1.2} yOffset={80}>
                   <Link
                     href={`/team/${member.slug}`}
-                    className="border border-[#2e826a] py-2 px-6 rounded-full hover:bg-[#2e826a] hover:text-white transition-transform duration-300 hover:scale-105"
+                    className="w-fit border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
                     aria-label={`Read more about ${member.name}`}
                   >
                     Ətraflı oxu

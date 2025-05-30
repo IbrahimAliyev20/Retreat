@@ -27,28 +27,28 @@ const Aboutsec: React.FC = async () => {
         </Reveal>
 
         {/* Kartlar */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          {data.map((item, index) => (
-            <Reveal key={index} duration={0.7} yOffset={60}>
-              <div className="bg-white rounded-lg p-6 text-left">
-                <Image
-                  src={item.icon}
-                  alt={`${item.title} icon`}
-                  width={32}
-                  height={32}
-                  className="mb-4 filter hue-rotate-85"
-                />
-                <h3 className="text-[24px] font-semibold text-brown mb-2">{item.title}</h3>
-                <p className="color-desc text-[16px]">{item.description}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 items-stretch">
+  {data.map((item, index) => (
+    <Reveal key={index} duration={0.7} yOffset={60}>
+      <div className="bg-white rounded-lg p-6 text-left h-full flex flex-col">
+        <Image
+          src={item.icon}
+          alt={`${item.title} icon`}
+          width={32}
+          height={32}
+          className="mb-4 filter hue-rotate-85"
+        />
+        <h3 className="text-[24px] font-semibold text-brown mb-2">{item.title}</h3>
+        <p className="color-desc text-[16px]">{item.description}</p>
+      </div>
+    </Reveal>
+  ))}
+</div>
 
         {/* Düymə */}
         <Reveal duration={1} yOffset={50}>
           <div className="w-full justify-center flex">
-            <Link href="/about" className="flex w-fit bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition">
+            <Link href="/about" className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition">
               Ətraflı
             </Link>
           </div>

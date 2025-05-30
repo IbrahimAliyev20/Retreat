@@ -84,7 +84,7 @@ const ContactForm: React.FC<Props> = ({ contactData }) => {
             </div>
             <button
               type="submit"
-              className="w-full custom-color-bg1 text-white font-medium py-3 rounded-full hover:bg-opacity-90 transition"
+              className="w-full border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
             >
               Göndər
             </button>

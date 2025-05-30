@@ -24,7 +24,7 @@ const ServiceScheduleSection: React.FC = async () => {
           <Reveal duration={0.9} yOffset={60}>
             <Link
               href="/service"
-              className="bg-[#2e826a] text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition"
+              className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
             >
               Daha çox bax
             </Link>

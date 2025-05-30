@@ -25,7 +25,7 @@ const AboutContactScroll: React.FC = async () => {
           <Reveal duration={0.9} yOffset={60}>
             <Link
               href="/contact"
-              className="bg-[#2e826a] text-white px-7 py-2 rounded-full hover:bg-brown-700 transition"
+              className="w-fit border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
             >
               Bizimlə Əlaqə
             </Link>

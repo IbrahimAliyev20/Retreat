@@ -38,40 +38,40 @@ const Navbar = () => {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-[#5b5b5b]">
+        <nav className="hidden md:flex items-center gap-8 text-[#5b5b5b] hover:text-[#2e826a]">
           <Link
             href="/"
-            className={`transition-colors text-lg font-semibold ${pathname === '/' ? 'text-[#8a7229] font-bold' : ''}`}
+            className={`transition-colors text-lg font-semibold ${pathname === '/' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Ana səhifə
           </Link>
           <Link
             href="/about"
-            className={`transition-colors text-lg font-semibold ${pathname === '/about' ? 'text-[#8a7229] font-bold' : ''}`}
+            className={`transition-colors text-lg font-semibold ${pathname === '/about' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Haqqımızda
           </Link>
           <Link
             href="/team"
-            className={`transition-colors text-lg font-semibold ${pathname === '/team' ? 'text-[#8a7229] font-bold' : ''}`}
+            className={`transition-colors text-lg font-semibold ${pathname === '/team' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Komanda
           </Link>
           <Link
             href="/service"
-            className={`transition-colors text-lg font-semibold ${pathname === '/service' ? 'text-[#8a7229] font-bold' : ''}`}
+            className={`transition-colors text-lg font-semibold ${pathname === '/service' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Xidmətlər
           </Link>
           <Link
             href="/blog"
-            className={`transition-colors text-lg font-semibold ${pathname === '/blog' ? 'text-[#8a7229] font-bold' : ''}`}
+            className={`transition-colors text-lg font-semibold ${pathname === '/blog' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Bloqlar
           </Link>
           <Link
             href="/contact"
-            className={`transition-colors text-lg font-semibold ${pathname === '/contact' ? 'text-[#8a7229] font-bold' : ''}`}
+            className={` transition-colors text-lg font-semibold ${pathname === '/contact' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Əlaqə
           </Link>
@@ -119,42 +119,42 @@ const Navbar = () => {
           <nav className="flex flex-col gap-4 p-4">
             <Link
               href="/"
-              className={`hover:text-[#8a7229] transition-colors text-lg font-semibold ${pathname === '/' ? 'text-[#8a7229] font-bold' : ''}`}
+              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/' ? 'custom-color font-bold' : ''}`}
               onClick={toggleMenu}
             >
               Ana səhifə
             </Link>
             <Link
               href="/about"
-              className={`hover:text-[#8a7229] transition-colors text-lg font-semibold ${pathname === '/about' ? 'text-[#8a7229] font-bold' : ''}`}
+              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/about' ? 'custom-color font-bold' : ''}`}
               onClick={toggleMenu}
             >
               Haqqımızda
             </Link>
             <Link
               href="/team"
-              className={`hover:text-[#8a7229] transition-colors text-lg font-semibold ${pathname === '/team' ? 'text-[#8a7229] font-bold' : ''}`}
+              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/team' ? 'custom-color font-bold' : ''}`}
               onClick={toggleMenu}
             >
               Komanda
             </Link>
             <Link
               href="/service"
-              className={`hover:text-[#8a7229] transition-colors text-lg font-semibold ${pathname === '/service' ? 'text-[#8a7229] font-bold' : ''}`}
+              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/service' ? 'custom-color font-bold' : ''}`}
               onClick={toggleMenu}
             >
               Xidmətlər
             </Link>
             <Link
               href="/blog"
-              className={`hover:text-[#8a7229] transition-colors text-lg font-semibold ${pathname === '/blog' ? 'text-[#8a7229] font-bold' : ''}`}
+              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/blog' ? 'custom-color font-bold' : ''}`}
               onClick={toggleMenu}
             >
               Bloqlar
             </Link>
             <Link
               href="/contact"
-              className={`hover:text-[#8a7229] transition-colors text-lg font-semibold ${pathname === '/contact' ? 'text-[#8a7229] font-bold' : ''}`}
+              className={` color-desc transition-colors text-lg font-semibold ${pathname === '/contact' ? 'custom-color font-bold' : ''}`}
               onClick={toggleMenu}
             >
               Əlaqə
