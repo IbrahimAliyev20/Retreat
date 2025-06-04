@@ -38,40 +38,46 @@ const Navbar = () => {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-[#5b5b5b] hover:text-[#2e826a]">
+        <nav className="hidden md:flex items-center gap-8 text-[#5b5b5b] ">
           <Link
             href="/"
-            className={`transition-colors text-lg font-semibold ${pathname === '/' ? 'custom-color font-bold scale-105' : ''}`}
+            className={` hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Ana səhifə
           </Link>
           <Link
             href="/about"
-            className={`transition-colors text-lg font-semibold ${pathname === '/about' ? 'custom-color font-bold scale-105' : ''}`}
+            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/about' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Haqqımızda
           </Link>
           <Link
             href="/team"
-            className={`transition-colors text-lg font-semibold ${pathname === '/team' ? 'custom-color font-bold scale-105' : ''}`}
+            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/team' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Komanda
           </Link>
           <Link
             href="/service"
-            className={`transition-colors text-lg font-semibold ${pathname === '/service' ? 'custom-color font-bold scale-105' : ''}`}
+            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/service' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Xidmətlər
           </Link>
           <Link
+            href="/marafon"
+            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/marafon' ? 'custom-color font-bold scale-105' : ''}`}
+          >
+            Marafon
+          </Link>
+          <Link
             href="/blog"
-            className={`transition-colors text-lg font-semibold ${pathname === '/blog' ? 'custom-color font-bold scale-105' : ''}`}
+            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/blog' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Bloqlar
           </Link>
           <Link
             href="/contact"
-            className={` transition-colors text-lg font-semibold ${pathname === '/contact' ? 'custom-color font-bold scale-105' : ''}`}
+            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/contact' ? 'custom-color font-bold scale-105' : ''}`}
           >
             Əlaqə
           </Link>
@@ -145,6 +151,12 @@ const Navbar = () => {
             >
               Xidmətlər
             </Link>
+             <Link
+            href="/marafon"
+           className={`color-desc transition-colors text-lg font-semibold ${pathname === '/marafon' ? 'custom-color font-bold' : ''}`}
+          >
+            Marafon
+          </Link>
             <Link
               href="/blog"
               className={`color-desc transition-colors text-lg font-semibold ${pathname === '/blog' ? 'custom-color font-bold' : ''}`}

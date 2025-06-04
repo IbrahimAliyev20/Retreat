@@ -41,6 +41,7 @@ const Footer: React.FC = () => {
             <ul className="text-md space-y-2">
               <li><Link href="/blog" className="hover:underline">Bloqlar</Link></li>
               <li><Link href="/service" className="hover:underline">Xidmətlər</Link></li>
+              <li><Link href="/marafon" className="hover:underline">Marafon</Link></li>
               <li><Link href="/team" className="hover:underline">Komanda</Link></li>
             </ul>
           </div>
