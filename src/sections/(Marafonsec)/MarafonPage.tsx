@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Reveal from '@/components/Reveal';
+import Image from 'next/image';
 
 export default function MarafonCards() {
   const marathons = [
@@ -43,7 +44,7 @@ export default function MarafonCards() {
               
               {/* Şəkil */}
                 <div className="sm:w-2/3">
-                  <img
+                  <Image
                     src={marathon.image}
                     alt={marathon.title}
                     className="w-full aspect-[4/3] object-cover rounded-2xl"
