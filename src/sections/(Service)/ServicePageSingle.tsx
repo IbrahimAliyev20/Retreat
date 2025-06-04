@@ -28,23 +28,6 @@ export default function ServicePageSingle({ service }: ServicePageSingleProps) {
       <section className="container mx-auto flex flex-col md:flex-row items-start justify-between py-10 md:py-20 ">
         <div className=" w-[90%] mx-auto md:w-[69%] pr-0 md:pr-15">
           <p className="text-[#5a4b3c] mb-4">{service.description}</p>
-
-          {/* Teams bölməsi
-          {service.teams.length > 0 && (
-            <>
-              <h2 className="text-2xl font-semibold text-[#5a4b3c] mb-4">Our Team</h2>
-              {service.teams.map((team, index) => (
-                <div key={index} className="mb-4">
-                  <h3 className="text-xl font-semibold text-[#5a4b3c]">{team.name}</h3>
-                  <p className="text-[#5a4b3c]">{team.profession}</p>
-                  <div
-                    className="text-[#5a4b3c]"
-                    dangerouslySetInnerHTML={{ __html: team.description }}
-                  />
-                </div>
-              ))}
-            </>
-          )} */}
         </div>
 
         <div className="mx-auto w-[90%] md:w-[30%] bg-white p-6 rounded-lg shadow-md mt-6 md:mt-0">

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function MarafonCards() {
   const marathons = [
@@ -67,15 +68,13 @@ export default function MarafonCards() {
                   <p className="text-muted-foreground color-desc">{marathon.description}</p>
                 </Reveal>
 
-                <Reveal duration={0.9} yOffset={100}>
-                  <a 
-                    href="#" 
+                  <Link 
+                    href="/#" 
                     className="inline-flex items-center text-primary hover:underline"
                   >
                     Ətraflı 
                     <ArrowRight className="ml-1 h-4 w-4" />
-                  </a>
-                </Reveal>
+                  </Link>
               </div>
             </div>
           </div>
