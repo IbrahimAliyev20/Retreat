@@ -39,7 +39,7 @@ export default function MarafonCards() {
     <div className="container mx-auto py-12 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {marathons.map((marathon, index) => (
-          <div key={marathon.id} className="p-5 bg-white rounded-2xl overflow-hidden shadow-sm">
+          <div key={index} className="p-5 bg-white rounded-2xl overflow-hidden shadow-sm">
             <div className="flex flex-col sm:flex-row">
               
               {/* Şəkil */}
