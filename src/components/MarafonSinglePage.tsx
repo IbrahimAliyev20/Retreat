@@ -16,7 +16,7 @@ export function MaratonSinglePage() {
               </h2>
               <div className="prose prose-stone max-w-none">
                 <p className="text-stone-600 leading-relaxed mb-6">
-                  FitVibe "Huzur Marafonu"na xoş gəlmisiniz! Bu 14 günlük marafon sizi Taylandın
+                  FitVibe Huzur Marafonu na xoş gəlmisiniz! Bu 14 günlük marafon sizi Taylandın
                   sakit atmosferində, qədim yoga bilikləri və müasir rifah yanaşmaları ilə 
                   həyatınızı dəyişməyə dəvət edir. Gündəlik Vinyasa Yoga, Pranayama və meditasiya
                   seansları ilə bədəninizi və ruhunuzu dinləndirin.
