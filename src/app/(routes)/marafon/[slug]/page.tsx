@@ -1,9 +1,12 @@
-import React from 'react'
+import { MaratonSingleHero } from '@/components/MarafonSingleHero';
+import { MaratonSinglePage } from '@/components/MarafonSinglePage';
+import React from 'react';
 
-const SingleMarafonPage = () => {
+export default function MarafonSlug() {
   return (
-    <div>SingleMarafonPage</div>
-  )
+    <main>
+      <MaratonSingleHero />
+      <MaratonSinglePage />
+    </main>
+  );
 }
-
-export default SingleMarafonPage

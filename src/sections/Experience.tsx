@@ -39,7 +39,7 @@ const Experience: React.FC = async () => {
           <div className="md:w-2/5">
             <Image
               src={about.image}
-              alt="Experience Retreat Image"
+              alt="Experience FitVibe Image"
               width={600}
               height={700}
               className="w-full h-auto"

@@ -31,7 +31,7 @@ const Navbar = () => {
         <Link href="/" className="flex items-center gap-2 text-[#5c4c1e]">
           <Image
             src="/images/logo.png"
-            alt="Retreat You Logo"
+            alt="FitVibe You Logo"
             width={143}
             height={63}
             className="object-contain filter invert"

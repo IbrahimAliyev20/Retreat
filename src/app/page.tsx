@@ -66,13 +66,13 @@ export default async function Home() {
      </Reveal>
 
       <Reveal>
-      <div className="py-6 md:py-20" id='retreat'>
+      <div className="py-6 md:py-20" >
         <ServiceScheduleSection />
       </div>
       </Reveal>
 
       <Reveal>
-      <div className="py-6  md:py-20" id='team'>
+      <div className="py-6  md:py-20">
         <TeamIntroSection />
       </div>
       </Reveal>

@@ -16,7 +16,7 @@ const YogaEscapeSection: React.FC = async () => {
             <div className="overflow-hidden">
               <Image
                 src={about.image}
-                alt="Retreat Yoga"
+                alt="FitVibe Yoga"
                 width={600}
                 height={400}
                 className="mx-auto w-[85%] h-auto object-cover"

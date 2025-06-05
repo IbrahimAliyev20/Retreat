@@ -52,7 +52,7 @@ const HeroSection: React.FC = async () => {
             <div className="relative w-full max-w-lg ">
               <Image
                 src={hero.image_2}
-                alt="Yoga Retreat 1"
+                alt="Yoga  1"
                 width={700}
                 height={730}
                 className="rounded-2xl w-[80%] md:w-[90%] mx-auto h-auto"
@@ -60,7 +60,7 @@ const HeroSection: React.FC = async () => {
               <div className="absolute -bottom-12 left-0 md:-left-12 w-70">
                 <Image
                   src={hero.image}
-                  alt="Yoga Retreat 2"
+                  alt="Yoga  2"
                   width={320}
                   height={400}
                   className="rounded-2xl w-[80%] md:w-full mx-auto h-auto"

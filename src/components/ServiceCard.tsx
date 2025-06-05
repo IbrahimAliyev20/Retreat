@@ -28,7 +28,7 @@ const ServiceCard = async () => {
               </p>
               <Link
                 href={`/service/${card.slug}`}
-                className="bg-[#2e826a] text-xl text-white py-2 px-7 rounded-full hover:bg-opacity-90 transition"
+                className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
               >
                 İndi sifariş et
               </Link>

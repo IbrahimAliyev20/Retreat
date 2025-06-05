@@ -69,7 +69,7 @@ export default function MarafonCards() {
                 </Reveal>
 
                   <Link 
-                    href="/#" 
+                    href={`/marafon/${marathon.id}`}
                     className="inline-flex items-center text-primary hover:underline"
                   >
                     Ətraflı 
