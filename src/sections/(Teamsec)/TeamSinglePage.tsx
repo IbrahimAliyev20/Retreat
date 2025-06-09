@@ -1,41 +1,24 @@
 import Image from 'next/image';
-import { TeamsType } from '@/types/type';
+import { SocialMediaType, TeamsType } from '@/types/type';
+import Link from 'next/link';
 
 interface TeamSinglePageProps {
   team: TeamsType;
+  socialLinks: SocialMediaType[];
 }
 
-export default function TeamSinglePage({ team }: TeamSinglePageProps) {
+export default function TeamSinglePage({ team, socialLinks }: TeamSinglePageProps) {
   if (!team) {
     return <div>Team member not found</div>;
   }
 
-  const socialLinksMap: Record<string, { instagram: string; twitter: string; tiktok: string }> = {
-    'kelly-kapor': {
-      instagram: 'https://instagram.com/kellykapor',
-      twitter: 'https://twitter.com/kellykapor',
-      tiktok: 'https://tiktok.com/@kellykapor',
-    },
-    'mini-cooper': {
-      instagram: 'https://instagram.com/minicooper',
-      twitter: 'https://twitter.com/minicooper',
-      tiktok: 'https://tiktok.com/@minicooper',
-    },
-  };
-
-  const socialLinks = socialLinksMap[team.slug] || {
-    instagram: '#',
-    twitter: '#',
-    tiktok: '#',
-  };
-
-  // HTML teqlərini təmizləmək üçün sadə regex
   const cleanDescription = team.description
     ? team.description.replace(/<[^>]+>/g, '')
     : 'No description available.';
 
   return (
     <div className="container mx-auto p-6">
+      {/* BU HİSSƏ DƏYİŞDİRİLMƏYİB */}
       <div className="text-center mb-8">
         <div className="relative w-[23rem] h-[23rem] mx-auto mb-4">
           <Image
@@ -52,31 +35,32 @@ export default function TeamSinglePage({ team }: TeamSinglePageProps) {
         </div>
         <p className="text-sm uppercase text-textColor">{team.profession}</p>
         <h1 className="text-4xl font-bold text-accent">{team.name}</h1>
-        <div className="flex justify-center space-x-4 mt-4">
-          <a
-            href={socialLinks.instagram}
-            className="text-textColor hover:text-blue-500 transition-colors duration-300"
-            aria-label={`Follow ${team.name} on Instagram`}
-          >
-            Instagram
-          </a>
-          <a
-            href={socialLinks.twitter}
-            className="text-textColor hover:text-blue-500 transition-colors duration-300"
-            aria-label={`Follow ${team.name} on Twitter`}
-          >
-            Twitter
-          </a>
-          <a
-            href={socialLinks.tiktok}
-            className="text-textColor hover:text-blue-500 transition-colors duration-300"
-            aria-label={`Follow ${team.name} on TikTok`}
-          >
-            TikTok
-          </a>
+        
+        {/* SADƏCƏ BU HİSSƏ YENİLƏNİB */}
+        <div className="flex justify-center items-center space-x-4 mt-4">
+          {socialLinks && socialLinks.map((social, index) => (
+            <Link
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow ${team.name} `}
+              className="text-textColor hover:opacity-75 transition-opacity duration-300"
+            >
+              <div className="relative w-8 h-8">
+                <Image
+                  src={`https://fitvibe.markup.az${social.image}`}
+                  alt="icon"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 
+      {/* BU HİSSƏ DƏ DƏYİŞDİRİLMƏYİB */}
       <article className="space-y-8 w-[60%] mx-auto">
         <h2 className="text-2xl font-semibold text-accent">Müəllim haqqında</h2>
         <p className="text-textColor">{cleanDescription}</p>

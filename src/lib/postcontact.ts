@@ -20,5 +20,5 @@ export async function postContactForm(data: ContactFormData) {
   }
 
   const result = await res.json();
-  return result.data; // { name, email, subject, note }
+  return result.data;
 }

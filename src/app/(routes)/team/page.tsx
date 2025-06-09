@@ -16,11 +16,9 @@ export default async function TeamPage() {
           <TeamHero />
         </div>
       </Reveal>
-      <Reveal>
         <div className="py-6 md:py-16">
           <TeamCard team={team} />
         </div>
-      </Reveal>
 
       <Reveal>
         <div className="py-6 md:py-16">

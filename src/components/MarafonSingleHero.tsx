@@ -1,30 +1,41 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import { getMaraphon } from '@/lib/marafon';
+import Image from 'next/image';
 
-export function MaratonSingleHero() {
+export async function MaratonSingleHero() {
+  const date = await getMaraphon();
+  const item = date[0];
+
+
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-amber-900 via-amber-800 to-amber-900 text-white">
+    <section className="relative min-h-screen bg-gradient-to-br text-white">
+      {item.image && (
+        <Image
+          src={item.image}
+          alt=""
+          className="absolute inset-0 object-cover w-full h-full"
+        />
+      )}
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center min-h-screen px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl">
           {/* Date */}
           <p className="text-sm md:text-base font-light mb-6 tracking-wide">
-            10 İyul 2023 - 24 İyul 2023
+         {item.start_date} - {item.end_date}
           </p>
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8">
-            14 günlük Yoga Marafonu
+            {item.name}
           </h1>
 
           {/* Description */}
           <p className="text-base md:text-lg font-light leading-relaxed max-w-2xl opacity-90">
-            Bədənini, zehnini və ruhunu yenilə! Tailandda keçirilən bu unikal yoga marafonunda qatıl və 
-            14 gün boyunca professional təlimçilərlə nəfəs, meditasiya və yoga praktikasını kəşf et. 
-            Sağlam qidalan, dincəl və öz daxili balansını tap!
+           {item.short_description}
           </p>
         </div>
 

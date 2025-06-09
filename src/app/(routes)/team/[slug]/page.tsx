@@ -4,25 +4,30 @@ import TeamSinglePage from '@/sections/(Teamsec)/TeamSinglePage';
 import TeamCard from '@/components/TeamCard';
 import Reveal from '@/components/Reveal';
 import JoinUsSection from '@/sections/JoinUsSection';
+import { getSocialMedia } from '@/lib/sociallink';
 
 interface TeamPageProps {
   params: Promise<{ slug: string }>;
 }
+
 export default async function TeamPage({ params }: TeamPageProps) {
   const { slug } = await params;
 
   const team = await getTeamBySlug(slug);
   const allTeams = await getTeams();
+  const socialLinks = await getSocialMedia();
 
   if (!team) {
     notFound(); 
   }
 
+  const otherTeams = allTeams.filter((member) => member.slug !== slug);
+
   return (
     <div className="container mx-auto py-20 flex flex-col gap-16">
       <Reveal>
         <div>
-          <TeamSinglePage team={team} />
+          <TeamSinglePage team={team} socialLinks={socialLinks} />
         </div>
       </Reveal>
       <div className="flex flex-col gap-10">
@@ -33,7 +38,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
           </p>
         </div>
         <Reveal>
-          <TeamCard team={allTeams} />
+          <TeamCard team={otherTeams} />
         </Reveal>
       </div>
       <Reveal>
@@ -42,11 +47,3 @@ export default async function TeamPage({ params }: TeamPageProps) {
     </div>
   );
 }
-
-// export async function generateStaticParams() {
-//   const teams = await getTeams();
-
-//   return teams.map((team: TeamsType) => ({
-//     slug: team.slug,
-//   }));
-// }

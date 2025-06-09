@@ -207,6 +207,7 @@ export type BlogsType = {
   thumb_image: string;
 };
 
+
 export type BlogApiResponse = {
   data: BlogsType[];
   links: {
@@ -230,6 +231,7 @@ export type BlogApiResponse = {
     total: number;
   };
 };
+
 
 
 
