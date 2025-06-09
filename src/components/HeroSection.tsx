@@ -40,7 +40,7 @@ const HeroSection: React.FC = async () => {
           <Reveal duration={1} yOffset={70}>
             <Link
               className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
-              href="/service"
+              href={hero.button_link}
             >
              {hero.button_text}
             </Link>

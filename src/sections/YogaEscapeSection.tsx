@@ -1,6 +1,5 @@
 import { getAbout } from "@/lib/about";
 import Image from "next/image";
-import { RiCheckDoubleFill } from "react-icons/ri";
 import Reveal from "@/components/Reveal";
 
 const YogaEscapeSection: React.FC = async () => {
@@ -33,25 +32,14 @@ const YogaEscapeSection: React.FC = async () => {
             </h2>
           </Reveal>
           <Reveal duration={0.7} yOffset={50}>
-            <p className="color-desc mb-8">{about.description}</p>
+            <p
+              className="color-desc mb-8"
+              dangerouslySetInnerHTML={{ __html: about.description }}
+            ></p>
           </Reveal>
           <Reveal duration={1.0} yOffset={70}>
             <div className="w-full h-[0.5px] bg-black my-10"></div>
-            <p className="font-semibold">FITVIBE QATILIN ƏGƏR:</p>
-            <ul className="ml-5 md:ml-0 text-brown-600 space-y-2 mt-3">
-              <li className="flex items-center">
-                <RiCheckDoubleFill className="mr-1" />
-                əlaqəni kəsmək lazımdır
-              </li>
-              <li className="flex items-center">
-                <RiCheckDoubleFill className="mr-1" />
-                bədəninizə diqqət yetirmək istəyirsiniz
-              </li>
-              <li className="flex items-center">
-                <RiCheckDoubleFill className="mr-1" />
-                yoganızı təkmilləşdirin
-              </li>
-            </ul>
+          
           </Reveal>
         </div>
       </div>
