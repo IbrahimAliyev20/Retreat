@@ -27,7 +27,7 @@ const ServiceCard = () => {
 
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col gap-16 md:gap-40">
+      <div className="flex flex-col gap-16 md:gap-20">
         {visibleCards.map((card, index) => (
           <div key={index} className="flex flex-col">
             {index > 0 && (

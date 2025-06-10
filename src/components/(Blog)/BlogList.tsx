@@ -4,7 +4,7 @@ import { useState } from 'react';
 import BlogPostCard from '@/components/(Blog)/BlogPostCard';
 import { BlogsType } from '@/types/type';
 
-const POSTS_PER_PAGE = 9; 
+const POSTS_PER_PAGE = 6; 
 
 export default function BlogList({ allPosts }: { allPosts: BlogsType[] }) {
   const [visiblePostsCount, setVisiblePostsCount] = useState(POSTS_PER_PAGE);
