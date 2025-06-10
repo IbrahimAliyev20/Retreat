@@ -72,6 +72,7 @@ export interface TeamsType {
   thumb_image: string;
   instagram?: string; 
   twitter?: string; 
+  tiktok?: string; 
 }
 ////////// Teams Type ////////////
 

@@ -1,5 +1,5 @@
-import { MaratonSingleHero } from '@/components/MarafonSingleHero';
-import { MaratonSinglePage } from '@/components/MarafonSinglePage';
+import { MaratonSingleHero } from '@/components/(Marafon)/MarafonSingleHero';
+import { MaratonSinglePage } from '@/components/(Marafon)/MarafonSinglePage';
 import React from 'react';
 
 export default function MarafonSlug() {

@@ -3,27 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TeamsType } from "@/types/type";
-import Reveal from "@/components/Reveal";
-// Yalnız useState hook-una ehtiyacımız var
 import { useState } from "react";
-
-interface SocialLinkMap {
-  link: string;
-  image: string;
-}
+import Reveal from "../Reveal";
 
 interface TeamCardClientProps {
   team: TeamsType[];
-  socialLinksMap: SocialLinkMap;
 }
 
 const ITEMS_PER_PAGE = 4;
 
-export default function TeamCardClient({ team, socialLinksMap }: TeamCardClientProps) {
+
+
+export default function TeamCardClient({ team }: TeamCardClientProps) {
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
   const handleLoadMore = () => {
-
     setVisibleCount(prevCount => prevCount + ITEMS_PER_PAGE);
   };
 
@@ -51,19 +45,39 @@ export default function TeamCardClient({ team, socialLinksMap }: TeamCardClientP
                 </Reveal>
                 <Reveal duration={0.8} yOffset={60}>
                   <div className="flex space-x-4">
-                    <Link
-                      href={socialLinksMap.link || '#'}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Follow ${member.name} on Instagram`}
-                    >
-                      <Image
-                        src={`https://fitvibe.markup.az${socialLinksMap.image}`}
-                        alt="Instagram"
-                        width={30}
-                        height={30}
-                      />
-                    </Link>
+                    
+                    {member.instagram && (
+                       <Link
+                        href={member.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Follow ${member.name} on Instagram`}
+                      >
+                        Instagram
+                      </Link>
+                    )}
+
+                    {member.twitter && (
+                       <Link
+                        href={member.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Follow ${member.name} on Twitter`}
+                      >
+                      Twitter
+                      </Link>
+                    )}
+
+                    {member.tiktok && (
+                       <Link
+                        href={member.tiktok}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Follow ${member.name} on TikTok`}
+                      >
+                      Tiktok
+                      </Link>
+                    )}
                   </div>
                 </Reveal>
               </div>

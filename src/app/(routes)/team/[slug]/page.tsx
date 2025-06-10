@@ -1,10 +1,9 @@
 import { notFound } from 'next/navigation';
 import { getTeamBySlug, getTeams } from '@/lib/getTeamBySlug';
 import TeamSinglePage from '@/sections/(Teamsec)/TeamSinglePage';
-import TeamCard from '@/components/TeamCard';
 import Reveal from '@/components/Reveal';
 import JoinUsSection from '@/sections/JoinUsSection';
-import { getSocialMedia } from '@/lib/sociallink';
+import TeamCard from '@/components/(Team)/TeamCard';
 
 interface TeamPageProps {
   params: Promise<{ slug: string }>;
@@ -15,7 +14,6 @@ export default async function TeamPage({ params }: TeamPageProps) {
 
   const team = await getTeamBySlug(slug);
   const allTeams = await getTeams();
-  const socialLinks = await getSocialMedia();
 
   if (!team) {
     notFound(); 
@@ -27,7 +25,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
     <div className="container mx-auto py-20 flex flex-col gap-16">
       <Reveal>
         <div>
-          <TeamSinglePage team={team} socialLinks={socialLinks} />
+          <TeamSinglePage team={team} />
         </div>
       </Reveal>
       <div className="flex flex-col gap-10">

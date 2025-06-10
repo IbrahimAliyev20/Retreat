@@ -2,10 +2,11 @@ import { getTeams } from "@/lib/getTeamBySlug";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { TeamMemberType } from "@/types/servicetype"; 
 
 const TeamIntroSection: React.FC = async () => {
-  const data = await getTeams();
-  const teachers = data;
+  const data: TeamMemberType[] = await getTeams();
+  const teachers = data.slice(0, 3);
 
   return (
     <div className="py-16">
@@ -20,9 +21,9 @@ const TeamIntroSection: React.FC = async () => {
             Sizə ən yaxşı təcrübəni yaşatmaq üçün çalışırıq.
           </p>
         </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teachers.map((member, index) => (
-            <Reveal key={index} duration={0.7 + index * 0.4} yOffset={50 + index * 20}>
+            <Reveal key={member.slug} duration={0.7 + index * 0.4} yOffset={50 + index * 20}>
               <Link
                 href={`/team/${member.slug}`}
                 className="flex flex-col items-center hover:scale-105 duration-300"

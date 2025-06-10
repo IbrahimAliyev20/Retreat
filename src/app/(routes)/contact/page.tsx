@@ -1,4 +1,4 @@
-import ContactForm from '@/components/ContactForm'
+import ContactForm from '@/components/(Contact)/ContactForm'
 import Reveal from '@/components/Reveal'
 import { getContact } from '@/lib/contact'
 import { getFaq } from '@/lib/faq'

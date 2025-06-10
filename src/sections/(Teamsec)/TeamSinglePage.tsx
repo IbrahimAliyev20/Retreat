@@ -1,13 +1,23 @@
 import Image from 'next/image';
-import { SocialMediaType, TeamsType } from '@/types/type';
+import { TeamsType } from '@/types/type'; // SocialMediaType burdan silindi, çünki istifadə edilmir
 import Link from 'next/link';
 
 interface TeamSinglePageProps {
   team: TeamsType;
-  socialLinks: SocialMediaType[];
 }
 
-export default function TeamSinglePage({ team, socialLinks }: TeamSinglePageProps) {
+// TeamsType-ın təxmini necə göründüyünü fərz edək:
+// interface TeamsType {
+//   name: string;
+//   profession: string;
+//   image: string;
+//   description: string;
+//   instagram?: string; // Sual işarəsi bu sahələrin məcburi olmadığını göstərir
+//   twitter?: string;
+//   tiktok?: string;
+// }
+
+export default function TeamSinglePage({ team }: TeamSinglePageProps) {
   if (!team) {
     return <div>Team member not found</div>;
   }
@@ -36,31 +46,43 @@ export default function TeamSinglePage({ team, socialLinks }: TeamSinglePageProp
         <p className="text-sm uppercase text-textColor">{team.profession}</p>
         <h1 className="text-4xl font-bold text-accent">{team.name}</h1>
         
-        {/* SADƏCƏ BU HİSSƏ YENİLƏNİB */}
         <div className="flex justify-center items-center space-x-4 mt-4">
-          {socialLinks && socialLinks.map((social, index) => (
+          {team.instagram && (
             <Link
-              key={index}
-              href={social.link}
+              href={team.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Follow ${team.name} `}
+              aria-label={`Follow ${team.name} on Instagram`}
               className="text-textColor hover:opacity-75 transition-opacity duration-300"
             >
-              <div className="relative w-8 h-8">
-                <Image
-                  src={`https://fitvibe.markup.az${social.image}`}
-                  alt="icon"
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
+              Instagram
             </Link>
-          ))}
+          )}
+          {team.twitter && (
+            <Link
+              href={team.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow ${team.name} on Twitter`}
+              className="text-textColor hover:opacity-75 transition-opacity duration-300"
+            >
+              Twitter
+            </Link>
+          )}
+          {team.tiktok && (
+            <Link
+              href={team.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow ${team.name} on TikTok`}
+              className="text-textColor hover:opacity-75 transition-opacity duration-300"
+            >
+              TikTok
+            </Link>
+          )}
         </div>
       </div>
 
-      {/* BU HİSSƏ DƏ DƏYİŞDİRİLMƏYİB */}
       <article className="space-y-8 w-[60%] mx-auto">
         <h2 className="text-2xl font-semibold text-accent">Müəllim haqqında</h2>
         <p className="text-textColor">{cleanDescription}</p>

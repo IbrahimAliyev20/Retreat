@@ -1,5 +1,5 @@
+import TeamCard from "@/components/(Team)/TeamCard";
 import Reveal from "@/components/Reveal";
-import TeamCard from "@/components/TeamCard";
 import { getTeams } from "@/lib/getTeamBySlug";
 import TeamHero from "@/sections/(Teamsec)/TeamHero";
 import Experience from "@/sections/Experience";

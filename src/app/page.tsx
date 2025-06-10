@@ -1,5 +1,5 @@
+import HeroSection from '@/components/(Home)/HeroSection';
 import CustomCarousel from '@/components/caruselembla/CustomCarusel';
-import HeroSection from '@/components/HeroSection';
 import Reveal from '@/components/Reveal';
 import { getComments } from '@/lib/comments';
 import { getFaq } from '@/lib/faq';

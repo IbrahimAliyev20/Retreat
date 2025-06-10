@@ -12,6 +12,7 @@ export async function MaratonSingleHero() {
     <section className="relative min-h-screen bg-gradient-to-br text-white">
       {item.image && (
         <Image
+          fill
           src={item.image}
           alt=""
           className="absolute inset-0 object-cover w-full h-full"

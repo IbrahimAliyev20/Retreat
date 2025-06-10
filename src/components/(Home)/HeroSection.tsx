@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "./Reveal";
+import Reveal from "../Reveal";
 import { getSlider } from "@/lib/slider";
 
 const HeroSection: React.FC = async () => {

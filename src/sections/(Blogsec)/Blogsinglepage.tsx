@@ -28,7 +28,7 @@ export default async function BlogSingle({ params }: BlogSingleProps) {
           </div>
         </div>
 
-        <article className="space-y-6 md:space-y-8 w-full sm:w-[90%] md:w-[70%] lg:w-[60%] mx-auto">
+        <article className="space-y-6 md:space-y-8 w-full  md:w-[70%]  mx-auto">
           <div
             className="prose max-w-none"
             dangerouslySetInnerHTML={{ __html: blog.description }}
