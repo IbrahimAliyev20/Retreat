@@ -32,7 +32,8 @@ const ServiceScheduleSection: React.FC = async () => {
         </div>
 
         <div className="md:w-3/5 space-y-12 mt-8 md:mt-0">
-          {services.map((service, index) => (
+          {/* DƏYİŞİKLİK: Yalnız ilk 3 elementi göstərmək üçün .slice(0, 3) əlavə edildi */}
+          {services.slice(0, 3).map((service, index) => (
             <Reveal key={index} duration={0.7 + index * 0.2} yOffset={50 + index * 10}>
               <div className="bg-white rounded-lg p-6 md:p-16 shadow-md">
                 <h3 className="text-xl font-semibold text-[#2e826a] mb-2">{service.title}</h3>

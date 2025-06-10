@@ -1,18 +1,35 @@
+'use client';
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { getServices } from "@/lib/service";
 import Link from "next/link";
+import { ServiceType, Attribute1Type, Attribute2Type } from "@/types/servicetype";
 
-const ServiceCard = async () => {
-  const data = await getServices();
-  // Tip yoxlaması və ya default dəyər
-  const cards = Array.isArray(data?.data) ? data.data : [];
+const CARDS_PER_PAGE = 4;
+
+const ServiceCard = () => {
+  const [cards, setCards] = useState<ServiceType[]>([]);
+  const [visibleCount, setVisibleCount] = useState(CARDS_PER_PAGE);
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/services`, {
+      headers: {
+        "Accept-Language": "az",
+      },
+      cache: "no-store",
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCards(Array.isArray(data?.data) ? data.data : []);
+      });
+  }, []);
+
+  const visibleCards = cards.slice(0, visibleCount);
 
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-16 md:gap-40">
-        {cards.map((card, index) => (
+        {visibleCards.map((card, index) => (
           <div key={index} className="flex flex-col">
-            {/* Hər kart arasında ayırıcı xətt */}
             {index > 0 && (
                 <div className="border-b-[0.5px] border-gray-300 opacity-55 shadow-md mb-40"></div>
             )}
@@ -29,10 +46,9 @@ const ServiceCard = async () => {
                 </p>
 
                 <div className="my-6 space-y-4">
-                  {/* Attribute 1 (Açar-Dəyər) */}
                   {card.attribute_1 && card.attribute_1.length > 0 && (
                     <div className="border-t border-gray-300 pt-4">
-                      {card.attribute_1.map((attr, attrIndex) => (
+                      {card.attribute_1.map((attr: Attribute1Type, attrIndex: number) => (
                         <div
                           key={attrIndex}
                           className="flex justify-between color-desc mb-2"
@@ -44,10 +60,9 @@ const ServiceCard = async () => {
                     </div>
                   )}
 
-                  {/* Attribute 2 (Şəkil-Dəyər) */}
                   {card.attribute_2 && card.attribute_2.length > 0 && (
                     <div className="border-t border-gray-300 pt-4">
-                      {card.attribute_2.map((attr, attrIndex) => (
+                      {card.attribute_2.map((attr: Attribute2Type, attrIndex: number) => (
                         <div
                           key={attrIndex}
                           className="flex items-center color-desc mb-2"
@@ -67,7 +82,6 @@ const ServiceCard = async () => {
                   )}
                 </div>
 
-                {/* Sifariş Düyməsi */}
                 <Link
                   href={`/service/${card.slug}`}
                   className="inline-block border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
@@ -76,8 +90,6 @@ const ServiceCard = async () => {
                 </Link>
               </div>
 
-              {/* DƏYİŞİKLİK BURADA BAŞLAYIR */}
-              {/* Image Card Section (Sağ tərəf) - Artıq bütövlükdə Linkdir */}
               <Link href={`/service/${card.slug}`} className="w-full md:w-2/3">
                 <div className="flex flex-col gap-6 bg-white p-8 rounded-xl shadow-lg h-full transition-transform duration-300  hover:shadow-xl cursor-pointer">
                   <h3 className="text-3xl font-serif custom-color">
@@ -97,12 +109,21 @@ const ServiceCard = async () => {
                   </p>
                 </div>
               </Link>
-              {/* DƏYİŞİKLİK BURADA BİTİR */}
 
             </div>
           </div>
         ))}
       </div>
+      {visibleCount < cards.length && (
+        <div className="text-center mt-10">
+          <button
+            onClick={() => setVisibleCount(c => c + CARDS_PER_PAGE)}
+            className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition"
+          >
+            Daha çox bax
+          </button>
+        </div>
+      )}
     </section>
   );
 };

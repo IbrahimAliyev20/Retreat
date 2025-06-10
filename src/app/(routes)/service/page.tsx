@@ -31,7 +31,7 @@ export async function generateMetadata() {
   };
 }
 
-const RetreatsPage =async () => {
+const ServicePage = async () => {
     const faqs = await getFaq()
   return (
     <div>
@@ -40,12 +40,12 @@ const RetreatsPage =async () => {
             <ServiceHero />
             </div >
       </Reveal>
-      <Reveal>
+      {/* <Reveal> */}
       <div className='py-6 md:py-16'>
       <ServiceCard />
       </div>
 
-      </Reveal>
+      {/* </Reveal> */}
 
       <Reveal>
    <div className='py-6 md:py-16'>
@@ -62,4 +62,4 @@ const RetreatsPage =async () => {
   )
 }
 
-export default RetreatsPage
+export default ServicePage

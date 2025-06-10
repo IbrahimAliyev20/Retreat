@@ -1,19 +1,19 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { getMaraphon } from '@/lib/marafon';
 import Image from 'next/image';
+import { MaraphonType } from '@/types/maraphon';
 
-export async function MaratonSingleHero() {
-  const date = await getMaraphon();
-  const item = date[0];
+interface MaratonSingleHeroProps {
+  marathon: MaraphonType;
+}
 
-
+export function MaratonSingleHero({ marathon }: MaratonSingleHeroProps) {
   return (
     <section className="relative min-h-screen bg-gradient-to-br text-white">
-      {item.image && (
+      {marathon.image && (
         <Image
           fill
-          src={item.image}
+          src={marathon.image}
           alt=""
           className="absolute inset-0 object-cover w-full h-full"
         />
@@ -26,17 +26,17 @@ export async function MaratonSingleHero() {
         <div className="max-w-4xl">
           {/* Date */}
           <p className="text-sm md:text-base font-light mb-6 tracking-wide">
-         {item.start_date} - {item.end_date}
+            {marathon.start_date} - {marathon.end_date}
           </p>
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8">
-            {item.name}
+            {marathon.name}
           </h1>
 
           {/* Description */}
           <p className="text-base md:text-lg font-light leading-relaxed max-w-2xl opacity-90">
-           {item.short_description}
+            {marathon.short_description}
           </p>
         </div>
 

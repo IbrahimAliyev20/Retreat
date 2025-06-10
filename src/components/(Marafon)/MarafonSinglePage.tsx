@@ -1,27 +1,24 @@
 import React from 'react';
 import { MapPin, Calendar, Users, Clock, CheckCircle } from 'lucide-react'; 
-import { getMaraphon } from '@/lib/marafon';
 import { MaraphonType } from '@/types/maraphon'; 
 
-export async function MaratonSinglePage() {
-  const data: MaraphonType[] = await getMaraphon();
-  
-  if (!data || data.length === 0) {
+interface MaratonSinglePageProps {
+  marathon: MaraphonType;
+}
+
+export function MaratonSinglePage({ marathon }: MaratonSinglePageProps) {
+  if (!marathon) {
     return <div className="text-center py-20">Marafon tapılmadı.</div>;
   }
-
-  const item = data[0];
-
   return (
     <div className="bg-stone-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-12">
             <section>
-            
               <div
                 className="prose prose-stone max-w-none"
-                dangerouslySetInnerHTML={{ __html: item.description }}
+                dangerouslySetInnerHTML={{ __html: marathon.description }}
               />
             </section>
           </div>
@@ -30,7 +27,7 @@ export async function MaratonSinglePage() {
             <div className="bg-white rounded-lg shadow-lg p-8 sticky top-8">
               <div className="mb-6">
                 {/* <div className="text-2xl font-bold custom-color mb-1">₼ 2,500 AZN</div> */}
-                <div className="text-stone-600">{item.name}</div>
+                <div className="text-stone-600">{marathon.name}</div>
               </div>
 
               <div className="space-y-4 mb-8">
@@ -38,7 +35,7 @@ export async function MaratonSinglePage() {
                   <Calendar className="w-5 h-5 text-stone-500" />
                   <div>
                     <div className="text-sm text-stone-500">Başlama tarixi</div>
-                    <div className="font-medium">{item.start_date}</div>
+                    <div className="font-medium">{marathon.start_date}</div>
                   </div>
                 </div>
 
@@ -46,7 +43,7 @@ export async function MaratonSinglePage() {
                   <Clock className="w-5 h-5 text-stone-500" />
                   <div>
                     <div className="text-sm text-stone-500">Müddət</div>
-                    <div className="font-medium">{item.end_date}</div>
+                    <div className="font-medium">{marathon.end_date}</div>
                   </div>
                 </div>
 
@@ -54,7 +51,7 @@ export async function MaratonSinglePage() {
                   <Users className="w-5 h-5 text-stone-500" />
                   <div>
                     <div className="text-sm text-stone-500">Maksimum iştirakçı sayı</div>
-                    <div className="font-medium">{item.participant}</div>
+                    <div className="font-medium">{marathon.participant}</div>
                   </div>
                 </div>
 
@@ -62,14 +59,14 @@ export async function MaratonSinglePage() {
                   <MapPin className="w-5 h-5 text-stone-500" />
                   <div>
                     <div className="text-sm text-stone-500">Məkan</div>
-                    <div className="font-medium">{item.address}</div>
+                    <div className="font-medium">{marathon.address}</div>
                   </div>
                 </div>
               </div>
 
               <div className="border-t border-stone-200 pt-6 space-y-3 mb-8">
                 <h4 className="font-semibold text-stone-800 mb-3">Nələr daxildir?</h4>
-                {item.attributes.map((attr, index) => (
+                {marathon.attributes.map((attr, index) => (
                   <div key={index} className="flex items-center gap-3 text-sm text-stone-600">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span>{attr.value}</span>

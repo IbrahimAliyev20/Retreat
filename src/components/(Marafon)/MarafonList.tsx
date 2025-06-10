@@ -28,15 +28,16 @@ export default function MarafonList({ allMarathons }: MarafonListProps) {
           <div key={marathon.slug} className="p-5 bg-white rounded-2xl overflow-hidden shadow-sm">
             <div className="flex flex-col sm:flex-row">
               
-              <div className="sm:w-2/3">
-                <Image
-                  src={marathon.thumb_image}
-                  alt={marathon.short_description}
-                  className="w-full aspect-[4/3] object-cover rounded-2xl"
-                  width={400}
-                  height={300}
-                />
-              </div>
+            <div className="sm:w-2/3 flex items-center justify-center">
+  <div className="w-[280px] h-[225px] relative">
+    <Image
+      src={marathon.thumb_image}
+      alt={marathon.short_description}
+      className="object-cover rounded-2xl"
+      fill
+    />
+  </div>
+</div>
 
               {/* Mətn hissəsi */}
               <div className="px-5 sm:w-2/3 space-y-3 mt-4 sm:mt-0">
