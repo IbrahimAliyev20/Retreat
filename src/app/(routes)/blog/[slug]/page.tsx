@@ -23,16 +23,9 @@ export default async function Blogpage({ params }: BlogPageProps) {
       </div>
       </Reveal>
       <Reveal>
-
       <BlogCardSec />
       </Reveal>
     </div>
   );
 }
 
-// export async function generateStaticParams() {
-//   const blogs = await getBlogs();
-//   return blogs.map((blog) => ({
-//     slug: blog.slug,
-//   }));
-// }
