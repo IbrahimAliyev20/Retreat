@@ -44,8 +44,8 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
             {comment.map((testimonial, index) => (
               <div key={index} className="px-4">
                 <Reveal duration={0.7} yOffset={50}>
-                  <div className="bg-white rounded-lg p-0 md:p-8 flex items-center gap-6 h-76">
-                    <div className="relative w-40 h-40 flex-shrink-0">
+                  <div className="bg-white rounded-lg p-2 md:p-8 flex items-center gap-6 h-76 ">
+                    <div className="relative w-30 h-30 flex-shrink-0">
                       <Image
                         src={testimonial.image}
                         alt={testimonial.author}
@@ -66,7 +66,7 @@ const TestimonialSlider: React.FC<Props> = ({ comment }) => {
                         </div>
                       </Reveal>
                       <Reveal duration={1.0} yOffset={70}>
-                        <p className="color-desc mb-4 text-[16px] md:text-xl">“{testimonial.description}”</p>
+                        <p className="color-desc mb-4 text-[14px] md:text-xl">“{testimonial.description}”</p>
                         <p className="color-desc font-medium">{testimonial.author}</p>
                       </Reveal>
                     </div>
