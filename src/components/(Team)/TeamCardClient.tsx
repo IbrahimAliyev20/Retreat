@@ -27,7 +27,7 @@ export default function TeamCardClient({ team }: TeamCardClientProps) {
         <Reveal key={member.slug} duration={0.7 + (index % ITEMS_PER_PAGE) * 0.2} yOffset={50 + (index % ITEMS_PER_PAGE) * 10}>
           <div className="flex items-center justify-center transition-opacity duration-1000 ease-in-out">
             
-            <div className="mb-10 bg-white md:w-[60%] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-5 rounded-lg shadow-md">
+            <div className="mb-10 bg-white w-full md:w-[60%] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-5 rounded-lg shadow-md">
               <div className="w-full md:w-1/3 flex flex-col items-center">
                 <Reveal duration={0.6} yOffset={50}>
                   <div className="relative w-48 h-48 mb-6">
