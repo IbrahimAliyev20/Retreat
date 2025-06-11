@@ -30,7 +30,7 @@ export default function TeamSinglePage({ team }: TeamSinglePageProps) {
     <div className="container mx-auto p-6">
       {/* BU HİSSƏ DƏYİŞDİRİLMƏYİB */}
       <div className="text-center mb-8">
-        <div className="relative w-[20rem] h-[20rem] md:w-[23rem] md:h-[23rem] mx-auto mb-4">
+        <div className="relative w-[18rem] h-[18rem] md:w-[23rem] md:h-[23rem] mx-auto mb-4">
           <Image
             src={team.image || '/placeholder.svg'}
             alt={team.name}
