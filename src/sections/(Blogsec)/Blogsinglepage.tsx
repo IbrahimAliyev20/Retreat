@@ -9,7 +9,7 @@ export default async function BlogSingle({ params }: BlogSingleProps) {
   const blog = await getBlogBySlug(params.slug);
 
   return (
-    <div className="container mx-auto px-3 sm:px-6 md:px-8 py-6 md:py-16 space-y-12 md:space-y-20">
+    <div className="container mx-auto px-3 sm:px-6 md:px-8 py-16 md:py-16 space-y-12 md:space-y-20">
       <div className="py-8 md:py-16">
         <div className="text-center mb-8">
           <p className="text-base md:text-2xl uppercase text-accent mb-6 md:mb-10">July 8, 2023</p>

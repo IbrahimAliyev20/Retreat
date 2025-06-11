@@ -67,7 +67,7 @@ export default function ServicePageSingle({ service }: ServicePageSingleProps) {
             </div>
           ))}
 
-          <button className="border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition">
+          <button className="w-full border border-[#2e826a] cursor-pointer text-[#2e826a] px-6 py-2 rounded-full hover:bg-[#2e826a] hover:text-white transition">
             Keçid et
           </button>
         </div>

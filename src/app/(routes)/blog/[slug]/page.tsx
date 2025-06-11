@@ -19,7 +19,7 @@ export default async function Blogpage({ params }: BlogPageProps) {
       <Reveal>
 
       <div >
-        <p className="text-5xl font-semibold">Digər bloq yazıları</p>
+        <p className="text-5xl font-semibold px-4">Digər bloq yazıları</p>
       </div>
       </Reveal>
       <Reveal>
