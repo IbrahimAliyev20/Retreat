@@ -23,7 +23,7 @@ export default async function MarafonPage({ params }: MarafonPageProps) {
         <MaratonSinglePage marathon={marathon} />
         <Reveal>
             <div className='mb-8'>
-              <p className="text-4xl md:text-5xl font-semibold">Digər Marafonlar</p>
+              <p className="text-4xl md:text-5xl font-semibold px-4">Digər Marafonlar</p>
             </div>
             <MarafonCards currentSlug={slug} />
         </Reveal>

@@ -25,17 +25,17 @@ export function MaratonSingleHero({ marathon }: MaratonSingleHeroProps) {
       <div className="relative z-10 flex flex-col justify-center min-h-screen px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl">
           {/* Date */}
-          <p className="text-sm md:text-base font-light mb-6 tracking-wide">
+          <p className="text-xl md:text-base font-light mb-6 tracking-wide">
             {marathon.start_date} - {marathon.end_date}
           </p>
 
           {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-8">
             {marathon.name}
           </h1>
 
           {/* Description */}
-          <p className="text-base md:text-lg font-light leading-relaxed max-w-2xl opacity-90">
+          <p className="text-xl md:text-lg font-light leading-relaxed max-w-2xl opacity-90">
             {marathon.short_description}
           </p>
         </div>

@@ -83,7 +83,7 @@ export default function TeamSinglePage({ team }: TeamSinglePageProps) {
         </div>
       </div>
 
-      <article className="space-y-8 w-[60%] mx-auto">
+      <article className="space-y-8 w-ful md:w-[60%] mx-auto">
         <h2 className="text-2xl font-semibold text-accent">Müəllim haqqında</h2>
         <p className="text-textColor">{cleanDescription}</p>
       </article>
