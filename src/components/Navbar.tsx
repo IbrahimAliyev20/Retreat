@@ -1,23 +1,42 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { X } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { X, Globe } from "lucide-react";
+import { useTranslations } from "next-intl";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Link, usePathname } from "@/i18n/navigation";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [moreOpen, setMoreOpen] = useState(false);
+  const t = useTranslations();
   const pathname = usePathname();
+
+  const languages = [
+    { code: "az", label: "AZ" },
+    { code: "en", label: "EN" },
+    { code: "ru", label: "RU" },
+  ];
+
+  const handleLanguageChange = (locale: string) => {
+    const newUrl = `/${locale}${pathname}`;
+    window.location.assign(newUrl);
+  };
 
   useEffect(() => {
     if (moreOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [moreOpen]);
 
@@ -25,8 +44,18 @@ const Navbar = () => {
     setMoreOpen(!moreOpen);
   };
 
+  const navLinks = [
+    { href: "/home", labelKey: "navigation.home" },
+    { href: "/about", labelKey: "navigation.about" },
+    { href: "/team", labelKey: "navigation.team" },
+    { href: "/service", labelKey: "navigation.services" },
+    { href: "/marafon", labelKey: "navigation.marathon" },
+    { href: "/blog", labelKey: "navigation.blog" },
+    { href: "/contact", labelKey: "navigation.contact" },
+  ];
+
   return (
-    <header className="py-4 px-6 bg-[#fff]  ">
+    <header className="py-4 px-6 bg-[#fff] shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-[#5c4c1e]">
           <Image
@@ -35,58 +64,51 @@ const Navbar = () => {
             width={143}
             height={63}
             className="object-contain filter invert"
+            priority
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-[#5b5b5b] ">
-          <Link
-            href="/"
-            className={` hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/' ? 'custom-color font-bold scale-105' : ''}`}
-          >
-            Ana səhifə
-          </Link>
-          <Link
-            href="/about"
-            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/about' ? 'custom-color font-bold scale-105' : ''}`}
-          >
-            Haqqımızda
-          </Link>
-          <Link
-            href="/team"
-            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/team' ? 'custom-color font-bold scale-105' : ''}`}
-          >
-            Komanda
-          </Link>
-          <Link
-            href="/service"
-            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/service' ? 'custom-color font-bold scale-105' : ''}`}
-          >
-            Xidmətlər
-          </Link>
-          <Link
-            href="/marafon"
-            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/marafon' ? 'custom-color font-bold scale-105' : ''}`}
-          >
-            Marafon
-          </Link>
-          <Link
-            href="/blog"
-            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/blog' ? 'custom-color font-bold scale-105' : ''}`}
-          >
-            Bloqlar
-          </Link>
-          <Link
-            href="/contact"
-            className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${pathname === '/contact' ? 'custom-color font-bold scale-105' : ''}`}
-          >
-            Əlaqə
-          </Link>
+        <nav className="hidden md:flex items-center gap-8 text-[#5b5b5b]">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`hover:text-[#2e826a] transition-colors text-lg font-semibold ${
+                pathname === link.href ? "custom-color font-bold scale-105" : ""
+              }`}
+            >
+              {t(link.labelKey)}
+            </Link>
+          ))}
         </nav>
+
+        <div className="hidden md:flex items-center space-x-2">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="h-9 w-9">
+                <Globe className="h-5 w-5" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {languages.map((lang) => (
+                <DropdownMenuItem key={lang.code} asChild>
+                  <Link
+                    href={pathname}
+                    locale={lang.code}
+                    className="cursor-pointer"
+                  >
+                    {lang.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
 
         <button
           className="md:hidden text-[#5c4c1e]"
           onClick={toggleMenu}
-          aria-label={moreOpen ? 'Menüyü kapat' : 'Menüyü aç'}
+          aria-label={moreOpen ? "Menüyü kapat" : "Menüyü aç"}
         >
           {moreOpen ? (
             <X className="w-6 h-6" />
@@ -109,8 +131,8 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-white   transform transition-transform duration-300 ease-in-out ${
-            moreOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+            moreOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden z-50`}
         >
           <div className="flex justify-end p-4">
@@ -123,54 +145,37 @@ const Navbar = () => {
             </button>
           </div>
           <nav className="flex flex-col gap-4 p-4">
-            <Link
-              href="/"
-              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/' ? 'custom-color font-bold' : ''}`}
-              onClick={toggleMenu}
-            >
-              Ana səhifə
-            </Link>
-            <Link
-              href="/about"
-              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/about' ? 'custom-color font-bold' : ''}`}
-              onClick={toggleMenu}
-            >
-              Haqqımızda
-            </Link>
-            <Link
-              href="/team"
-              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/team' ? 'custom-color font-bold' : ''}`}
-              onClick={toggleMenu}
-            >
-              Komanda
-            </Link>
-            <Link
-              href="/service"
-              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/service' ? 'custom-color font-bold' : ''}`}
-              onClick={toggleMenu}
-            >
-              Xidmətlər
-            </Link>
-             <Link
-            href="/marafon"
-           className={`color-desc transition-colors text-lg font-semibold ${pathname === '/marafon' ? 'custom-color font-bold' : ''}`}
-          >
-            Marafon
-          </Link>
-            <Link
-              href="/blog"
-              className={`color-desc transition-colors text-lg font-semibold ${pathname === '/blog' ? 'custom-color font-bold' : ''}`}
-              onClick={toggleMenu}
-            >
-              Bloqlar
-            </Link>
-            <Link
-              href="/contact"
-              className={` color-desc transition-colors text-lg font-semibold ${pathname === '/contact' ? 'custom-color font-bold' : ''}`}
-              onClick={toggleMenu}
-            >
-              Əlaqə
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`color-desc transition-colors text-lg font-semibold ${
+                  pathname === link.href ? "custom-color font-bold" : ""
+                }`}
+                onClick={toggleMenu}
+              >
+                {t(link.labelKey)}
+              </Link>
+            ))}
+
+            <div className="border-t border-gray-200 mt-4 pt-4">
+              <div className="flex items-center space-x-4 px-2">
+                <Globe className="h-5 w-5 text-gray-600" />
+                <div className="flex space-x-4">
+                  {languages.map((lang) => (
+                    <Link
+                      key={lang.code}
+                      href={pathname}
+                      locale={lang.code}
+                      onClick={toggleMenu}
+                      className="text-[#323642] hover:text-[#2e826a] text-lg font-medium"
+                    >
+                      {lang.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </nav>
         </div>
       </div>

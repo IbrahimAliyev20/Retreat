@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "home": "Главная",
+    "about": "О нас",
+    "team": "Команда",
+    "services": "Услуги",
+    "marathon": "Марафон",
+    "blog": "Блог",
+    "contact": "Контакты"
+  }
+}

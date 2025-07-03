@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { getSocialMedia } from "@/lib/sociallink";
+import { Link } from "@/i18n/navigation";
+import FooterLinks from "./FooterLinks";
+
+import { SocialMediaType } from "@/types/type";
 
 const Footer: React.FC = async () => {
-  const data = await getSocialMedia();
+  const data: SocialMediaType[] = await getSocialMedia();
 
   return (
     <footer className="bg-white w-full text-[#4A3C31] py-8 px-6 font-sans">
@@ -36,53 +39,7 @@ const Footer: React.FC = async () => {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-wrap gap-8">
-          <div>
-            <h3 className="font-semibold mb-4">Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Ana səhifə
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:underline">
-                  Haqqımızda
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:underline">
-                  Əlaqə
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4">&nbsp;</h3>
-            <ul className="text-md space-y-2">
-              <li>
-                <Link href="/blog" className="hover:underline">
-                  Bloqlar
-                </Link>
-              </li>
-              <li>
-                <Link href="/service" className="hover:underline">
-                  Xidmətlər
-                </Link>
-              </li>
-              <li>
-                <Link href="/marafon" className="hover:underline">
-                  Marafon
-                </Link>
-              </li>
-              <li>
-                <Link href="/team" className="hover:underline">
-                  Komanda
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <FooterLinks />
 
         <div className="bg-[#2e826a] text-white p-6 rounded-lg flex-1">
           <div>
@@ -128,7 +85,7 @@ const Footer: React.FC = async () => {
           </div>
         </div>
       </div>
-      <p className="text-center pt-4 mt-10 border-t-1 border-[#00000038]">
+      <p className="text-center pt-4 mt-10 border-t border-[#00000038]">
         Bütün hüquqlar Fitvibe tərəfindən qorunur. Veb sayt
         <Link href={"https://markup.az/"} target="_blank" className="mx-1">
           Markup

@@ -1,8 +1,13 @@
-import "./globals.css";
+import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MetaTagsType } from "@/types/type";
 import { getMetaTags } from "@/lib/metatags";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import TopLoader from "@/components/TopLoader";
+import { getMessages } from "next-intl/server";
 
 export async function generateMetadata() {
   const metaData: MetaTagsType[] = await getMetaTags();
@@ -27,14 +32,23 @@ export async function generateMetadata() {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
+  params,
   children,
 }: Readonly<{
+  params: Promise<{ locale: string }>;
   children: React.ReactNode;
 }>) {
+  const {locale} = await params;
+  const messages = (await getMessages()) as Record<string, string>;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
   return (
     <html lang="en">
       <body className="bg-[#f3f3f3] custom-color n">
+        <TopLoader />
+         <NextIntlClientProvider messages={messages} >
         <header className="fixed w-full z-50">
           <Navbar />
         </header>
@@ -44,6 +58,7 @@ export default function RootLayout({
         <footer className="w-full z-50">
           <Footer />
         </footer>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

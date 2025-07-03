@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "team": "Team",
+    "services": "Services",
+    "marathon": "Marafon",
+    "blog": "Blog",
+    "contact": "Contact"
+  }
+ 
+}
