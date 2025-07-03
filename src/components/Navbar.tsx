@@ -24,10 +24,7 @@ const Navbar = () => {
     { code: "ru", label: "RU" },
   ];
 
-  const handleLanguageChange = (locale: string) => {
-    const newUrl = `/${locale}${pathname}`;
-    window.location.assign(newUrl);
-  };
+
 
   useEffect(() => {
     if (moreOpen) {
